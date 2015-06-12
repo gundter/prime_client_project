@@ -1,40 +1,37 @@
-<body>
-    <div class="container" ng-controller="ticketController">
-        <form class='ticketForm' method="post" novalidate ng-submit="ticketSubmit()">
-            <h4 class="col-md-12 ticketHeader">Issue Report</h4>
-            <div class="form-group">
-                <label class="col-md-offset-4 col-md-2" for="problem">Problem:</label>
-                <div class="col-md-6">
-                    <input type="text" id="problem" name="problem" autofocus ng-model="ticket.problem" ng-required="true"/>
-                    <p class="incomplete" ng-show="ticketForm.problem.$invalid && ticketForm.problem.$touched"> please input problem</p>
-                </div>
+<div class="container" ng-controller="ticketController">
+    <form class="col-md-offset-2 col-md-8 ticketForm" name='ticketForm' novalidate ng-submit="ticketSubmit()">
+        <h2 class="ticketHeader">Issue Report</h2>
+        <div class="form-group">
+            <label class="col-md-4" for="problem">Problem:</label>
+            <div class="col-md-8">
+                <input type="text" id="problem" class="col-md-10 field" name="problem" ng-model="ticket.problem" ng-required="true"/>
+                <p class="incomplete" ng-show="ticketForm.problem.$invalid && ticketForm.email.$touched">Please input a problem</p>
             </div>
-            <div class="form-group">
-                <label class="col-md-offset-4 col-md-2" for="email">Contact Email:</label>
-                <div class="col-md-6">
-                    <input type="email" id="email" name="email" autofocus ng-model="ticket.email" ng-required="true"/>
-                    <p class="incomplete" ng-show="ticketForm.email.$invalid && ticketForm.email.$touched"> please input email</p>
-                </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4" for="email">Contact Email:</label>
+            <div class="col-md-8">
+                <input type="email" id="email" class="col-md-10 field" name="email" ng-model="ticket.email" ng-required="true"/>
+                <p class="incomplete" ng-show="ticketForm.email.$invalid && ticketForm.email.$touched"> Please input email</p>
             </div>
-            <div class="form-group">
-                <label class="col-md-offset-4 col-md-2" for="browser">Browser Used:</label>
-                <div class="col-md-6">
-                    <input type="text" id="browser" name="browser" autofocus ng-model="ticket.browser" ng-required="true"/>
-                    <p class="incomplete" ng-show="ticketForm.browser.$invalid && ticketForm.browser.$touched"> please input browser</p>
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4" for="browser">Browser Used:</label>
+            <div class="col-md-8">
+                <input type="text" id="browser" class="col-md-10 field" name="browser" ng-model="ticket.browser" ng-required="true"/>
+                <p class="incomplete" ng-show="ticketForm.browser.$invalid && ticketForm.browser.$touched"> Please input browser</p>
             </div>
-            <div class="form-group">
-                <label class="col-md-offset-4 col-md-2" for="description">Description:</label>
-                <div class="col-md-6">
-                    <textarea type="text" id="description" name="description" autofocus ng-model="ticket.description" ng-required="true"></textarea>
-                    <p class="incomplete" ng-show="ticketForm.description.$invalid && ticketForm.description.$touched"> please input description</p>
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4" for="description">Description:</label>
+            <div class="col-md-8">
+                <textarea type="text" id="description" class="col-md-10 field" name="description" ng-model="ticket.description" ng-required="true"></textarea>
+                <p class="incomplete" ng-show="ticketForm.description.$invalid && ticketForm.description.$touched"> Please input description</p>
             </div>
-            <div class="col-md-12 recordBtn">Record Button</div>
-            <div class="col-md-12 videoDisplay">Video goes here</div>
-            <div class="col-md-12 ticketSubmit">
-                <input type="submit" value="Register"/>
-            </div>
-        </form>
-    </div>
-</body>
+        </div>
+        <div class="recordBtn">Record Button</div>
+        <div class="videoDisplay">Video goes here</div>
+        <button type="submit" class="btn btn-primary ticketSubmit" ng-disabled="ticketForm.$invalid">Submit Ticket</button>
+    </form>
+</div>

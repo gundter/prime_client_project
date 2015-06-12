@@ -12,6 +12,10 @@ blockquote {
 
 
 /*Ticket Page Style Guide*/
+
+.ticketForm{
+  background-color: #40a070;
+}
 .incomplete {
   color: #ff0000;
 }
@@ -24,6 +28,19 @@ blockquote {
 .videoDisplay{
   text-align: center;
 }
-.ticketSubmit{
+.ticketSubmit {
+  margin: 5px auto;
+}
+.form-group{
+  margin: 20px;
+  padding: 20px;
+}
+.field{
+  height: 30px
+}
+#description{
+  height: 200px;
+}
+.btn{
   text-align: center;
 }
