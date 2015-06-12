@@ -1,0 +1,48 @@
+<div class="container">
+    <h2>API Instructions</h2>
+
+    <p>This will be some basic text about the API instructions and problems that we encountered while implementing</p>
+
+
+    <div>
+        <p class="lead">Step 1: Get API keys from user</p>
+        <ul>
+            <ol>User's API key is located in Options > Account Settings</ol>
+            <ol>Organization's guest user API key is located in Options > Admin > Integrations</ol>
+        </ul>
+        <button ng-click="codeExample=!codeExample" class="btn-sm btn-info">See Code Example</button>
+
+        <div class="code" ng-show="codeExample">
+            <blockquote>
+                <p>myApp.controller('getUser', ['$scope', '$http', function($scope, $http){</p>
+
+                    <p>$scope.showUser = false;</p>
+
+                    <p>$http.get('/users/username').success(function(data){</p>
+                    <p>console.log("Username response: ", data);</p>
+                    <p>if (data == "false"){</p>
+                    <p>$scope.showLogin = true;</p>
+                    <p>} else {</p>
+                    <p>$scope.showUser = true;</p>
+                    <p>$scope.username = data.username;</p>
+                    <p>}</p>
+                    <p>});</p>
+
+                    <p>$scope.logout = function() {</p>
+                    <p>$http.get('/users/logout').success(function(data){</p>
+                    <p>$scope.showLogin = true;</p>
+                    <p>$scope.showUser = false;</p>
+                    <p>console.log(data + " has been logged out");</p>
+                    <p>})</p>
+                    <p>}</p>
+                    <p>}]);</p>
+
+            </blockquote>
+        </div>
+    </div>
+
+
+
+
+
+</div>
