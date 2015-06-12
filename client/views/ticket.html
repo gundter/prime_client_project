@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="App">
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <div class="container" ng-controller="ticketController">
+            <form class='ticketForm' method="post" novalidate ng-submit="ticketSubmit()">
+                    <h4 class="ticketHeader">Issue Report</h4>
+                    <div class="form-group">
+                        <label class="col-md-4" for="problem">Problem:</label>
+                        <div class="col-md-8">
+                            <input type="text" id="problem" name="problem" autofocus ng-model="ticket.problem" ng-required="true"/>
+                        <p ng-show="ticketForm.problem.$invalid && ticketForm.problem.$touched"> please input Problem</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4" for="email">Contact Email:</label>
+                        <div class="col-md-8">
+                            <input type="email" id="email" name="email" autofocus ng-model="ticket.email" ng-required="true"/>
+                            <p ng-show="ticketForm.email.$invalid && ticketForm.email.$touched"> please input Email</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4" for="browser">Browser Used:</label>
+                        <div class="col-md-8">
+                            <input type="text" id="browser" name="browser" autofocus ng-model="ticket.browser" ng-required="true"/>
+                            <p ng-show="ticketForm.browser.$invalid && ticketForm.browser.$touched"> please input Browser</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4" for="description">Description:</label>
+                        <div class="col-md-8">
+                            <textarea type="text" id="description" name="description" autofocus ng-model="ticket.description" ng-required="true"></textarea>
+                            <p ng-show="ticketForm.description.$invalid && ticketForm.description.$touched"> please input Description</p>
+                        </div>
+                    </div>
+                    <div>Record button</div>
+                <div class="videoDisplay">Video goes here
+                </div>
+                <div class="ticketSubmit">
+                    <input type="submit" value="Register"/>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
