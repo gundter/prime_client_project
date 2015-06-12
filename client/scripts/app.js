@@ -2,12 +2,12 @@
  * Created by brianaamodt on 6/11/15.
  */
     // myApp is enabling angular functionality within it's scope
-var myApp = angular.module('myApp',['ngRouter', 'appControllers', 'ngAnimate']);
+var App = angular.module('App',['ngRoute', 'appControllers']);
 
 var appControllers = angular.module('appControllers', []);
 
 // myApp.config is enabling navigation between html pages
-myApp.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider){
+App.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider){
     $routeProvider.
         // directs to about/ home page
         when('/home', {

@@ -9,6 +9,14 @@ module.exports = function(grunt) {
             build: {
                 src: 'client/scripts/app.js',
                 dest: 'public/javascripts/app.min.js'
+            },
+            controller1: {
+                src: 'client/scripts/controllers/apiInstructionsController.js',
+                dest: 'public/javascripts/controllers/apiInstructionsController.min.js'
+            },
+            controller2: {
+                src: 'client/scripts/controllers/ticketController.js',
+                dest: 'public/javascripts/controllers/ticketController.min.js'
             }
         },
         copy: {
@@ -58,7 +66,7 @@ module.exports = function(grunt) {
                         expand: true,
                         cwd: "client/",
                         src: [
-                            "views/routes/*",
+                            "views/*",
                             "styles/*"
                         ],
                         "dest": "public/"
