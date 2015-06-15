@@ -10,36 +10,58 @@ blockquote {
   background-color: #e6e1dc;
 }
 
+/*About Page Style Guide*/
+
+.issue {
+  margin: 5px 10% 5px auto;
+  height: 300px;
+  width: 300px;
+  background-color: red;
+}
+
+.aboutContent {
+  margin: 5px auto;
+}
+
 /*Ticket Page Style Guide*/
 
 .ticketForm{
   background-color: #40a070;
 }
+
 .incomplete {
   color: #ffffff;
 }
+
 .ticketHeader{
   text-align: center;
 }
+
 .recordBtn{
   text-align: center;
 }
+
 .videoDisplay{
   text-align: center;
 }
+
 .ticketSubmit {
   margin: 5px auto;
 }
+
 .form-group{
   margin: 20px;
   padding: 20px;
 }
+
 .field{
   height: 30px
 }
+
 #description{
   height: 200px;
 }
-.btn{
+
+.btn {
   text-align: center;
 }
