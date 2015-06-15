@@ -24,6 +24,10 @@ App.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
             templateUrl: "/views/apiInstructions.html",
             controller: 'apiInstructionsController'
         }).
+        when('/register',{
+            templateUrl: "/views/register.html",
+            controller: 'registerController'
+        }).
         // defaults to about/ home page
         otherwise({
             redirectTo: "/home"
