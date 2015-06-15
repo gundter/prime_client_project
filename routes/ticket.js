@@ -30,9 +30,30 @@ router.get('/getTickets', function (req, res, next) {
 
 });
 
+/////////////////////////
+// Create a New Ticket
+/////////////////////////
 router.post('/createTicket', function(req, res, next) {
 
-    res.send("Sucka!");
+    if (req.isAuthenticated()) {
+        console.log("Request Data: ", req.body);
+
+        var ticket = {
+            problem: req.body.problem,
+            email: req.body.email,
+            browser: req.body.browser,
+            description: req.body.description,
+            iframe: req.body.iframe,
+            userID: req.user._id
+        };
+
+        Tickets.create(ticket, function (err, post) {
+            if (err)
+                next(err);
+            else
+                res.send('Success');
+        });
+    }
 
 });
 
