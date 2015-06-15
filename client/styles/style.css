@@ -1,11 +1,8 @@
 /*Index Page Styling*/
-* {
-    margin: 0;
-}
-
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     height: 100%;
+    margin: 0;
 }
 
 .page-wrap {
