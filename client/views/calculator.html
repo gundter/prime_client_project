@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div ng-app ng-controller="calculatorController">
+        <div class="calcbody">
+            <!-- Calculator Display -->
+            <div class="thinborder" >
+                <p class="output" name="output" >
+                    {{output}}<br>
+                    {{operationToken}}
+                </p>
+            </div>
+            <div class="calcbuttons">
+                <button name="btn1" class="numBtn" value="1" ng-click='input(1)'>1</button>
+                <button name="btn2" class="numBtn" value="2" ng-click='input(2)'>2</button>
+                <button name="btn3" class="numBtn" value="3" ng-click='input(3)'>3</button>
+                <button name="btnMinus" class="opBtn" ng-click='sub()'> - </button>
+                <br>
+                <button name="btn4" class="numBtn" value="4" ng-click='input(4)'>4</button>
+                <button name="btn5" class="numBtn" value="5" ng-click='input(5)'>5</button>
+                <button name="btn6" class="numBtn" value="6" ng-click='input(6)'>6</button>
+                <button name="btnPlus" class="opBtn" ng-click='add()'>+</button>
+                <br>
+                <button name="btn7" class="numBtn" value="7" ng-click='input(7)'>7</button>
+                <button name="btn8" class="numBtn" value="8" ng-click='input(8)'>8</button>
+                <button name="btn9" class="numBtn" value="9" ng-click='input(9)'>9</button>
+                <button name="btnEquals" class="opBtn" ng-click='equal()'>=</button>
+                <br>
+                <button name="btn0" class="numBtn" value="0" ng-click='input(0)'>0</button>
+                <button name="btnClear" class="clrBtn" ng-click='clear()'>CLEAR</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

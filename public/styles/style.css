@@ -1,5 +1,26 @@
+/*Index Page Styling*/
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+.page-wrap {
+    min-height: 100%;
+    margin-bottom: -20px;
+}
+
+.page-wrap:after {
+    content: "";
+    display: block;
+}
+
+.site-footer, .page-wrap:after {
+    height: 20px;
+}
+.site-footer {
+    text-align: center;
+    background-color: #777777;
 }
 
 a {
@@ -10,8 +31,12 @@ blockquote {
   background-color: #e6e1dc;
 }
 
+<<<<<<< HEAD
 /*About Page Style Guide*/
 
+=======
+/* About Page Styling*/
+>>>>>>> 98e03ce626f292427ac3ada6c2cddaade5fbc292
 .issue {
   margin: 5px 10% 5px auto;
   height: 300px;
@@ -20,10 +45,16 @@ blockquote {
 }
 
 .aboutContent {
+<<<<<<< HEAD
   margin: 5px auto;
 }
 
 /*Ticket Page Style Guide*/
+=======
+    margin: 5px auto;
+}
+/*Ticket Page Styling*/
+>>>>>>> 98e03ce626f292427ac3ada6c2cddaade5fbc292
 
 .ticketForm{
   background-color: #40a070;
@@ -65,3 +96,7 @@ blockquote {
 .btn {
   text-align: center;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 98e03ce626f292427ac3ada6c2cddaade5fbc292

@@ -20,7 +20,7 @@
             <ul class="nav nav-pills">
                 <li><a href="#home">About</a></li>
                 <li><a href="#ticket">Report An Issue</a></li>
-                <li><a href="#apiInstructions">API Instructions</a></li>
+                <li><a href="#allTickets">All Tickets</a></li>
             </ul>
         </div>
 
@@ -29,7 +29,14 @@
      <!-- /////////////////////////// -->
      <!-- Bring in all the pages here -->
     <!-- /////////////////////////// -->
-    <main ng-view></main>
+    <div class="page-wrap">
+        <main ng-view></main>
+    </div>
+
+
+    <footer class="site-footer">
+        <a href="apiInstructions">API Instructions</a>
+    </footer>
 
     <!-- /////////////////////////// -->
     <!-- Scripts Start -->

@@ -11,8 +11,8 @@ App.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
     $routeProvider.
         // directs to about/ home page
         when('/home', {
-            templateUrl: "/views/about.html",
-            controller: 'aboutController'
+            templateUrl: "/views/about.html"
+            //controller: 'aboutController'
         }).
         // directs to ticket page
         when('/ticket',{
