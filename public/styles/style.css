@@ -44,6 +44,31 @@ blockquote {
   margin: 5px auto;
 }
 
+/*Calculator Styling*/
+.output{
+    margin: 10px;
+    background-color: #ffffff;
+    height: 50px;
+    width: 200px;
+}
+
+
+.numBtn, .opBtn{
+    width: 40px;
+    margin: 5px;
+    padding: 2px;
+    height: 25px;
+    background-color: #009926;
+}
+
+.clrBtn{
+    width: 75px;
+    margin: 5px;
+    padding: 2px;
+    height: 25px;
+    background-color: #dd1144;
+}
+
 /*Ticket Page Styling*/
 
 .ticketForm{
