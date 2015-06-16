@@ -113,12 +113,14 @@ blockquote {
 .btn {
   text-align: center;
 }
-<<<<<<< HEAD
-=======
 
-=======
 header {
   color: #177289
 }
->>>>>>> Stashed changes
->>>>>>> d10975400878c044545462212c6b25895b43f2e4
+
+.heatTicket{
+    margin: 5px;
+    padding: 5px;
+    background-color: #adadad;
+    border-radius: 5px;
+}

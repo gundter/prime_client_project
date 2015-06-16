@@ -29,6 +29,10 @@ module.exports = function(grunt) {
             controller5: {
                 src: 'client/scripts/controllers/registerController.js',
                 dest: 'public/javascripts/controllers/registerController.min.js'
+            },
+            controller6: {
+                src: 'client/scripts/controllers/allTicketController.js',
+                dest: 'public/javascripts/controllers/allTicketController.min.js'
             }
         },
         copy: {
