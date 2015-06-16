@@ -25,6 +25,7 @@ App.controller('calculatorController',['$scope', function($scope){
         if(key == "equal"){
             current = value;
             $scope.output = current;
+            key = value;
         }else{
             current += value;
             $scope.output = current;
