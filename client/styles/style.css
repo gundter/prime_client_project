@@ -172,3 +172,9 @@ header {
   color: #177289
 }
 
+.heatTicket{
+    margin: 5px;
+    padding: 5px;
+    background-color: #adadad;
+    border-radius: 5px;
+}

@@ -28,6 +28,10 @@ App.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
             templateUrl: "/views/register.html",
             controller: 'registerController'
         }).
+        when('/allTickets',{
+            templateUrl: "/views/allTickets.html",
+            controller: 'allTicketController'
+        }).
         // defaults to about/ home page
         otherwise({
             redirectTo: "/home"
