@@ -19,10 +19,14 @@ module.exports = function(grunt) {
                 dest: 'public/javascripts/controllers/ticketController.min.js'
             },
             controller3: {
+                src: 'client/scripts/controllers/calculatorController.js',
+                dest: 'public/javascripts/controllers/calculatorController.min.js'
+            },
+            controller4: {
                 src: 'client/scripts/controllers/headerController.js',
                 dest: 'public/javascripts/controllers/headerController.min.js'
             },
-            controller4: {
+            controller5: {
                 src: 'client/scripts/controllers/registerController.js',
                 dest: 'public/javascripts/controllers/registerController.min.js'
             }

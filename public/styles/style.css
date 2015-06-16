@@ -18,6 +18,7 @@ body {
 .site-footer, .page-wrap:after {
     height: 20px;
 }
+
 .site-footer {
     text-align: center;
     background-color: #777777;
@@ -33,46 +34,80 @@ blockquote {
 
 /* About Page Styling*/
 .issue {
-    margin: 5px 10% 5px auto;
-    height: 300px;
-    width: 300px;
-    background-color: red;
+  margin: 5px 10% 5px auto;
+  height: 300px;
+  width: 300px;
+  background-color: red;
 }
 
 .aboutContent {
-    margin: 5px auto;
+  margin: 5px auto;
 }
+
+/*Calculator Styling*/
+.output{
+    margin: 10px;
+    background-color: #ffffff;
+    height: 50px;
+    width: 200px;
+}
+
+
+.numBtn, .opBtn{
+    width: 40px;
+    margin: 5px;
+    padding: 2px;
+    height: 25px;
+    background-color: #009926;
+}
+
+.clrBtn{
+    width: 75px;
+    margin: 5px;
+    padding: 2px;
+    height: 25px;
+    background-color: #dd1144;
+}
+
 /*Ticket Page Styling*/
 
 .ticketForm{
   background-color: #40a070;
 }
+
 .incomplete {
   color: #ffffff;
 }
+
 .ticketHeader{
   text-align: center;
 }
+
 .recordBtn{
   text-align: center;
 }
+
 .videoDisplay{
   text-align: center;
 }
+
 .ticketSubmit {
   margin: 5px auto;
 }
+
 .form-group{
   margin: 20px;
   padding: 20px;
 }
+
 .field{
   height: 30px
 }
+
 #description{
   height: 200px;
 }
-.btn{
+
+.btn {
   text-align: center;
 }
-
