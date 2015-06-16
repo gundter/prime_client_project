@@ -14,6 +14,7 @@ var User = require('./models/userSchema');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var ticket = require('./routes/ticket');
 
 var app = express();
 
@@ -69,31 +70,32 @@ passport.use('local', new localStrategy({
         passReqToCallback : true,
         usernameField: 'username'
     },
-    function(req, username, password, done){
+    function(req, emailAddress, password, done){
         console.log("finding user...");
-        User.findOne({ username: username }, function(err, user) {
+        User.findOne({ email: emailAddress }, function(err, user) {
             if (err) throw err;
             if (!user) {
                 console.log("User doesn't exist");
-                return done(null, false, {message: 'Incorrect username and password.'});}
+                return done(null, false, {message: 'Incorrect Email and Password.'});}
 
             // test a matching password
-            console.log("testing for username "+ username + " password: "+ password);
+            console.log("testing for email: "+ emailAddress + " password: "+ password);
             user.comparePassword(password, function(err, isMatch) {
                 if (err) throw err;
                 if(isMatch) {
-                    console.log("Password matches for " + user.username + " isMatch " + isMatch);
+                    console.log("Password matches for " + user.email + " isMatch " + isMatch);
                     return done(null, user);
                 }
                 else
                     console.log("Password doesn't match");
-                done(null, false, { message: 'Incorrect username and password.' });
+                done(null, false, { message: 'Incorrect Email and Password.' });
             });
         });
     }));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/ticket', ticket);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

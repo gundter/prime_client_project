@@ -9,6 +9,7 @@ var Users = require('../models/userSchema');
 /////////////////////////
 router.get('/', function(req, res, next) {
   if (req.isAuthenticated()) {
+      console.log("Logged in");
       res.sendFile(path.resolve(__dirname, '../views/index.html'));
   } else {
     res.redirect('/')
@@ -38,7 +39,7 @@ router.get('/user', function (req, res, next) {
     var user = {
         _id: req.user._id,
         email: req.user.email,
-        name: {first: req.user.name.first, last: req.user.name.first},
+        name: {first: req.user.name.first, last: req.user.name.last},
         phone: req.user.phone,
         department: req.user.department
     };
