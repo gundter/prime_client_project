@@ -33,7 +33,6 @@ blockquote {
   background-color: #e6e1dc;
 }
 
-<<<<<<< Updated upstream
 /* About Page Styling*/
 .issue {
   margin: 5px 10% 5px auto;
@@ -116,11 +115,4 @@ blockquote {
 
 header {
   color: #177289
-}
-
-.heatTicket{
-    margin: 5px;
-    padding: 5px;
-    background-color: #adadad;
-    border-radius: 5px;
 }
