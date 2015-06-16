@@ -6,6 +6,8 @@ var App = angular.module('App',['ngRoute', 'appControllers']);
 
 var appControllers = angular.module('appControllers', []);
 
+App
+
 // myApp.config is enabling navigation between html pages
 App.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider){
     $routeProvider.
