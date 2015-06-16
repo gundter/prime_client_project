@@ -24,14 +24,16 @@ body {
     background-color: #777777;
 }
 
-a {
-  color: #00B7FF;
+button {
+  background-color: #42a4a1;
+  color:white;
 }
 
 blockquote {
   background-color: #e6e1dc;
 }
 
+<<<<<<< Updated upstream
 /* About Page Styling*/
 .issue {
   margin: 5px 10% 5px auto;
@@ -111,3 +113,12 @@ blockquote {
 .btn {
   text-align: center;
 }
+<<<<<<< HEAD
+=======
+
+=======
+header {
+  color: #177289
+}
+>>>>>>> Stashed changes
+>>>>>>> d10975400878c044545462212c6b25895b43f2e4
