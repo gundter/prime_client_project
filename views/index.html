@@ -11,7 +11,7 @@
 
 <body>
 
-    <header class="container-fluid">
+    <header class="container-fluid" ng-controller="headerController">
 
         <!-- /////////////////////////// -->
         <!-- Navigation -->
@@ -22,6 +22,37 @@
                 <li><a href="#ticket">Report An Issue</a></li>
                 <li><a href="#allTickets">All Tickets</a></li>
             </ul>
+        </div>
+
+        <!-- /////////////////// -->
+        <!-- Login Functionality -->
+        <!-- /////////////////// -->
+        <div class="login pull-right">
+
+            <div ng-if="showUser">
+                <ul class="signedIn">
+                    <li class="lead">Hi, {{user}}</li>
+                    <li><button class="btn btn-warning" ng-click="logout()">Logout</button></li>
+                </ul>
+            </div>
+
+            <div ng-if="showLogin" class="">
+                <form action="/" method="post">
+                    <ul class="loginInputs">
+                        <li>
+                            <input class="loginInputs" type="text" name="username" id="username" placeholder="Email"/>
+                        </li>
+                        <li>
+                            <input class="loginInputs" type="password" name="password" id="password"
+                                   placeholder="password"/>
+                        </li>
+
+                        <li><input class="btn btn-primary" type="submit" value="Log In"/></li>
+                        <li><a href="#register">Register</a></li>
+
+                    </ul>
+                </form>
+            </div>
         </div>
 
     </header>
@@ -47,6 +78,7 @@
     <script type="text/javascript" src="/javascripts/controllers/apiInstructionsController.min.js"></script>
     <script type="text/javascript" src="/javascripts/controllers/ticketController.min.js"></script>
     <script type="text/javascript" src="/javascripts/controllers/calculatorController.min.js"></script>
+    <script type="text/javascript" src="/javascripts/controllers/headerController.min.js"></script>
 
 </body>
 </html>

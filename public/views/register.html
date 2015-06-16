@@ -1,0 +1,77 @@
+<div class="col-md-offset-3 col-md-4">
+    <form name="createUserForm" class="form-horizontal" novalidate ng-submit="createUser(newUser)">
+        <fieldset>
+            <legend>Create User Login Information</legend>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="email">Email:</label>
+                <div class="col-md-9">
+                    <input ng-model="newUser.email" ng-required="true" autofocus type="email" id="email"/>
+                    <p ng-show="createUserForm.email.$invalid && createUserForm.email.$touched">Please input a Email Address</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="email">Password:</label>
+                <div class="col-md-9">
+                    <input ng-model="newUser.password" ng-required="true" autofocus type="password" id="password"/>
+                    <p ng-show="createUserForm.password.$invalid && createUserForm.password.$touched">Please input a
+                        Password</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="retypePassword">Retype Password:</label>
+                <div class="col-md-9">
+                    <input ng-model="newUser.retypePassword" ng-required="true" autofocus type="password"
+                           id="retypePassword"/>
+                    <p ng-show="createUserForm.retypePassword.$invalid && createUserForm.retypePassword.$touched">Please input a
+                        Password</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="nameFirst">First Name:</label>
+                <div class="col-md-9">
+                    <input ng-model="newUser.name.first" ng-required="true" autofocus type="text" id="nameFirst"/>
+                    <p ng-show="createUserForm.name.first.$invalid && createUserForm.name.first.$touched">Please input a
+                        First Name</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="nameLast">Last Name:</label>
+                <div class="col-md-9">
+                    <input ng-model="newUser.name.last" ng-required="true" autofocus type="text" id="nameLast"/>
+                    <p ng-show="createUserForm.name.last.$invalid && createUserForm.name.last.$touched">Please input a
+                        Last Name</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="phone">Work Phone #:</label>
+                <div class="col-md-9">
+                    <input ng-model="newUser.phone" ng-required="true" autofocus type="text" id="phone"/>
+                    <p ng-show="createUserForm.phone.$invalid && createUserForm.phone.$touched">Please input a
+                        Work Phone Number</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="department">Department or Desk #:</label>
+                <div class="col-md-9">
+                    <input ng-model="newUser.department" ng-required="true" autofocus type="text" id="department"/>
+                    <p ng-show="createUserForm.department.$invalid && createUserForm.department.$touched">Please input a
+                        Department or Desk #</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                    <input type="submit" value="Register" class="btn btn-primary"/>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</div>

@@ -6,10 +6,31 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var path = require('path');
 
+var passport = require('passport');
+var localStrategy = require('passport-local').Strategy;
+var mongoose = require('mongoose');
+var session = require('express-session');
+var User = require('./models/userSchema');
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+// Mongo setup
+
+//var mongoURI = "mongodb://localhost:27017/basementIdeas";
+//var mongoURI = "mongodb://vincethebutcher:winteriscoming9@ds043012.mongolab.com:43012/primeDesk";
+var mongoURI = "mongodb://localhost:27017/primeDesk";
+var MongoDB = mongoose.connect(mongoURI).connection;
+
+MongoDB.on('error', function (err) {
+  console.log('mongodb connection error', err);
+});
+
+MongoDB.once('open', function () {
+  console.log('mongodb connection open');
+});
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -18,6 +39,58 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+    secret: 'secret',
+    key: 'user',
+    resave: true,
+    saveUninitialized: false,
+    cookie: { maxAge: 60000, secure: false }
+}));
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Passport Stuff
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.serializeUser(function(user, done) {
+    done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done) {
+    User.findById(id, function(err,user){
+        if(err) done(err);
+        done(null,user);
+    });
+});
+
+passport.use('local', new localStrategy({
+        passReqToCallback : true,
+        usernameField: 'username'
+    },
+    function(req, username, password, done){
+        console.log("finding user...");
+        User.findOne({ username: username }, function(err, user) {
+            if (err) throw err;
+            if (!user) {
+                console.log("User doesn't exist");
+                return done(null, false, {message: 'Incorrect username and password.'});}
+
+            // test a matching password
+            console.log("testing for username "+ username + " password: "+ password);
+            user.comparePassword(password, function(err, isMatch) {
+                if (err) throw err;
+                if(isMatch) {
+                    console.log("Password matches for " + user.username + " isMatch " + isMatch);
+                    return done(null, user);
+                }
+                else
+                    console.log("Password doesn't match");
+                done(null, false, { message: 'Incorrect username and password.' });
+            });
+        });
+    }));
 
 app.use('/', routes);
 app.use('/users', users);

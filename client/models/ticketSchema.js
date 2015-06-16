@@ -8,7 +8,9 @@ var TicketSchema = new Schema({
     problem: String,
     email: String,
     browser: String,
-    description: String
+    description: String,
+    iframe: String,
+    userID: String
 });
 
 module.exports = mongoose.model('Ticket', TicketSchema);
