@@ -12,10 +12,6 @@ li {
     list-style: none;
 }
 
-#register {
-    color: #37c2bf;
-}
-
 .login2 {
     background-color: #37c2bf;
     border-color: #37c2bf;
@@ -24,6 +20,7 @@ li {
 .login2:hover {
     background-color: #42a4a1;
     border-color: #42a4a1;
+    float:left;
 }
 
 li a {
@@ -31,9 +28,15 @@ li a {
     background-color: #37c2bf;
 }
 
-li a:hover {
-    color:white;
-    background-color: #42a4a1;
+.registerstyle {
+    color: #37c2bf;
+    background-color:#f2f2f2;
+    float:right;
+}
+
+.registerstyle:hover {
+    color: #42a4a1;
+    background-color:#f2f2f2;
 }
 
 body {
@@ -86,6 +89,7 @@ h4 {
     margin: 5px auto 5px 18%;
     padding-top: 20px;
 }
+
 
 .issue {
     margin: 5px 25% 5px auto;
@@ -168,13 +172,25 @@ h4 {
     text-align: center;
 }
 
-header {
-  color: #177289
-}
-
 .heatTicket{
     margin: 5px;
     padding: 5px;
     background-color: #adadad;
     border-radius: 5px;
+}
+
+header, .nav-pills, .indivnav, .loginInputs, .pull-right {
+    background-color:#177289;
+}
+
+.nav-pills, .loginInputs {
+    padding-top:10px;
+}
+
+.background {
+    background-color:#f2f2f2;
+}
+
+.inline {
+    display:inline-block;
 }
