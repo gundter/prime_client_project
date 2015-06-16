@@ -14,9 +14,9 @@
             </div>
 
             <div class="form-group">
-                <label class="col-md-3 control-label" for="password">Password:</label>
+                <label class="col-md-3 control-label" for="newUser.password">Password:</label>
                 <div class="col-md-9">
-                    <input ng-model="newUser.password" ng-required="true" type="password" id="password"
+                    <input ng-model="newUser.password" ng-required="true" type="password" id="newUser.password"
                            name="password"/>
                     <p ng-show="createUserForm.password.$invalid && createUserForm.password.$touched">Please input a
                         Password</p>
@@ -26,13 +26,12 @@
             <div class="form-group">
                 <label class="col-md-3 control-label" for="confirmPassword">Retype Password:</label>
                 <div class="col-md-9">
-                    <input ng-model="newUser.confirmPassword" ng-required="" type="password"
+                    <input ng-model="newUser.confirmPassword" type="password"
                            name="confirmPassword" id="confirmPassword" pw-check="newUser.password"/>
 
-                    <div class="msg-block" ng-hide="createUserForm.newUser.confirmPassword.$error.pwMatch">
+                    <div class="msg-block" ng-show="createUserForm.confirmPassword.$error.pwMatch">
                         <span class="msg-error">Passwords don't match.</span>
                     </div>
-                    Hey {{createUserForm.newUser.confirmPassword.$error.pwMatch}}
                 </div>
             </div>
 
