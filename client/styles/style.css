@@ -1,4 +1,25 @@
 /*Index Page Styling*/
+
+*{
+    background-color:#f2f2f2;
+}
+
+.holdup {
+    color:#f2f2f2;
+}
+
+.login {
+    background-color: #37c2bf;
+}
+
+.login:hover {
+    background-color: #42a4a1;
+}
+
+#register {
+    color: #37c2bf;
+}
+
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     height: 100%;
@@ -21,7 +42,11 @@ body {
 
 .site-footer {
     text-align: center;
-    background-color: #777777;
+    background-color: #f2f2f2;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 button {
@@ -33,34 +58,47 @@ blockquote {
   background-color: #e6e1dc;
 }
 
-<<<<<<< Updated upstream
 /* About Page Styling*/
+.calcbody {
+    margin: 0 auto;
+    border-color: #7f7f7f;
+    border-width: 5px;
+    border-radius: 10px;
+}
+
+h4 {
+    margin: 5px auto 5px 18%;
+    padding-top: 20px;
+}
+
 .issue {
-  margin: 5px 10% 5px auto;
-  height: 300px;
-  width: 300px;
-  background-color: red;
+    margin: 5px 25% 5px auto;
+    height: 280px;
+    width: 300px;
 }
 
 .aboutContent {
-  margin: 5px auto;
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 475px;
+    text-align: center;
 }
 
 /*Calculator Styling*/
 .output{
     margin: 10px;
     background-color: #ffffff;
-    height: 50px;
+    height: 30px;
     width: 200px;
+    text-align:right;
 }
-
-
+/*Calulator Buttons styled using ilos Style Guide colors - light gradient dark blue, and medium blue color*/
 .numBtn, .opBtn{
     width: 40px;
     margin: 5px;
     padding: 2px;
     height: 25px;
-    background-color: #009926;
+    background-color: #3F51B5;
 }
 
 .clrBtn{
@@ -68,7 +106,7 @@ blockquote {
     margin: 5px;
     padding: 2px;
     height: 25px;
-    background-color: #dd1144;
+    background-color: #313446;
 }
 
 /*Ticket Page Styling*/
@@ -111,14 +149,10 @@ blockquote {
 }
 
 .btn {
-  text-align: center;
+    text-align: center;
 }
-<<<<<<< HEAD
-=======
 
-=======
 header {
   color: #177289
 }
->>>>>>> Stashed changes
->>>>>>> d10975400878c044545462212c6b25895b43f2e4
+
