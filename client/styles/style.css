@@ -226,3 +226,19 @@ h4 {
     border-radius: 5px;
 }
 
+header, .nav-pills, .indivnav, .loginInputs, .pull-right {
+    background-color:#177289;
+}
+
+.nav-pills, .loginInputs {
+    padding-top:10px;
+}
+
+.background {
+    background-color:#f2f2f2;
+}
+
+.inline {
+    display:inline-block;
+}
+
