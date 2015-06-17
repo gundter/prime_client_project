@@ -109,10 +109,16 @@ blockquote {
   height: 200px;
 }
 
-.btn {
+.btn{
   text-align: center;
 }
 
-header {
+header{
   color: #177289
+}
+
+.ticketWrapper{
+    background-color: #adadad;
+    border-radius: 5px;
+    margin: 5px;
 }
