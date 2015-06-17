@@ -1,5 +1,5 @@
 <div class="container" ng-controller="ticketController">
-    <form class="col-md-offset-2 col-md-8 ticketForm" name='ticketForm' novalidate ng-submit="ticketSubmit()">
+    <form class="col-md-offset-2 col-md-8 ticketForm" name='ticketForm' novalidate ng-submit="createTicket(ticket)">
         <h2 class="ticketHeader">Issue Report</h2>
         <div class="form-group">
             <label class="col-md-3" for="problem">Problem:</label>
@@ -12,7 +12,7 @@
         <div class="form-group">
             <label class="col-md-3" for="email">Contact Email:</label>
             <div class="col-md-9">
-                <input type="email" id="email" class="col-md-12 field" name="email" ng-model="ticket.email" ng-required="true"/>
+                <input type="email" id="email" class="col-md-12 field" name="email" ng-model="ticket.email" ng-required="true" />
                 <p class="incomplete" ng-show="ticketForm.email.$invalid && ticketForm.email.$touched"> Please input email</p>
             </div>
         </div>
