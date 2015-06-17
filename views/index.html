@@ -18,9 +18,9 @@
         <!-- /////////////////////////// -->
         <div class="navBar pull-left">
             <ul class="nav nav-pills">
-                <li><a href="#home">About</a></li>
-                <li><a href="#ticket">Report An Issue</a></li>
-                <li><a href="#allTickets">All Tickets</a></li>
+                <li class="indivnav"><a href="#home">About</a></li>
+                <li class="indivnav"><a href="#ticket">Report An Issue</a></li>
+                <li class="indivnav"><a href="#allTickets">All Tickets</a></li>
             </ul>
         </div>
 
@@ -38,23 +38,16 @@
 
             <div ng-if="showLogin" class="">
                 <form action="/" method="post">
-                    <ul class="loginInputs">
-                        <li>
-                            <input class="loginInputs" type="text" name="username" id="username" placeholder="Email"/>
-                        </li>
-                        <li>
-                            <input class="loginInputs" type="password" name="password" id="password"
-                                   placeholder="password"/>
-                        </li>
-
-                        <li><input class="btn btn-primary login" type="submit" value="Log In"/></li>
-                        <li><a href="#register">Register</a></li>
-
-                    </ul>
+                    <div class="loginInputs">
+                        <div><input class="loginInputs background" type="text" name="username" id="username" placeholder="Email"/></div>
+                        <div><input class="loginInputs background" type="password" name="password" id="password"
+                                   placeholder="password"/></div>
+                        <div><div class="inline"><input class="btn btn-primary login2" type="submit" value="Log In"></div>
+                        <div class= "stylereg"><a href="#register" class="registerstyle">Register</a></div></div>
+                    </div>
                 </form>
             </div>
         </div>
-
     </header>
 
      <!-- /////////////////////////// -->

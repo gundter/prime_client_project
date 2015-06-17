@@ -8,16 +8,35 @@
     color:#f2f2f2;
 }
 
-.login {
+li {
+    list-style: none;
+}
+
+.login2 {
+    background-color: #37c2bf;
+    border-color: #37c2bf;
+}
+
+.login2:hover {
+    background-color: #42a4a1;
+    border-color: #42a4a1;
+    float:left;
+}
+
+li a {
+    color:white;
     background-color: #37c2bf;
 }
 
-.login:hover {
-    background-color: #42a4a1;
+.registerstyle {
+    color: #37c2bf;
+    background-color:#f2f2f2;
+    float:right;
 }
 
-#register {
-    color: #37c2bf;
+.registerstyle:hover {
+    color: #42a4a1;
+    background-color:#f2f2f2;
 }
 
 body {
@@ -67,9 +86,10 @@ blockquote {
 }
 
 h4 {
-    margin: 5px auto 5px 18%;
+    margin: 6px auto 6px 18%;
     padding-top: 20px;
 }
+
 
 .issue {
     margin: 5px 25% 5px auto;
@@ -151,7 +171,25 @@ h4 {
 .btn {
     text-align: center;
 }
+.heatTicket{
+    margin: 5px;
+    padding: 5px;
+    background-color: #adadad;
+    border-radius: 5px;
+}
 
-header {
-  color: #177289
+header, .nav-pills, .indivnav, .loginInputs, .pull-right {
+    background-color:#177289;
+}
+
+.nav-pills, .loginInputs {
+    padding-top:10px;
+}
+
+.background {
+    background-color:#f2f2f2;
+}
+
+.inline {
+    display:inline-block;
 }
