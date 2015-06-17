@@ -7,8 +7,8 @@
             <div class="form-group">
                 <label class="col-md-3 control-label" for="email">Email:</label>
                 <div class="col-md-9">
-                    <input ng-model="newUser.email" ng-required="" autofocus type="email" id="email"/>
-                    <p ng-show="createUserForm.newUser.email.$invalid && createUserForm.newUser.email.$touched">Please input a
+                    <input ng-model="newUser.email" ng-required="true" autofocus type="email" id="email" name="email"/>
+                    <p ng-show="createUserForm.email.$invalid && createUserForm.email.$touched">Please input a
                         Email Address</p>
                 </div>
             </div>
@@ -16,20 +16,20 @@
             <div class="form-group">
                 <label class="col-md-3 control-label" for="newUser.password">Password:</label>
                 <div class="col-md-9">
-                    <input ng-model="newUser.password" ng-required="true" type="password" id="newUser.password" />
-                    <p ng-show="createUserForm.newUser.password.$invalid && createUserForm.newUser.password.$touched">Please input a
+                    <input ng-model="newUser.password" ng-required="true" type="password" id="newUser.password"
+                           name="password"/>
+                    <p ng-show="createUserForm.password.$invalid && createUserForm.password.$touched">Please input a
                         Password</p>
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="col-md-3 control-label" for="newUser.confirmPassword">Retype Password:</label>
+                <label class="col-md-3 control-label" for="confirmPassword">Retype Password:</label>
                 <div class="col-md-9">
-                    <input ng-model="newUser.confirmPassword" ng-required="" type="password"
-                           name="newUser.confirmPassword"
-                           id="newUser.confirmPassword" pw-check="newUser.password"/>
+                    <input ng-model="newUser.confirmPassword" type="password" ng-required="true"
+                           name="confirmPassword" id="confirmPassword" pw-check="newUser.password"/>
 
-                    <div class="msg-block" ng-hide="createUserForm.newUser.confirmPassword.$error.pwMatch">
+                    <div class="msg-block" ng-show="createUserForm.confirmPassword.$error.pwMatch">
                         <span class="msg-error">Passwords don't match.</span>
                     </div>
                 </div>
@@ -38,8 +38,9 @@
             <div class="form-group">
                 <label class="col-md-3 control-label" for="nameFirst">First Name:</label>
                 <div class="col-md-9">
-                    <input ng-model="newUser.name.first" ng-required="true" type="text" id="nameFirst"/>
-                    <p ng-show="createUserForm.name.first.$invalid && createUserForm.name.first.$touched">Please input a
+                    <input ng-model="newUser.name.first" ng-required="true" type="text" id="nameFirst"
+                           name="nameFirst"/>
+                    <p ng-show="createUserForm.nameFirst.$invalid && createUserForm.nameFirst.$touched">Please input a
                         First Name</p>
                 </div>
             </div>
@@ -47,8 +48,8 @@
             <div class="form-group">
                 <label class="col-md-3 control-label" for="nameLast">Last Name:</label>
                 <div class="col-md-9">
-                    <input ng-model="newUser.name.last" ng-required="true" type="text" id="nameLast"/>
-                    <p ng-show="createUserForm.name.last.$invalid && createUserForm.name.last.$touched">Please input a
+                    <input ng-model="newUser.name.last" ng-required="true" type="text" id="nameLast" name="nameLast"/>
+                    <p ng-show="createUserForm.nameLast.$invalid && createUserForm.nameLast.$touched">Please input a
                         Last Name</p>
                 </div>
             </div>
@@ -56,7 +57,7 @@
             <div class="form-group">
                 <label class="col-md-3 control-label" for="phone">Work Phone #:</label>
                 <div class="col-md-9">
-                    <input ng-model="newUser.phone" ng-required="true" type="text" id="phone"/>
+                    <input ng-model="newUser.phone" ng-required="true" type="text" id="phone" name="phone"/>
                     <p ng-show="createUserForm.phone.$invalid && createUserForm.phone.$touched">Please input a
                         Work Phone Number</p>
                 </div>
@@ -65,7 +66,8 @@
             <div class="form-group">
                 <label class="col-md-3 control-label" for="department">Department or Desk #:</label>
                 <div class="col-md-9">
-                    <input ng-model="newUser.department" ng-required="true" autofocus type="text" id="department"/>
+                    <input ng-model="newUser.department" ng-required="true" autofocus type="text" id="department"
+                           name="department"/>
                     <p ng-show="createUserForm.department.$invalid && createUserForm.department.$touched">Please input a
                         Department or Desk #</p>
                 </div>
