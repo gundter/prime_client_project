@@ -1,18 +1,18 @@
-<div class="col-md-offset-3 col-md-4" ng-controller="allTicketController">
-    <div class="ticketDisplay" ng-repeat="ticket in allTickets">
-        <div class="ticketWrapper">
-            <div class="heatTicket">
-                    <div class=" col-md-12 ticketProblem"><p>PROBLEM: {{ticket.problem}}</p></div>
+<div ng-controller="allTicketController">
+    <div class="row">
+        <div class="ticketDisplay col-md-offset-1" ng-repeat="ticket in allTickets" >
+            <div class="well col-md-4 heatTicket">
+                    <div class="col-md-12 ticketProblem"><p>PROBLEM: {{ticket.problem}}</p></div>
                 <div>
                     <div class="well col-md-9">
                         <div class="ticketName"><p>NAME: {{ticket.name}}</p></div>
                         <div class="ticketEmail"><p>EMAIL: {{ticket.email}}</p></div>
                         <div class="ticketPhone"><p>PHONE: {{ticket.phone}}</p></div>
-                        <div class="ticketDepartment"><p>DEPARTMENT/ DESK:{{ticket.department}}</p></div>
+                        <div class="ticketDepartment"><p>DEPARTMENT/ DESK: {{ticket.department}}</p></div>
                     </div>
                     <div class="col-md-3">
                         <div class="ticketNum"><p>{{ticket.ticketNum}}</p></div>
-                        <div class="ticketNum"><p>DATE: {{ticket.date | date :'medium'}}</p></div>
+                        <div class="ticketNum"><p>{{ticket.date | date :'medium'}}</p></div>
                     </div>
                 </div>
                 <div class="col-md-12">
