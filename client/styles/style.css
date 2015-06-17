@@ -1,4 +1,44 @@
 /*Index Page Styling*/
+
+*{
+    background-color:#f2f2f2;
+}
+
+.holdup {
+    color:#f2f2f2;
+}
+
+li {
+    list-style: none;
+}
+
+.login2 {
+    background-color: #37c2bf;
+    border-color: #37c2bf;
+}
+
+.login2:hover {
+    background-color: #42a4a1;
+    border-color: #42a4a1;
+    float:left;
+}
+
+li a {
+    color:white;
+    background-color: #37c2bf;
+}
+
+.registerstyle {
+    color: #37c2bf;
+    background-color:#f2f2f2;
+    float:right;
+}
+
+.registerstyle:hover {
+    color: #42a4a1;
+    background-color:#f2f2f2;
+}
+
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     height: 100%;
@@ -21,7 +61,11 @@ body {
 
 .site-footer {
     text-align: center;
-    background-color: #777777;
+    background-color: #f2f2f2;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 button {
@@ -34,32 +78,47 @@ blockquote {
 }
 
 /* About Page Styling*/
+.calcbody {
+    margin: 0 auto;
+    border-color: #7f7f7f;
+    border-width: 5px;
+    border-radius: 10px;
+}
+
+h4 {
+    margin: 6px auto 6px 18%;
+    padding-top: 20px;
+}
+
+
 .issue {
-  margin: 5px 10% 5px auto;
-  height: 300px;
-  width: 300px;
-  background-color: red;
+    margin: 5px 25% 5px auto;
+    height: 280px;
+    width: 300px;
 }
 
 .aboutContent {
-  margin: 5px auto;
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 475px;
+    text-align: center;
 }
 
 /*Calculator Styling*/
 .output{
     margin: 10px;
     background-color: #ffffff;
-    height: 50px;
+    height: 30px;
     width: 200px;
+    text-align:right;
 }
-
-
+/*Calulator Buttons styled using ilos Style Guide colors - light gradient dark blue, and medium blue color*/
 .numBtn, .opBtn{
     width: 40px;
     margin: 5px;
     padding: 2px;
     height: 25px;
-    background-color: #009926;
+    background-color: #3F51B5;
 }
 
 .clrBtn{
@@ -67,7 +126,7 @@ blockquote {
     margin: 5px;
     padding: 2px;
     height: 25px;
-    background-color: #dd1144;
+    background-color: #313446;
 }
 
 /*Ticket Page Styling*/
@@ -110,9 +169,29 @@ blockquote {
 }
 
 .btn {
-  text-align: center;
+    text-align: center;
 }
 
-header {
-  color: #177289
+.heatTicket{
+    margin: 5px;
+    padding: 5px;
+    background-color: #adadad;
+    border-radius: 5px;
 }
+
+header, .nav-pills, .indivnav, .loginInputs, .pull-right {
+    background-color:#177289;
+}
+
+.nav-pills, .loginInputs {
+    padding-top:10px;
+}
+
+.background {
+    background-color:#f2f2f2;
+}
+
+.inline {
+    display:inline-block;
+}
+
