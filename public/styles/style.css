@@ -12,7 +12,11 @@
     background-color: #37c2bf;
 }
 
-li a {
+.login:hover {
+    background-color: #42a4a1;
+}
+
+#register {
     color: #37c2bf;
 }
 
@@ -150,10 +154,4 @@ h4 {
 
 header {
   color: #177289
-}
-.heatTicket{
-    margin: 5px;
-    padding: 5px;
-    background-color: #adadad;
-    border-radius: 5px;
 }
