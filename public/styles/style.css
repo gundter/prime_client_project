@@ -103,14 +103,8 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .navBar, .login ul, .l
     background-color:#177289;
 }
 
-<<<<<<< HEAD
 .nav-pills, .loginInputs {
     margin: 12px;
-=======
-h4 {
-    margin: 6px auto 6px 18%;
-    padding-top: 20px;
->>>>>>> sandbox
 }
 
 .nav-pills li {
@@ -169,7 +163,6 @@ h4 {
 
 .numBtnGroups {
     display: block;
-
     margin-right: auto;
     margin-left: auto;
 }
