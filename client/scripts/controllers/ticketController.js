@@ -20,5 +20,9 @@ App.controller('ticketController', ["$scope", "$http", function($scope, $http){
                     $scope.ticket.email = $scope.user.email;
                     console.log("Email: ", $scope.user.email);
             }
-            );
+        );
+
+        $http.get('/api/getData').success(function(data){
+            console.log("Data from API", data);
+        });
 }]);
