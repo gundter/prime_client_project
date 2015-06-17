@@ -1,5 +1,6 @@
+/*///////////////////*/
 /*Index Page Styling*/
-
+/*///////////////////*/
 *{
     background-color:#f2f2f2;
 }
@@ -12,6 +13,29 @@ li {
     list-style: none;
 }
 
+.loginInputs li , .signedIn li{
+    list-style-type: none;
+    display: inline;
+    padding: 5px;
+    background-color:#177289;
+}
+.signedIn li {
+    color: white;
+}
+
+.signedIn {
+    margin-top: 12px;
+}
+
+.signedIn button {
+    margin-right: 8em;
+}
+
+#username, #password {
+    padding: 5px;
+    padding-right: 15px;
+}
+
 .login2 {
     background-color: #37c2bf;
     border-color: #37c2bf;
@@ -20,7 +44,6 @@ li {
 .login2:hover {
     background-color: #42a4a1;
     border-color: #42a4a1;
-    float:left;
 }
 
 li a {
@@ -31,7 +54,6 @@ li a {
 .registerstyle {
     color: #37c2bf;
     background-color:#f2f2f2;
-    float:right;
 }
 
 .registerstyle:hover {
@@ -77,25 +99,29 @@ blockquote {
   background-color: #e6e1dc;
 }
 
-/* About Page Styling*/
-.calcbody {
-    margin: 0 auto;
-    border-color: #7f7f7f;
-    border-width: 5px;
-    border-radius: 10px;
+header, .nav-pills, .indivnav, .loginInputs, .pull-right, .navBar, .login ul, .login form {
+    background-color:#177289;
 }
 
+.nav-pills, .loginInputs {
+    margin: 12px;
+}
+
+.nav-pills li {
+    margin-right: 8px;
+}
+
+/*///////////////////*/
+/* About Page Styling*/
+/*///////////////////*/
 h4 {
     margin: 6px auto 6px 18%;
     padding-top: 20px;
 }
 
-
-.issue {
-    margin: 5px 25% 5px auto;
-    height: 280px;
-    width: 300px;
-}
+/*.issue {*/
+    /**/
+/*}*/
 
 .aboutContent {
     padding-top: 30px;
@@ -103,16 +129,21 @@ h4 {
     width: 475px;
     text-align: center;
 }
-
+/*///////////////////*/
 /*Calculator Styling*/
+/*///////////////////*/
 .output{
     margin: 10px;
     background-color: #ffffff;
     height: 30px;
     width: 200px;
     text-align:right;
+    border: 1px solid #484848;
 }
+
+/*///////////////////*/
 /*Calulator Buttons styled using ilos Style Guide colors - light gradient dark blue, and medium blue color*/
+/*///////////////////*/
 .numBtn, .opBtn{
     width: 40px;
     margin: 5px;
@@ -122,15 +153,32 @@ h4 {
 }
 
 .clrBtn{
+    display: block;
     width: 75px;
-    margin: 5px;
+    margin: 5px auto;
     padding: 2px;
     height: 25px;
     background-color: #313446;
 }
 
-/*Ticket Page Styling*/
+.numBtnGroups {
+    display: block;
 
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.calcbody {
+    border: 2px solid #484848;
+    border-radius: 10px;
+    padding: 5px auto;
+    margin: 5px 25% 5px auto;
+    height: 250px;
+    width: 225px;
+}
+/*///////////////////*/
+/*Ticket Page Styling*/
+/*///////////////////*/
 .ticketForm{
   background-color: #40a070;
 }
@@ -177,21 +225,5 @@ h4 {
     padding: 5px;
     background-color: #adadad;
     border-radius: 5px;
-}
-
-header, .nav-pills, .indivnav, .loginInputs, .pull-right {
-    background-color:#177289;
-}
-
-.nav-pills, .loginInputs {
-    padding-top:10px;
-}
-
-.background {
-    background-color:#f2f2f2;
-}
-
-.inline {
-    display:inline-block;
 }
 

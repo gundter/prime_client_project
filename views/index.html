@@ -36,15 +36,16 @@
                 </ul>
             </div>
 
-            <div ng-if="showLogin" class="">
+            <div ng-if="showLogin">
                 <form action="/" method="post">
-                    <div class="loginInputs">
-                        <div><input class="loginInputs background" type="text" name="username" id="username" placeholder="Email"/></div>
-                        <div><input class="loginInputs background" type="password" name="password" id="password"
-                                   placeholder="password"/></div>
-                        <div><div class="inline"><input class="btn btn-primary login2" type="submit" value="Log In"></div>
-                        <div class= "stylereg"><a href="#register" class="registerstyle">Register</a></div></div>
-                    </div>
+                    <ul class="loginInputs">
+                        <li><input type="text" name="username" id="username"
+                                  placeholder="Email"/></li>
+                        <li><input type="password" name="password" id="password"
+                                   placeholder="password"/></li>
+                        <li><input class="btn btn-primary login2" type="submit" value="Log In"></li>
+                        <li><a href="#register" class="registerstyle btn">Register</a></li>
+                    </ul>
                 </form>
             </div>
         </div>
