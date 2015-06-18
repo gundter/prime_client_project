@@ -1,0 +1,66 @@
+<div class="container" ng-controller="registerController">
+    <form name="createUserForm" class="col-md-offset-2 col-md-8 form-horizontal" novalidate
+          ng-submit="createUser(newUser)">
+        <fieldset>
+            <legend>Create User Login Information</legend>
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="email">Email:</label>
+                <div class="col-md-9">
+                    <input ng-model="newUser.email" ng-required="true" autofocus type="email" id="email" name="email"/>
+                    <p ng-show="createUserForm.email.$invalid && createUserForm.email.$touched">Please input a Email Address</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="newUser.password">Password:</label>
+                <div class="col-md-9">
+                    <input ng-model="newUser.password" ng-required="true" type="password" id="newUser.password"
+                           name="password"/>
+                    <p ng-show="createUserForm.password.$invalid && createUserForm.password.$touched">Please input aPassword</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="confirmPassword">Retype Password:</label>
+                <div class="col-md-9">
+                    <input ng-model="newUser.confirmPassword" type="password" ng-required="true" name="confirmPassword" id="confirmPassword" pw-check="newUser.password"/>
+                    <div class="msg-block" ng-show="createUserForm.confirmPassword.$error.pwMatch">
+                        <span class="msg-error">Passwords don't match.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="nameFirst">First Name:</label>
+                <div class="col-md-9">
+                    <input ng-model="newUser.name.first" ng-required="true" type="text" id="nameFirst"
+                           name="nameFirst"/>
+                    <p ng-show="createUserForm.nameFirst.$invalid && createUserForm.nameFirst.$touched">Please input aFirst Name</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="nameLast">Last Name:</label>
+                <div class="col-md-9">
+                    <input ng-model="newUser.name.last" ng-required="true" type="text" id="nameLast" name="nameLast"/>
+                    <p ng-show="createUserForm.nameLast.$invalid && createUserForm.nameLast.$touched">Please input aLast Name</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="phone">Work Phone #:</label>
+                <div class="col-md-9">
+                    <input ng-model="newUser.phone" ng-required="true" type="text" id="phone" name="phone"/>
+                    <p ng-show="createUserForm.phone.$invalid && createUserForm.phone.$touched">Please input aWork Phone Number</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="department">Department or Desk #:</label>
+                <div class="col-md-9">
+                    <input ng-model="newUser.department" ng-required="true" autofocus type="text" id="department" name="department"/>
+                    <p ng-show="createUserForm.department.$invalid && createUserForm.department.$touched">Please input aDepartment or Desk #</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                    <button type="submit" class="btn btn-primary" ng-disabled="createUserForm.newUser.$invalid">CreateUser</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
