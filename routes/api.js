@@ -5,14 +5,6 @@ var formUrlEncoded = require('form-urlencoded');
 var VideoData = require('../models/videoDataSchema');
 
 
-router.get('/getData', function(req, res, next){
-    var results = new GetData();
-    console.log('Data Created');
-    results.go(function(data){
-        res.json(data);
-    })
-});
-
 //////////////////////////////
 // Save Video Data to database
 //////////////////////////////
@@ -28,8 +20,17 @@ router.post('/', function(req, res, next){
        res.send(data);
     });
 });
-//////////////////////////////
 
+//////////////////////////////////
+// Get the Video Recording Button
+//////////////////////////////////
+router.get('/getData', function(req, res, next){
+    var results = new GetData();
+    console.log('Data Created');
+    results.go(function(data){
+        res.json(data);
+    })
+});
 function GetData(){
     if (!this instanceof GetData){
         return new GetData();
@@ -37,8 +38,8 @@ function GetData(){
 }
 
 var post_data = {
-    api_key: 'b6ANvns15XjOUeMbvyzVumTbgJ9stQ',
-    api_key_type: 'org_guest_recorder',
+    api_key: 'nwSDkitfEISvI022Eh57iTITwtTFoY',
+    api_key_type: 'user',
     service_name: 'Prime Digital Academy Team',
     // Change video_endpoint for your own website
     video_endpoint: 'https://polar-reef-6279.herokuapp.com/api',
