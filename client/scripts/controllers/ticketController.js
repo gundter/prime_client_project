@@ -25,11 +25,11 @@ App.controller('ticketController', ["$scope", "$http", function($scope, $http){
 
         $http.get('/api/getData').success(
             function(data) {
-            console.log(data);
-            $scope.returnedData = data;
-            $scope.iframe = $scope.returnedData.recordButtonIframe;
+                    console.log(data);
+                    $scope.returnedData = data;
+                    $scope.iframe = $scope.returnedData.recordButtonIframe;
         }).error(
             function(err) {
-            console.log(err);
+                    console.log(err);
         });
 }]);
