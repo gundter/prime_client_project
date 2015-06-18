@@ -32,7 +32,7 @@
             <div ng-if="showUser">
                 <ul class="signedIn">
                     <li class="lead" ng-cloak>Hi, {{user}}</li>
-                    <li><button class="btn btn-warning" ng-click="logout()">Logout</button></li>
+                    <li><button class="btn btn-warning" ng-click="logout()" ng-cloak>Logout</button></li>
                 </ul>
             </div>
 
@@ -44,7 +44,7 @@
                         <li><input type="password" name="password" id="password"
                                    placeholder="password"/></li>
                         <li><input class="btn btn-primary login2" type="submit" value="Log In"></li>
-                        <li><a href="#register" class="registerstyle">Register</a></li>
+                        <li><a href="#register" class="registerstyle btn">Register</a></li>
                     </ul>
                 </form>
             </div>

@@ -62,12 +62,18 @@ li {
     background-color: #42a4a1;
 }
 
+li.inactive a {
+    background-color: #37c2bf;
+}
+
 .registerstyle {
     color: white;
+    background-color:#177289;
 }
 
 .registerstyle:hover {
-    color: #37c2bf;
+    color: white;
+    background-color: #37c2bf;
 }
 
 body {
