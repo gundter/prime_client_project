@@ -20,8 +20,7 @@ var API = require('./routes/api');
 var app = express();
 
 // Mongo setup
-
-var mongoURI = "mongodb://primedesk:vtkb@ds045252.mongolab.com:45252/primedesk";
+var mongoURI = "mongodb://localhost:27017/primeDesk";
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function (err) {
@@ -32,8 +31,6 @@ MongoDB.once('open', function () {
   console.log('mongodb connection open');
 });
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

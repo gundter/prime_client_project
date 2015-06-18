@@ -13,9 +13,8 @@
             <div class="form-group">
                 <label class="col-md-3 control-label" for="newUser.password">Password:</label>
                 <div class="col-md-9">
-                    <input ng-model="newUser.password" ng-required="true" type="password" id="newUser.password"
-                           name="password"/>
-                    <p ng-show="createUserForm.password.$invalid && createUserForm.password.$touched">Please input aPassword</p>
+                    <input ng-model="newUser.password" ng-required="true" type="password" id="newUser.password" name="password"/>
+                    <p ng-show="createUserForm.password.$invalid && createUserForm.password.$touched">Please input a Password</p>
                 </div>
             </div>
             <div class="form-group">
@@ -30,35 +29,35 @@
             <div class="form-group">
                 <label class="col-md-3 control-label" for="nameFirst">First Name:</label>
                 <div class="col-md-9">
-                    <input ng-model="newUser.name.first" ng-required="true" type="text" id="nameFirst"
-                           name="nameFirst"/>
-                    <p ng-show="createUserForm.nameFirst.$invalid && createUserForm.nameFirst.$touched">Please input aFirst Name</p>
+                    <input ng-model="newUser.name.first" ng-required="true" type="text" id="nameFirst" name="nameFirst"/>
+                    <p ng-show="createUserForm.nameFirst.$invalid && createUserForm.nameFirst.$touched">Please input a First Name</p>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-3 control-label" for="nameLast">Last Name:</label>
                 <div class="col-md-9">
                     <input ng-model="newUser.name.last" ng-required="true" type="text" id="nameLast" name="nameLast"/>
-                    <p ng-show="createUserForm.nameLast.$invalid && createUserForm.nameLast.$touched">Please input aLast Name</p>
+                    <p ng-show="createUserForm.nameLast.$invalid && createUserForm.nameLast.$touched">Please input a Last Name</p>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-3 control-label" for="phone">Work Phone #:</label>
                 <div class="col-md-9">
                     <input ng-model="newUser.phone" ng-required="true" type="text" id="phone" name="phone"/>
-                    <p ng-show="createUserForm.phone.$invalid && createUserForm.phone.$touched">Please input aWork Phone Number</p>
+                    <p ng-show="createUserForm.phone.$invalid && createUserForm.phone.$touched">Please input a Work Phone Number</p>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-3 control-label" for="department">Department or Desk #:</label>
                 <div class="col-md-9">
-                    <input ng-model="newUser.department" ng-required="true" autofocus type="text" id="department" name="department"/>
-                    <p ng-show="createUserForm.department.$invalid && createUserForm.department.$touched">Please input aDepartment or Desk #</p>
+                    <input ng-model="newUser.department" ng-required="true" autofocus type="text" id="department"
+                           name="department"/>
+                    <p ng-show="createUserForm.department.$invalid && createUserForm.department.$touched">Please input a Department or Desk #</p>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
-                    <button type="submit" class="btn btn-primary" ng-disabled="createUserForm.newUser.$invalid">CreateUser</button>
+                    <button type="submit" class="btn btn-primary" ng-disabled="createUserForm.newUser.$invalid">Create User</button>
                 </div>
             </div>
         </fieldset>

@@ -1,5 +1,4 @@
 App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, $http, $sce){
-
         console.log("Controller Empty");
 
         $scope.ticket = {};

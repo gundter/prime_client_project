@@ -20,4 +20,7 @@ App.controller('headerController', ['$scope', '$http', function($scope, $http){
             console.log(data + " has been logged out");
         });
     };
+
+
+
 }]);

@@ -54,12 +54,7 @@ router.post('/createTicket', function(req, res, next) {
                 name: req.user.name.first + " " + req.user.name.last,
                 phone: req.user.phone,
                 department: req.user.department,
-<<<<<<< HEAD
                 userID: req.user._id
-=======
-                userID: req.user._id,
-                date: Date.now()
->>>>>>> 2543d04a985da04eb1f14cc1599fce906d0fe17d
 
             };
             Tickets.create(ticket, function (err, post) {

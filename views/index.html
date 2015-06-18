@@ -11,7 +11,8 @@
 
 <body>
 
-    <header class="container-fluid ng-cloak" ng-controller="headerController">
+    <header class="container-fluid" ng-controller="headerController">
+
         <!-- /////////////////////////// -->
         <!-- Navigation -->
         <!-- /////////////////////////// -->
@@ -30,8 +31,8 @@
 
             <div ng-if="showUser">
                 <ul class="signedIn">
-                    <li class="lead">Hi, {{user}}</li>
-                    <li><button class="btn btn-warning" ng-click="logout()">Logout</button></li>
+                    <li class="lead" ng-cloak>Hi, {{user}}</li>
+                    <li><button class="btn btn-warning" ng-click="logout()" ng-cloak>Logout</button></li>
                 </ul>
             </div>
 
