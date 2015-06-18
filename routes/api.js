@@ -11,6 +11,11 @@ router.get('/getData', function(req, res, next){
     })
 });
 
+router.post('/', function(req, res, next){
+    console.log('Results: ', req.body);
+    res.send(req.body);
+});
+
 function GetData(){
     if (!this instanceof GetData){
         return new GetData();
