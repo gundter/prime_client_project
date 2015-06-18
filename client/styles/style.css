@@ -40,13 +40,13 @@ li {
     padding-right: 15px;
 }
 
-.login2, .ticketSubmit {
+.login2, .ticketSubmit, .submitregister{
     background-color: #37c2bf;
     border-color: #37c2bf;
     color:white;
 }
 
-.login2:hover, .ticketSubmit:hover {
+.login2:hover, .submitregister:hover, .ticketSubmit:hover {
     background-color: #42a4a1;
     border-color: #42a4a1;
     color:white;
@@ -240,11 +240,13 @@ h4 {
     border-radius: 5px;
 }
 
-.fieldsrequired {
-}
 .videoDisplay{
     text-align: center;
     margin-top: 10px;
+}
+
+.createuser {
+    color: #3F51B5;
 }
 
 header, .nav-pills, .indivnav, .loginInputs, .pull-right {
