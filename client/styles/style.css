@@ -5,6 +5,10 @@
     background-color:#f2f2f2;
 }
 
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
+}
+
 .holdup {
     color:#f2f2f2;
 }
