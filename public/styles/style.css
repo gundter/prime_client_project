@@ -40,14 +40,16 @@ li {
     padding-right: 15px;
 }
 
-.login2 {
+.login2, .ticketSubmit, .nav-pills {
     background-color: #37c2bf;
     border-color: #37c2bf;
+    color:white;
 }
 
-.login2:hover {
+.login2:hover, .ticketSubmit:hover, .nav-pills {
     background-color: #42a4a1;
     border-color: #42a4a1;
+    color:white;
 }
 
 li a {
@@ -92,11 +94,6 @@ body {
 
 a:hover {
     text-decoration: none;
-}
-
-button {
-  background-color: #42a4a1;
-  color:white;
 }
 
 blockquote {
@@ -154,6 +151,7 @@ h4 {
     padding: 2px;
     height: 25px;
     background-color: #3F51B5;
+    color:white;
 }
 
 .clrBtn{
@@ -163,6 +161,7 @@ h4 {
     padding: 2px;
     height: 25px;
     background-color: #313446;
+    color:white;
 }
 
 .numBtnGroups {
@@ -182,28 +181,30 @@ h4 {
 /*///////////////////*/
 /*Ticket Page Styling*/
 /*///////////////////*/
+.ticketPage {
+    color:#484848;
+}
+
 .ticketForm{
-  background-color: #40a070;
+    border: 1px solid #313446;
 }
 
 .incomplete {
-  color: #ffffff;
+  color: gray;
 }
 
 .ticketHeader{
-  text-align: center;
+    text-align: center;
+    color: #3F51B5;
 }
 
 .recordBtn{
   text-align: center;
 }
 
-.videoDisplay{
-  text-align: center;
-}
-
 .ticketSubmit {
-  margin: 5px auto;
+    margin: 5px auto;
+    float:right;
 }
 
 .form-group{
@@ -228,6 +229,13 @@ h4 {
     padding: 5px;
     background-color: #adadad;
     border-radius: 5px;
+}
+
+.fieldsrequired {
+}
+.videoDisplay{
+    text-align: center;
+    margin-top: 10px;
 }
 
 header, .nav-pills, .indivnav, .loginInputs, .pull-right {
