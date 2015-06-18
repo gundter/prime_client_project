@@ -3,6 +3,8 @@ App.controller('ticketController', ["$scope", "$http", function($scope, $http){
 
         $scope.ticket = {};
         $scope.user = {};
+        $scope.returnedData = {};
+        $scope.iframe = '';
 
         $scope.createTicket = function(ticket) {
                 console.log(ticket);
@@ -19,6 +21,15 @@ App.controller('ticketController', ["$scope", "$http", function($scope, $http){
                     $scope.user = data;
                     $scope.ticket.email = $scope.user.email;
                     console.log("Email: ", $scope.user.email);
-            }
-            );
+            });
+
+        $http.get('/api/getData').success(
+            function(data) {
+            console.log(data);
+            $scope.returnedData = data;
+            $scope.iframe = $scope.returnedData.recordButtonIframe;
+        }).error(
+            function(err) {
+            console.log(err);
+        });
 }]);
