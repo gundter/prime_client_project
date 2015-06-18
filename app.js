@@ -20,7 +20,7 @@ var API = require('./routes/api');
 var app = express();
 
 // Mongo setup
-var mongoURI = "mongodb://localhost:27017/primeDesk";
+var mongoURI = "mongodb://primedesk:vtkb@ds045252.mongolab.com:45252/primedesk";
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function (err) {
