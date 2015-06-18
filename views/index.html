@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>primeDesk</title>
+
+    <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
+
+</head>
+
+<body>
+
+    <header class="container-fluid" ng-controller="headerController">
+
+        <!-- /////////////////////////// -->
+        <!-- Navigation -->
+        <!-- /////////////////////////// -->
+        <div class="navBar pull-left">
+            <ul class="nav nav-pills">
+                <li class="indivnav"><a href="#home">About</a></li>
+                <li class="indivnav"><a href="#ticket">Report An Issue</a></li>
+                <li class="indivnav"><a href="#allTickets">All Tickets</a></li>
+            </ul>
+        </div>
+
+        <!-- /////////////////// -->
+        <!-- Login Functionality -->
+        <!-- /////////////////// -->
+        <div class="login pull-right">
+
+            <div ng-if="showUser">
+                <ul class="signedIn">
+                    <li class="lead">Hi, {{user}}</li>
+                    <li><button class="btn btn-warning" ng-click="logout()">Logout</button></li>
+                </ul>
+            </div>
+
+            <div ng-if="showLogin">
+                <form action="/" method="post">
+                    <ul class="loginInputs">
+                        <li><input type="text" name="username" id="username"
+                                  placeholder="Email"/></li>
+                        <li><input type="password" name="password" id="password"
+                                   placeholder="password"/></li>
+                        <li><input class="btn btn-primary login2" type="submit" value="Log In"></li>
+                        <li><a href="#register" class="registerstyle btn">Register</a></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </header>
+
+     <!-- /////////////////////////// -->
+     <!-- Bring in all the pages here -->
+    <!-- /////////////////////////// -->
+    <div class="page-wrap">
+        <main ng-view></main>
+    </div>
+
+
+    <footer class="site-footer">
+        <a href="apiInstructions">API Instructions</a>
+    </footer>
+
+    <!-- /////////////////////////// -->
+    <!-- Scripts Start -->
+    <!-- /////////////////////////// -->
+    <script type="text/javascript" src="/vendors/angular/angular.js"></script>
+    <script type="text/javascript" src="/vendors/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="/javascripts/app.min.js"></script>
+    <script type="text/javascript" src="/javascripts/controllers/apiInstructionsController.min.js"></script>
+    <script type="text/javascript" src="/javascripts/controllers/ticketController.min.js"></script>
+    <script type="text/javascript" src="/javascripts/controllers/headerController.min.js"></script>
+    <script type="text/javascript" src="/javascripts/controllers/registerController.min.js"></script>
+    <script type="text/javascript" src="/javascripts/controllers/calculatorController.min.js"></script>
+    <script type="text/javascript" src="/javascripts/controllers/allTicketController.min.js"></script>
+
+
+</body>
+</html>
