@@ -1,39 +1,44 @@
 <div class="container">
     <h1> primeDesk </h1>
 
-    <div class="issue">
-        <h4> This looks like an issue.  Let's report it!</h4>
-        <div>
-            <div class="calcbody">
-                <div class="thinborder" >
-                    <p class="output" name="output">
-                        {{output}}
-                    </p>
-                </div>
-                <div class="calcButtons">
-                    <button name="btn1" class="numBtn" value="1" ng-click='numBtn("1")'>1</button>
-                    <button name="btn2" class="numBtn" value="2" ng-click='numBtn("2")'>2</button>
-                    <button name="btn3" class="numBtn" value="3" ng-click='numBtn("3")'>3</button>
-                    <button name="btnMin" class="opBtn" ng-click='opBtn("-")'>-</button>
-                    <br>
-                    <button name="btn4" class="numBtn" value="4" ng-click='numBtn("4")'>4</button>
-                    <button name="btn5" class="numBtn" value="5" ng-click='numBtn("5")'>5</button>
-                    <button name="btn6" class="numBtn" value="6" ng-click='numBtn("6")'>6</button>
-                    <button name="btnAdd" class="opBtn" ng-click='opBtn("+")'>+</button>
-                    <br>
-                    <button name="btn7" class="numBtn" value="7" ng-click='numBtn("7")'>7</button>
-                    <button name="btn8" class="numBtn" value="8" ng-click='numBtn("8")'>8</button>
-                    <button name="btn9" class="numBtn" value="9" ng-click='numBtn("9")'>9</button>
-                    <button name="btnMult" class="opBtn" ng-click='opBtn("*")'>*</button>
-                    <br>
-                    <button name="btn0" class="numBtn" value="0" ng-click='numBtn("0")'>0</button>
-                    <button name="btnDot" class="opBtn" ng-click='opBtn(".")'>.</button>
-                    <button name="btnEquals" class="opBtn" ng-click='equal()'>=</button>
-                    <button name="btnDiv" class="opBtn" ng-click='opBtn("/")'>/</button>
-                    <br>
-                    <button name="btnClear" class="clrBtn" ng-click='clear()'>CLEAR</button>
-                </div>
+    <h4> Looks like an issue, let's report this</h4>
+
+
+    <div class="calcbody">
+
+        <p class="output" name="output">{{output}}</p>
+
+        <div class="calcButtons">
+            <div class="numBtnGroups">
+                <button name="btn1" class="numBtn" value="1" ng-click='numBtn("1")'>1</button>
+                <button name="btn2" class="numBtn" value="2" ng-click='numBtn("2")'>2</button>
+                <button name="btn3" class="numBtn" value="3" ng-click='numBtn("3")'>3</button>
+                <button name="btnMin" class="opBtn" ng-click='opBtn("-")'>-</button>
+                <br>
             </div>
+            <div class="numBtnGroups">
+                <button name="btn4" class="numBtn" value="4" ng-click='numBtn("4")'>4</button>
+                <button name="btn5" class="numBtn" value="5" ng-click='numBtn("5")'>5</button>
+                <button name="btn6" class="numBtn" value="6" ng-click='numBtn("6")'>6</button>
+                <button name="btnAdd" class="opBtn" ng-click='opBtn("+")'>+</button>
+                <br>
+            </div>
+            <div class="numBtnGroups">
+                <button name="btn7" class="numBtn" value="7" ng-click='numBtn("7")'>7</button>
+                <button name="btn8" class="numBtn" value="8" ng-click='numBtn("8")'>8</button>
+                <button name="btn9" class="numBtn" value="9" ng-click='numBtn("9")'>9</button>
+                <button name="btnMult" class="opBtn" ng-click='opBtn("*")'>*</button>
+                <br>
+            </div>
+
+            <div class="numBtnGroups">
+                <button name="btn0" class="numBtn" value="0" ng-click='numBtn("0")'>0</button>
+                <button name="btnDot" class="opBtn" ng-click='opBtn(".")'>.</button>
+                <button name="btnEquals" class="opBtn" ng-click='equal()'>=</button>
+                <button name="btnDiv" class="opBtn" ng-click='opBtn("/")'>/</button>
+                <br>
+            </div>
+            <button name="btnClear" class="clrBtn" ng-click='clear()'>CLEAR</button>
         </div>
     </div>
 
@@ -41,17 +46,12 @@
     <div class="aboutContent">
         <p class="lead"> About Us </p>
 
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-        </p>
+        <p> ilos Recorder is a technology developed by ICOS that allows screen capture and audio recording of issues for sharing with a help desk, team members or broader organization. This website was developed to showcase how simply and easily this product can be used.</p>
 
 
-        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        </p>
+        <p class="holdup">
+        Blue bubble gum Croissant danish biscuit soufflé caramels jujubes jelly. Dragée danish caramels lemon drops dragée. Gummi bears cupcake biscuit tiramisu sugar plum pastry. Dragée gummies applicake pudding liquorice. Donut jujubes oat cake jelly-o. </p>
 
-        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-        </p></div>
+    </div>
 
 </div>

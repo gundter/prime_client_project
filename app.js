@@ -15,13 +15,11 @@ var User = require('./models/userSchema');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var ticket = require('./routes/ticket');
+var API = require('./routes/api');
 
 var app = express();
 
 // Mongo setup
-
-//var mongoURI = "mongodb://localhost:27017/basementIdeas";
-//var mongoURI = "mongodb://vincethebutcher:winteriscoming9@ds043012.mongolab.com:43012/primeDesk";
 var mongoURI = "mongodb://localhost:27017/primeDesk";
 var MongoDB = mongoose.connect(mongoURI).connection;
 
@@ -33,8 +31,6 @@ MongoDB.once('open', function () {
   console.log('mongodb connection open');
 });
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -96,6 +92,7 @@ passport.use('local', new localStrategy({
 app.use('/', routes);
 app.use('/users', users);
 app.use('/ticket', ticket);
+app.use('/api', API);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

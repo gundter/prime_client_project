@@ -20,7 +20,7 @@
             <div class="form-group">
                 <label class="col-md-3 control-label" for="confirmPassword">Retype Password:</label>
                 <div class="col-md-9">
-                    <input ng-model="newUser.confirmPassword" type="password" name="confirmPassword" id="confirmPassword" pw-check="newUser.password"/>
+                    <input ng-model="newUser.confirmPassword" type="password" ng-required="true" name="confirmPassword" id="confirmPassword" pw-check="newUser.password"/>
                     <div class="msg-block" ng-show="createUserForm.confirmPassword.$error.pwMatch">
                         <span class="msg-error">Passwords don't match.</span>
                     </div>

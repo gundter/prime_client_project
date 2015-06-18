@@ -1,4 +1,66 @@
+/*///////////////////*/
 /*Index Page Styling*/
+/*///////////////////*/
+*{
+    background-color:#f2f2f2;
+}
+
+.holdup {
+    color:#f2f2f2;
+}
+
+li {
+    list-style: none;
+}
+
+.loginInputs li , .signedIn li{
+    list-style-type: none;
+    display: inline;
+    padding: 5px;
+    background-color:#177289;
+}
+.signedIn li {
+    color: white;
+}
+
+.signedIn {
+    margin-top: 12px;
+}
+
+.signedIn button {
+    margin-right: 8em;
+}
+
+#username, #password {
+    padding: 5px;
+    padding-right: 15px;
+}
+
+.login2 {
+    background-color: #37c2bf;
+    border-color: #37c2bf;
+}
+
+.login2:hover {
+    background-color: #42a4a1;
+    border-color: #42a4a1;
+}
+
+li a {
+    color:white;
+    background-color: #37c2bf;
+}
+
+.registerstyle {
+    color: #37c2bf;
+    background-color:#f2f2f2;
+}
+
+.registerstyle:hover {
+    color: #42a4a1;
+    background-color:#f2f2f2;
+}
+
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     height: 100%;
@@ -21,7 +83,11 @@ body {
 
 .site-footer {
     text-align: center;
-    background-color: #777777;
+    background-color: #f2f2f2;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 button {
@@ -33,45 +99,85 @@ blockquote {
   background-color: #e6e1dc;
 }
 
-/* About Page Styling*/
-.issue {
-  margin: 5px 10% 5px auto;
-  height: 300px;
-  width: 300px;
-  background-color: red;
+header, .nav-pills, .indivnav, .loginInputs, .pull-right, .navBar, .login ul, .login form {
+    background-color:#177289;
 }
+
+.nav-pills, .loginInputs {
+    margin: 12px;
+}
+
+.nav-pills li {
+    margin-right: 8px;
+}
+
+/*///////////////////*/
+/* About Page Styling*/
+/*///////////////////*/
+h4 {
+    margin: 6px auto 6px 18%;
+    padding-top: 20px;
+}
+
+/*.issue {*/
+    /**/
+/*}*/
 
 .aboutContent {
-  margin: 5px auto;
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 475px;
+    text-align: center;
 }
-
+/*///////////////////*/
 /*Calculator Styling*/
+/*///////////////////*/
 .output{
     margin: 10px;
     background-color: #ffffff;
-    height: 50px;
+    height: 30px;
     width: 200px;
+    text-align:right;
+    border: 1px solid #484848;
 }
 
-
+/*///////////////////*/
+/*Calulator Buttons styled using ilos Style Guide colors - light gradient dark blue, and medium blue color*/
+/*///////////////////*/
 .numBtn, .opBtn{
     width: 40px;
     margin: 5px;
     padding: 2px;
     height: 25px;
-    background-color: #009926;
+    background-color: #3F51B5;
 }
 
 .clrBtn{
+    display: block;
     width: 75px;
-    margin: 5px;
+    margin: 5px auto;
     padding: 2px;
     height: 25px;
-    background-color: #dd1144;
+    background-color: #313446;
 }
 
-/*Ticket Page Styling*/
+.numBtnGroups {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
 
+.calcbody {
+    border: 2px solid #484848;
+    border-radius: 10px;
+    padding: 5px auto;
+    margin: 5px 25% 5px auto;
+    height: 250px;
+    width: 225px;
+}
+/*///////////////////*/
+/*Ticket Page Styling*/
+/*///////////////////*/
 .ticketForm{
   background-color: #40a070;
 }
@@ -109,19 +215,34 @@ blockquote {
   height: 200px;
 }
 
-.btn{
-  text-align: center;
+.btn {
+    text-align: center;
 }
 
-header{
-  color: #177289
+.ticketNum, .ticketDate {
+    text-align: right;
 }
 
 .heatTicket{
+    margin: 5px;
+    padding: 5px;
     background-color: #adadad;
     border-radius: 5px;
-    margin: 10px;
 }
-.ticketNum{
-    text-align: right;
+
+header, .nav-pills, .indivnav, .loginInputs, .pull-right {
+    background-color:#177289;
 }
+
+.nav-pills, .loginInputs {
+    padding-top:10px;
+}
+
+.background {
+    background-color:#f2f2f2;
+}
+
+.inline {
+    display:inline-block;
+}
+

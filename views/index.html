@@ -18,9 +18,9 @@
         <!-- /////////////////////////// -->
         <div class="navBar pull-left">
             <ul class="nav nav-pills">
-                <li><a href="#home">About</a></li>
-                <li><a href="#ticket">Report An Issue</a></li>
-                <li><a href="#allTickets">All Tickets</a></li>
+                <li class="indivnav"><a href="#home">About</a></li>
+                <li class="indivnav"><a href="#ticket">Report An Issue</a></li>
+                <li class="indivnav"><a href="#allTickets">All Tickets</a></li>
             </ul>
         </div>
 
@@ -36,25 +36,19 @@
                 </ul>
             </div>
 
-            <div ng-if="showLogin" class="">
+            <div ng-if="showLogin">
                 <form action="/" method="post">
                     <ul class="loginInputs">
-                        <li>
-                            <input class="loginInputs" type="text" name="username" id="username" placeholder="Email"/>
-                        </li>
-                        <li>
-                            <input class="loginInputs" type="password" name="password" id="password"
-                                   placeholder="password"/>
-                        </li>
-
-                        <li><input class="btn btn-primary" type="submit" value="Log In"/></li>
-                        <li><a href="#register">Register</a></li>
-
+                        <li><input type="text" name="username" id="username"
+                                  placeholder="Email"/></li>
+                        <li><input type="password" name="password" id="password"
+                                   placeholder="password"/></li>
+                        <li><input class="btn btn-primary login2" type="submit" value="Log In"></li>
+                        <li><a href="#register" class="registerstyle btn">Register</a></li>
                     </ul>
                 </form>
             </div>
         </div>
-
     </header>
 
      <!-- /////////////////////////// -->
