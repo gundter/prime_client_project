@@ -63,13 +63,11 @@ li {
 }
 
 .registerstyle {
-    color: #37c2bf;
-    background-color:#f2f2f2;
+    color: white;
 }
 
 .registerstyle:hover {
-    color: #42a4a1;
-    background-color:#f2f2f2;
+    color: #37c2bf;
 }
 
 body {
