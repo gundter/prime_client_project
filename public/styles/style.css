@@ -117,8 +117,11 @@ header{
   color: #177289
 }
 
-.ticketWrapper{
+.heatTicket{
     background-color: #adadad;
     border-radius: 5px;
-    margin: 5px;
+    margin: 10px;
+}
+.ticketNum{
+    text-align: right;
 }
