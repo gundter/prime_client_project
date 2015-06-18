@@ -21,9 +21,9 @@ var app = express();
 
 // Mongo setup
 
-//var mongoURI = "mongodb://localhost:27017/basementIdeas";
 //var mongoURI = "mongodb://vincethebutcher:winteriscoming9@ds043012.mongolab.com:43012/primeDesk";
-var mongoURI = "mongodb://localhost:27017/primeDesk";
+//var mongoURI = "mongodb://localhost:27017/primeDesk";
+var mongoURI = 'mongodb://tgun6144:Docix016@ds045242.mongolab.com:45242/primedesk';
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function (err) {
