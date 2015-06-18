@@ -32,7 +32,7 @@
         </div>
         <div class="form-group">
             <div class="recordBtn">Record Button Goes Here</div>
-            <div class="videoDisplay">Video Goes Here</div>
+            <div class="videoDisplay" ng-bind-html="iframe"></div>
             <button type="submit" class="btn btn-primary ticketSubmit" ng-disabled="ticketForm.$invalid">Submit Ticket</button>
         </div>
     </form>

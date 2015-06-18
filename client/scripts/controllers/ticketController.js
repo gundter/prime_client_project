@@ -1,4 +1,4 @@
-App.controller('ticketController', ["$scope", "$http", function($scope, $http){
+App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, $http, $sce){
         console.log("Controller Empty");
 
         $scope.ticket = {};
@@ -27,7 +27,7 @@ App.controller('ticketController', ["$scope", "$http", function($scope, $http){
             function(data) {
                     console.log(data);
                     $scope.returnedData = data;
-                    $scope.iframe = $scope.returnedData.recordButtonIframe;
+                    $scope.iframe = $sce.trustAsHtml($scope.returnedData.recordButtonIframe);
         }).error(
             function(err) {
                     console.log(err);
