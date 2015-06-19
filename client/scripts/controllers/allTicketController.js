@@ -23,6 +23,6 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
         return $http.put('/ticket/updateStatus/', $scope.chgTktSts).success(getTickets());
     };
 
-    $scope.getTickets;
+    $scope.getTickets();
 
 }]);
