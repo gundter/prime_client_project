@@ -30,7 +30,7 @@ App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, 
             function(data) {
                     console.log(data);
                     $scope.returnedData = data;
-                    $scope.iframe = $sce.trustAsHtml($scope.returnedData.recordButtonIframe);
+                    $scope.iframeButton = $sce.trustAsHtml($scope.returnedData.recordButtonIframe);
         }).error(
             function(err) {
                     console.log(err);
