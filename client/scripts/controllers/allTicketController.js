@@ -17,11 +17,11 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
                 $scope.users = response.data;
         });
 
-    $scope.ticketClass = function(status){
+    $scope.ticketClass = function(ticket, status){
         $scope.tktStatus = status;
         console.log("allStats: ", $scope.tktStatus);
         console.log("UPDATE: ", status);
-        return $http.put('/createTickets/'+ticket.tktStatus, status)
+        return $http.put('/createTickets/'+ticket._id, status)
     };
 
 }]);
