@@ -21,7 +21,7 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
             tktStatus: status,
             _id: ticket._id
         };
-        return $http.put('/ticket/updateStatus/', $scope.chgTktSts).success(getTickets);
+        return $http.put('/ticket/updateStatus/', $scope.chgTktSts).success($scope.getTickets());
     };
 
     $scope.getTickets();
