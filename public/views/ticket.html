@@ -31,8 +31,8 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="recordBtn"></div>
-            <div class="videoDisplay" ng-bind-html="iframe"></div>
+            <div class="recordBtn" ng-bind-html="iframe"></div>
+            <div class="videoDisplay" ng-bind-html="iframe" ></div>
             <button type="submit" class="btn ticketSubmit" ng-disabled="ticketForm.$invalid">Submit Ticket</button>
             <br/>
             <p class="incomplete fieldsrequired" ng-show="ticketForm.description.$invalid">*Required fields</p>
