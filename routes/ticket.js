@@ -66,6 +66,7 @@ router.post('/createTicket', function(req, res, next) {
 });
 
 router.put('/updateStatus', function(req, res, next) {
+    console.log(req.body, req.body.tktStatus)
     Tickets.findByIdAndUpdate(req.body._id, {tktStatus: req.body.tktStatus}, function (err, data) {
         if (err) return next(err);
         res.json(data);
