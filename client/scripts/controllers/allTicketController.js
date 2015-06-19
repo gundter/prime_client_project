@@ -18,13 +18,6 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
         });
 
     $scope.ticketClass = function(status){
-        if (status == tktOpen){
-            $scope.ticket.tktStatus = tktOpen
-        }else if(status == tktClosed){
-            $scope.ticket.tktStatus = tktClosed
-        }else if(status == tktArchived){
-            $scope.ticket.tktStatus = tktArchived
-        }
         console.log("allStats: ", $scope.tktStatus);
         console.log("UPDATE: ", status);
         return $http.put('/createTickets/'+ticket.tktStatus, status)
