@@ -5,7 +5,8 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
     $scope.users = [];
     $scope.userInfo = {};
 
-    $scope.getTickets = function(){
+
+    $scope.getTickets = function() {
         $http.get('/ticket/getTickets').then(
             function(response) {
                 console.log("All Tickets", response);
@@ -24,5 +25,4 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
     };
 
     $scope.getTickets();
-
 }]);

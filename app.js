@@ -1,10 +1,9 @@
 var express = require('express');
 var path = require('path');
-var favicon = require('serve-favicon');
+//var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var path = require('path');
 
 var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
@@ -12,15 +11,22 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var User = require('./models/userSchema');
 
+//////////////
+//App Routes//
+//////////////
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var ticket = require('./routes/ticket');
 var API = require('./routes/api');
+var videos = require('./routes/videos');
 
 var app = express();
 
 // Mongo setup
-var mongoURI = "mongodb://primedesk:vtkb@ds045252.mongolab.com:45252/primedesk";
+//var mongoURI = "mongodb://vincethebutcher:winteriscoming9@ds047652.mongolab.com:47652/primedesk";
+// var mongoURI = 'mongodb://tgun6144:Docix016@ds045242.mongolab.com:45242/primedesk';
+var mongoURI = "mongodb://primedesk:vtkb@ds045242.mongolab.com:45242/primedesk";
+// var mongoURI = "mongodb://localhost:27017/primeDesk";
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function (err) {
@@ -93,6 +99,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/ticket', ticket);
 app.use('/api', API);
+app.use('/videos', videos);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
