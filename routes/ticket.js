@@ -4,7 +4,7 @@ var passport = require('passport');
 var path = require('path');
 var Users = require('../models/userSchema');
 var Tickets = require('../models/ticketSchema');
-var Videos = require('../models/videoDataSchema');
+var ticketNumber;
 
 
 /////////////////////////
@@ -30,55 +30,39 @@ router.get('/getTickets', function (req, res, next) {
 
 });
 
+
 /////////////////////////
 // Create a New Ticket
 /////////////////////////
-router.post('/createTicket', function(req, res, next) {
 
+
+
+router.post('/createTicket', function(req, res, next) {
     if (req.isAuthenticated()){
 
-        // Find size of Video Collection
-        Videos.find({}, null, function(err, videoData) {
-           var videoDataLen = videoData.length;
-            console.log("Size of Video Collection: ", videoDataLen);
 
-            // Get a new Ticket Number
-            Tickets.find({}, null, function (err, ticketData) {
-                // length of ticket array
-                var ticketNumber = ticketData.length + 1;
-                console.log("Size of Ticket Collection: ", ticketData);
-                console.log("Next Ticket Number: ", ticketNumber);
 
-                // Build a New Ticket
-                var ticket = {
-                    ticketNum: ticketNumber,
-                    problem: req.body.problem,
-                    email: req.body.email,
-                    browser: req.body.browser,
-                    description: req.body.description,
-                    name: req.user.name.first + " " + req.user.name.last,
-                    phone: req.user.phone,
-                    department: req.user.department,
-                    userID: req.user._id,
-                    date: Date.now(),
-                    token: videoData[videoDataLen].token,
-                    randtag: videoData[videoDataLen].randtag,
-                    videoURL: videoData[videoDataLen].videoURL,
-                    embedURL: videoData[videoDataLen].embedURL,
-                    iframe: videoData[videoDataLen].iframe,
-                    tktStatus: "tktOpen"
-                };
+            var ticket = {
+                ticketNum: ticketNumber,
+                problem: req.body.problem,
+                email: req.body.email,
+                browser: req.body.browser,
+                description: req.body.description,
+                iframe: req.body.iframe,
+                name: req.user.name.first + " " + req.user.name.last,
+                phone: req.user.phone,
+                department: req.user.department,
+                userID: req.user._id,
+                tktStatus: "tktOpen"
 
-                // Create a New Ticket
-                Tickets.create(ticket, function (err, post) {
-                    if (err)
-                        next(err);
-                    else
-                        res.send('Success ', post);
-                });
+            };
+            Tickets.create(ticket, function (err, post) {
+                if (err)
+                    next(err);
+                else
+                    res.send('Success');
             });
-        });
-    }
+        }
 });
 
 router.put('/updateStatus', function(req, res, next) {

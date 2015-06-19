@@ -1,7 +1,7 @@
 <div ng-controller="allTicketController">
     <div class="row">
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in allTickets" >
-            <div class="well col-md-5 heatTicket">
+            <div class="well col-md-5 heatTicket {{ticket.tktStatus}}">
                     <div class="col-md-9 ticketProblem"><p>{{ticket.problem}}</p></div>
                     <div class="col-md-3 ticketNum"><p>{{ticket.ticketNum}}</p></div>
                 <div>
@@ -17,6 +17,11 @@
                     <div class="well ticketDescription"><p>DESCRIPTION: {{ticket.description}}</p></div>
                     <div class="ticketBrowser"><p>BROWSER: {{ticket.browser}}</p></div>
                     <div class="ticketIframe">{{ticket.iframe}}</div>
+                </div>
+                <div class="ticketStatus">
+                    <a ng-click="ticketClass(ticket, 'tktOpen')">Open</a>
+                    <a ng-click="ticketClass(ticket, 'tktClosed')">Close</a>
+                    <a ng-click="ticketClass(ticket, 'tktArchived')">Archive</a>
                 </div>
             </div>
         </div>

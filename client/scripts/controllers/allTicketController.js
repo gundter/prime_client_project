@@ -19,7 +19,7 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
     $http.get('/users/user').then(
         function(response) {
             console.log("User reponse: ", response);
-            $scope.users = response.data;
+                $scope.users = response.data;
         });
 
     $scope.ticketClass = function(ticket, status){
