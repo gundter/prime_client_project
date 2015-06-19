@@ -267,17 +267,3 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right {
     display:inline-block;
 }
 
-.tktOpen{
-    border-color: #009926;
-    border-radius: 4px;
-}
-
-.tktClosed{
-    border-color: #dd1144;
-    border-radius: 4px;
-}
-
-.tktArchived{
-    border-color: #222222;
-    border-radius: 4px;
-}

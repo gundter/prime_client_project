@@ -1,6 +1,6 @@
 var express = require('express');
 var path = require('path');
-var favicon = require('serve-favicon');
+//var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -20,7 +20,11 @@ var API = require('./routes/api');
 var app = express();
 
 // Mongo setup
-var mongoURI = "mongodb://primedesk:vtkb@ds045252.mongolab.com:45252/primedesk";
+
+var mongoURI = "mongodb://vincethebutcher:winteriscoming9@ds047652.mongolab.com:47652/primedesk";
+// var mongoURI = 'mongodb://tgun6144:Docix016@ds045242.mongolab.com:45242/primedesk';
+// var mongoURI = "mongodb://localhost:27017/primeDesk";
+
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function (err) {
