@@ -67,11 +67,11 @@ router.post('/createTicket', function(req, res, next) {
         }
 });
 
-router.put('/:id', function(req, res, next) {
-    Tickets.findByIdAndUpdate(req.params.id, req.body, function (err, assignment) {
-        if (err) return next(err);
-        res.json(assignment);
-    });
-});
+//router.put('/:id', function(req, res, next) {
+//    Tickets.findByIdAndUpdate(req.params.id, req.body, function (err, assignment) {
+//        if (err) return next(err);
+//        res.json(assignment);
+//    });
+//});
 
 module.exports = router;
