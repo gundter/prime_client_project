@@ -59,4 +59,5 @@ router.get('/logout', function(req, res, next) {
   res.send(user);
 });
 
+console.log('users route loaded');
 module.exports = router;

@@ -16,4 +16,5 @@ router.post('/',
     }
 );
 
+console.log('index route loaded');
 module.exports = router;
