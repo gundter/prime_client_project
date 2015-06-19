@@ -4,7 +4,6 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
     $scope.ticket = {};
     $scope.users = [];
     $scope.userInfo = {};
-    $scope.tktStatus;
 
     $http.get('/ticket/getTickets').then(
         function(response) {
