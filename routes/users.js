@@ -24,7 +24,7 @@ router.post('/create', function(req,res,next) {
         if (err)
             next(err);
         else
-            res.redirect('/home');
+            res.redirect('/');
     })
 });
 

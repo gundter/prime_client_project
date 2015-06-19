@@ -4,6 +4,7 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
     $scope.ticket = {};
     $scope.users = [];
     $scope.userInfo = {};
+    $scope.tktStatus;
 
     $http.get('/ticket/getTickets').then(
         function(response) {
@@ -16,5 +17,18 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
             console.log("User reponse: ", response);
                 $scope.users = response.data;
         });
+
+    $scope.ticketClass = function(status){
+        if (status == tktOpen){
+            $scope.ticket.tktStatus = tktOpen
+        }else if(status == tktClosed){
+            $scope.ticket.tktStatus = tktClosed
+        }else if(status == tktArchived){
+            $scope.ticket.tktStatus = tktArchived
+        }
+        console.log("allStats: ", $scope.tktStatus);
+        console.log("UPDATE: ", status);
+        return $http.put('/createTickets/'+ticket.tktStatus, status)
+    };
 
 }]);

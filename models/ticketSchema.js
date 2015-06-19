@@ -15,7 +15,8 @@ var TicketSchema = new Schema({
     name: String,
     phone: String,
     department: String,
-    date: {type: Date, default: new Date()}
+    date: {type: Date, default: new Date()},
+    tktStatus: String
 });
 
 module.exports = mongoose.model('Ticket', TicketSchema);

@@ -54,7 +54,8 @@ router.post('/createTicket', function(req, res, next) {
                 name: req.user.name.first + " " + req.user.name.last,
                 phone: req.user.phone,
                 department: req.user.department,
-                userID: req.user._id
+                userID: req.user._id,
+                tktStatus: tktOpen
 
             };
             Tickets.create(ticket, function (err, post) {
@@ -64,6 +65,13 @@ router.post('/createTicket', function(req, res, next) {
                     res.send('Success');
             });
         }
+});
+
+router.put('/:id', function(req, res, next) {
+    Tickets.findByIdAndUpdate(req.params.id, req.body, function (err, assignment) {
+        if (err) return next(err);
+        res.json(assignment);
+    });
 });
 
 module.exports = router;
