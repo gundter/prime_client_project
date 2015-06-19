@@ -40,13 +40,13 @@ li {
     padding-right: 15px;
 }
 
-.login2, .ticketSubmit {
+.login2, .ticketSubmit, .createuserbtn {
     background-color: #37c2bf;
     border-color: #37c2bf;
     color:white;
 }
 
-.login2:hover, .ticketSubmit:hover {
+.login2:hover, .ticketSubmit:hover, .createuserbtn:hover {
     background-color: #42a4a1;
     border-color: #42a4a1;
     color:white;
@@ -74,6 +74,10 @@ li.inactive a {
 .registerstyle:hover {
     color: white;
     background-color: #37c2bf;
+}
+
+.createuser {
+    color:#3F51B5;
 }
 
 body {
@@ -233,6 +237,10 @@ h4 {
     text-align: center;
 }
 
+.ticketNum, .ticketDate {
+    text-align: right;
+}
+
 .heatTicket{
     margin: 5px;
     padding: 5px;
@@ -240,8 +248,6 @@ h4 {
     border-radius: 5px;
 }
 
-.fieldsrequired {
-}
 .videoDisplay{
     text-align: center;
     margin-top: 10px;
@@ -263,3 +269,17 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right {
     display:inline-block;
 }
 
+.tktOpen{
+    border-radius: 4px;
+    border: 10px solid #96c661;
+}
+
+.tktClosed{
+    border-radius: 4px;
+    border: 10px solid #e1564f;
+}
+
+.tktArchived{
+    border-radius: 4px;
+    border: 10px solid #484848;
+}
