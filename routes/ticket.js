@@ -64,7 +64,8 @@ router.post('/createTicket', function(req, res, next) {
                     randtag: videoData[videoDataLen].randtag,
                     videoURL: videoData[videoDataLen].videoURL,
                     embedURL: videoData[videoDataLen].embedURL,
-                    iframe: videoData[videoDataLen].iframe
+                    iframe: videoData[videoDataLen].iframe,
+                    tktStatus: "tktOpen"
                 };
 
                 // Create a New Ticket
@@ -77,6 +78,13 @@ router.post('/createTicket', function(req, res, next) {
             });
         });
     }
+});
+
+router.put('/updateStatus', function(req, res, next) {
+    Tickets.findByIdAndUpdate(req.body._id, {tktStatus: req.body.tktStatus}, function (err, data) {
+        if (err) return next(err);
+        res.json(data);
+    });
 });
 
 module.exports = router;

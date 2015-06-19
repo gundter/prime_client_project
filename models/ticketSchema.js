@@ -15,6 +15,8 @@ var TicketSchema = new Schema({
     phone: String,
     department: String,
     date: {type: Date, default: new Date()},
+    tktStatus: String,
+
     // video stuff
     token: String,
     randtag: String,
