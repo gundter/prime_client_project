@@ -248,8 +248,6 @@ h4 {
     border-radius: 5px;
 }
 
-.fieldsrequired {
-}
 .videoDisplay{
     text-align: center;
     margin-top: 10px;
@@ -271,3 +269,17 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right {
     display:inline-block;
 }
 
+.tktOpen{
+    border-color: #96c661;
+    border-radius: 4px;
+}
+
+.tktClosed{
+    border-color: #e1564f;
+    border-radius: 4px;
+}
+
+.tktArchived{
+    border-color: #484848;
+    border-radius: 4px;
+}
