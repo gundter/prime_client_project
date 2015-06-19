@@ -19,8 +19,8 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
 
     $scope.ticketClass = function(ticket, status){
         $scope.tktStatus = status;
-        console.log("allStats: ", ticket, $scope.tktStatus);
-        console.log("UPDATE: ", status);
+        console.log(ticket, $scope.tktStatus);
+        console.log(status);
         return $http.put('/createTickets/'+ticket._id, status)
     };
 
