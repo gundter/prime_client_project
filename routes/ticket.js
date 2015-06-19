@@ -39,7 +39,7 @@ router.post('/createTicket', function(req, res, next) {
 
         // Find size of Video Collection
         Videos.find({}, null, function(err, videoData) {
-           var videoDataLen = videoData.length;
+           var videoDataLen = videoData.length - 1;
             console.log("Size of Video Collection: ", videoDataLen);
 
             // Get a new Ticket Number
@@ -60,7 +60,6 @@ router.post('/createTicket', function(req, res, next) {
                     phone: req.user.phone,
                     department: req.user.department,
                     userID: req.user._id,
-                    date: Date.now(),
                     token: videoData[videoDataLen].token,
                     randtag: videoData[videoDataLen].randtag,
                     videoURL: videoData[videoDataLen].videoURL,
