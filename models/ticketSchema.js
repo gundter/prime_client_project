@@ -14,13 +14,14 @@ var TicketSchema = new Schema({
     name: String,
     phone: String,
     department: String,
-    date: String,
+    date: {type: Date, default: new Date()}
     // video stuff
     token: String,
     randtag: String,
     videoURL: String,
     embedURL: String,
     iframe: String
+
 });
 
 module.exports = mongoose.model('Ticket', TicketSchema);
