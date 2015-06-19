@@ -39,8 +39,10 @@ App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, 
 
         $http.get('/videos').success(
             function(data) {
+                    var lastVideo = data.length - 1;
+
                     console.log("Video Data: ",data);
-                    console.log("Video URL: ", data.videoURL);
+                    console.log("Video URL: ", data[lastVideo].videoURL);
                     $scope.recordedVideo = data;
                     $scope.iframeVideo = $sce.trustAsHtml($scope.recordedVideo.iframe);
                     $scope.embedVideoURL = $sce.trustAsHtml($scope.recordedVideo.embedURL);
