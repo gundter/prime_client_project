@@ -31,6 +31,7 @@ router.get('/getData', function(req, res, next){
         res.json(data);
     })
 });
+
 function GetData(){
     if (!this instanceof GetData){
         return new GetData();
@@ -41,8 +42,7 @@ var post_data = {
     api_key: 'nwSDkitfEISvI022Eh57iTITwtTFoY',
     api_key_type: 'user',
     service_name: 'Prime Digital Academy Team',
-    // Change video_endpoint for your own website
-    video_endpoint: 'https://polar-reef-6279.herokuapp.com/api',
+    video_endpoint: 'https://fathomless-brook-8214.herokuapp.com/api',
     video_endpoint_extras: [],
     video_set_public: true
 };
