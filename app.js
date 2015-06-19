@@ -4,7 +4,6 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var path = require('path');
 
 var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
@@ -12,10 +11,14 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var User = require('./models/userSchema');
 
+//////////////
+//App Routes//
+//////////////
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var ticket = require('./routes/ticket');
 var API = require('./routes/api');
+var videos = require('./routes/videos');
 
 var app = express();
 
@@ -97,6 +100,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/ticket', ticket);
 app.use('/api', API);
+app.use('/videos', videos);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
