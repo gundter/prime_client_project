@@ -5,16 +5,14 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
     $scope.users = [];
     $scope.userInfo = {};
 
-    $scope.getTickets();
 
-    $scope.getTickets = function(){
+    $scope.getTickets = function() {
         $http.get('/ticket/getTickets').then(
             function(response) {
                 console.log("All Tickets", response);
                 $scope.allTickets = response.data;
             });
     };
-
 
     $http.get('/users/user').then(
         function(response) {
@@ -32,4 +30,5 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
         return $http.put('/ticket/updateStatus/', $scope.chgTktSts).success(getTickets());
     };
 
+    $scope.getTickets();
 }]);
