@@ -40,13 +40,13 @@ li {
     padding-right: 15px;
 }
 
-.login2, .ticketSubmit {
+.login2, .ticketSubmit, .createuserbtn {
     background-color: #37c2bf;
     border-color: #37c2bf;
     color:white;
 }
 
-.login2:hover, .ticketSubmit:hover {
+.login2:hover, .ticketSubmit:hover, .createuserbtn:hover {
     background-color: #42a4a1;
     border-color: #42a4a1;
     color:white;
@@ -74,6 +74,10 @@ li.inactive a {
 .registerstyle:hover {
     color: white;
     background-color: #37c2bf;
+}
+
+.createuser {
+    color:#3F51B5;
 }
 
 body {
@@ -231,6 +235,10 @@ h4 {
 
 .btn {
     text-align: center;
+}
+
+.ticketNum, .ticketDate {
+    text-align: right;
 }
 
 .heatTicket{

@@ -4,7 +4,10 @@ App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, 
         $scope.ticket = {};
         $scope.user = {};
         $scope.returnedData = {};
-        $scope.iframe = '';
+        $scope.iframeButton = '';
+        $scope.recordedVideo = {};
+        $scope.iframeVideo = '';
+        $scope.embedVideoURL = '';
 
         $scope.createTicket = function(ticket) {
                 console.log(ticket);
@@ -31,5 +34,16 @@ App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, 
         }).error(
             function(err) {
                     console.log(err);
+        });
+
+        $http.get('/videos').success(
+            function(data) {
+                    console.log(data);
+                    $scope.recordedVideo = data;
+                    $scope.iframeVideo = $sce.trustAsHtml($scope.recordedVideo.iframe);
+                    $scope.embedVideoURL = $sce.trustAsHtml($scope.recordedVideo.embedURL);
+        }).error(
+            function(err) {
+                console.log(err);
         });
 }]);

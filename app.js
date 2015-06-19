@@ -23,9 +23,11 @@ var videos = require('./routes/videos');
 var app = express();
 
 // Mongo setup
-//var mongoURI = "mongodb://vincethebutcher:winteriscoming9@ds047652.mongolab.com:47652/primedesk";
-var mongoURI = "mongodb://tgun6144:Docix016@ds045242.mongolab.com:45242/primedesk";
+var mongoURI = "mongodb://vincethebutcher:winteriscoming9@ds047652.mongolab.com:47652/primedesk";
+// var mongoURI = 'mongodb://tgun6144:Docix016@ds045242.mongolab.com:45242/primedesk';
 //var mongoURI = "mongodb://primedesk:vtkb@ds045242.mongolab.com:45242/primedesk";
+// var mongoURI = "mongodb://localhost:27017/primeDesk";
+
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function (err) {
@@ -36,8 +38,6 @@ MongoDB.once('open', function () {
   console.log('mongodb connection open');
 });
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
