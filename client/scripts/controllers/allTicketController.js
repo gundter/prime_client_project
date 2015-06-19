@@ -21,7 +21,7 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
         $scope.tktStatus = status;
         console.log(ticket, $scope.tktStatus);
         console.log(status);
-        return $http.put('/createTickets/'+ticket._id, status)
+        return $http.put('/createTickets/'+ticket._id, ticket.tktStatus = status)
     };
 
 }]);
