@@ -270,17 +270,14 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right {
 .tktOpen{
     border-color: #009926;
     border-radius: 10px;
-    border: 10px;
 }
 
 .tktClosed{
     border-color: #dd1144;
     border-radius: 10px;
-    border: 10px;
 }
 
 .tktArchived{
     border-color: #222222;
     border-radius: 10px;
-    border: 10px;
 }
