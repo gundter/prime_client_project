@@ -87,4 +87,5 @@ router.put('/updateStatus', function(req, res, next) {
     });
 });
 
+console.log('ticket route loaded');
 module.exports = router;

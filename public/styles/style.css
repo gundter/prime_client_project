@@ -270,6 +270,7 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right {
 }
 
 .tktOpen{
+<<<<<<< HEAD
     border-color: #96c661;
     border-radius: 10px;
 }
@@ -282,4 +283,18 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right {
 .tktArchived{
     border-color: #484848;
     border-radius: 10px;
+=======
+    border-radius: 4px;
+    border: 10px solid #96c661;
+}
+
+.tktClosed{
+    border-radius: 4px;
+    border: 10px solid #e1564f;
+}
+
+.tktArchived{
+    border-radius: 4px;
+    border: 10px solid #484848;
+>>>>>>> 12c5c16679506cb4bb276aa9e214aa29d0ca4981
 }
