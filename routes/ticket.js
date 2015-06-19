@@ -66,5 +66,5 @@ router.post('/createTicket', function(req, res, next) {
             });
         }
 });
-
+console.log('ticket route loaded');
 module.exports = router;

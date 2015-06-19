@@ -8,4 +8,5 @@ router.get('/', function(req, res, next){
     })
 });
 
+console.log('videos route loaded');
 module.exports = router;
