@@ -10,12 +10,19 @@ var TicketSchema = new Schema({
     email: String,
     browser: String,
     description: String,
-    iframe: String,
     userID: String,
     name: String,
     phone: String,
     department: String,
-    date: {type: Date, default: new Date()}
+    date: {type: Date, default: new Date()},
+    tktStatus: String,
+    // video stuff
+    token: String,
+    randtag: String,
+    videoURL: String,
+    embedURL: String,
+    iframe: String
+
 });
 
 module.exports = mongoose.model('Ticket', TicketSchema);
