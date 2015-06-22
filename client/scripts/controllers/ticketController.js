@@ -48,7 +48,10 @@ App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, 
         // Get the Last Video that was Recorded
         ///////////////////////////////////////
 
+        $scope.count = 0;
         setInterval( function() {
+            $scope.count+=1;
+            console.log("How many times does this run?", $scope.count);
             $http.get('/videos').success(
                 function(data) {
                     var lastVideo = data.length - 1;
@@ -62,7 +65,7 @@ App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, 
                 function(err) {
                     console.log(err);
                 });
-        }, 5000);
+        }, 1000);
 
 
 }]);
