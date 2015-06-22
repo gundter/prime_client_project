@@ -8,6 +8,7 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
         $scope.recordedVideo = {};
         $scope.iframeVideo = '';
         $scope.embedVideoURL = '';
+        $scope.token = '';
 
         /////////////////////////
         // Create a New Ticket
@@ -41,6 +42,7 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
                     console.log(data);
                     $scope.returnedData = data;
                     $scope.iframeButton = $sce.trustAsHtml($scope.returnedData.recordButtonIframe);
+                    $scope.token = $scope.returnedData.token;
                     console.log("iframe button: ",$scope.iframeButton);
 
         }).error(
@@ -54,7 +56,7 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
         $scope.getVideo = function(){
             $interval(function() {
 
-                $http.get('/videos').success(
+                $http.get('/videos/' + $scope.token).success(
                     function (data) {
                         var lastVideo = data.length - 1;
                         console.log("SetInterval Happens");
@@ -63,6 +65,9 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
                         $scope.recordedVideo = data;
                         $scope.iframeVideo = $sce.trustAsHtml($scope.recordedVideo[lastVideo].iframe);
                         $scope.embedVideoURL = $sce.trustAsHtml($scope.recordedVideo[lastVideo].embedURL);
+
+                        $scope.token === data.token ? $scope.matchToken = true : $scope.matchToken = false;
+
                     }).error(
                     function (err) {
                         console.log(err);
