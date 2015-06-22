@@ -250,6 +250,10 @@ h4 {
     text-align: center;
 }
 
+.ticketNum, .ticketDate {
+    text-align: right;
+}
+
 .heatTicket{
     margin: 5px;
     padding: 5px;
@@ -257,8 +261,6 @@ h4 {
     border-radius: 5px;
 }
 
-.fieldsrequired {
-}
 .videoDisplay{
     text-align: center;
     margin-top: 10px;
@@ -280,3 +282,17 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right {
     display:inline-block;
 }
 
+.tktOpen{
+    border-radius: 4px;
+    border: 10px solid #96c661;
+}
+
+.tktClosed{
+    border-radius: 4px;
+    border: 10px solid #e1564f;
+}
+
+.tktArchived{
+    border-radius: 4px;
+    border: 10px solid #484848;
+}
