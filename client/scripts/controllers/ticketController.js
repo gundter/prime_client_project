@@ -26,6 +26,8 @@ App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, 
                     console.log("Email: ", $scope.user.email);
             });
 
+        $http.post('/api/nullify', {token: "", randtag: "", videoURL: "", embedURL: "", iframe: ""});
+
         $http.get('/api/getData').success(
             function(data) {
                     console.log(data);
@@ -52,5 +54,4 @@ App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, 
             function(err) {
                 console.log(err);
         });
-
 }]);
