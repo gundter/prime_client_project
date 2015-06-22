@@ -1,4 +1,4 @@
-App.controller('ticketController', ["$scope", "$http", '$sce', '$interval',function($scope, $http, $sce, $interval){
+App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$location',function($scope, $http, $sce, $interval, $location){
         console.log("ticketController loads");
 
         $scope.ticket = {};
@@ -9,13 +9,17 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval',funct
         $scope.iframeVideo = '';
         $scope.embedVideoURL = '';
 
+        /////////////////////////
+        // Create a New Ticket
+        ////////////////////////
         $scope.createTicket = function(ticket) {
                 console.log(ticket);
                 $http.post('/ticket/createTicket', ticket).success(
                     function(data, status, headers, config) {
                             console.log("Ticket Created ", status);
-                            $scope.ticket = {};
                     });
+            $scope.ticket = {};
+            $location.path('/allTickets');
         };
 
         ////////////////////////
