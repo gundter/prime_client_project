@@ -1,5 +1,5 @@
 App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, $http, $sce){
-        console.log("Controller Empty");
+        console.log("ticketController loads");
 
         $scope.ticket = {};
         $scope.user = {};
@@ -30,20 +30,27 @@ App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, 
             function(data) {
                     console.log(data);
                     $scope.returnedData = data;
-                    $scope.iframe = $sce.trustAsHtml($scope.returnedData.recordButtonIframe);
+                    $scope.iframeButton = $sce.trustAsHtml($scope.returnedData.recordButtonIframe);
+                    console.log("iframe button: ",$scope.iframeButton);
+
         }).error(
             function(err) {
                     console.log(err);
         });
 
+
         $http.get('/videos').success(
             function(data) {
-                    console.log(data);
+                    var lastVideo = data.length - 1;
+
+                    console.log("Video Data: ",data);
+                    console.log("Video URL: ", data[lastVideo].videoURL);
                     $scope.recordedVideo = data;
-                    $scope.iframeVideo = $sce.trustAsHtml($scope.recordedVideo.iframe);
-                    $scope.embedVideoURL = $sce.trustAsHtml($scope.recordedVideo.embedURL);
+                    $scope.iframeVideo = $sce.trustAsHtml($scope.recordedVideo[lastVideo].iframe);
+                    $scope.embedVideoURL = $sce.trustAsHtml($scope.recordedVideo[lastVideo].embedURL);
         }).error(
             function(err) {
                 console.log(err);
         });
+
 }]);
