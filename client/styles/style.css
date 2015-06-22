@@ -30,6 +30,7 @@ color: #c2e49c;
 font-size: 50px;
 }
 
+
 .loginInputs li , .signedIn li{
     list-style-type: none;
     display: inline;
@@ -53,17 +54,18 @@ font-size: 50px;
     padding-right: 15px;
 }
 
-.login2, .ticketSubmit, .createuserbtn {
+.login2, .ticketSubmit, .createuserbtn, .videoShow {
     background-color: #37c2bf;
     border-color: #37c2bf;
     color:white;
 }
 
-.login2:hover, .ticketSubmit:hover, .createuserbtn:hover {
+.login2:hover, .ticketSubmit:hover, .createuserbtn:hover, .videoShow:hover {
     background-color: #42a4a1;
     border-color: #42a4a1;
     color:white;
 }
+
 
 .nav-pills li a {
     color:white;
@@ -252,6 +254,27 @@ h4 {
 
 .ticketNum, .ticketDate {
     text-align: right;
+}
+
+.embedShow{
+    color:#37c2bf;
+    background-color: white;
+    border-color:#37c2bf;
+    margin-left:2px;
+}
+.embedShow:hover {
+    color:#42a4a1;
+    background-color: white;
+    border-color:#42a4a1;
+}
+
+.videoShow, .embedShow {
+    margin-top:5px;
+    margin-bottom:3px;
+}
+
+.recordBtn {
+    margin-top: 10px;
 }
 
 .heatTicket{
