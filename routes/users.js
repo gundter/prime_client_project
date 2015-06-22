@@ -24,9 +24,14 @@ router.post('/create', function(req,res,next) {
         if (err)
             next(err);
         else
-            res.redirect('/');
+            res.redirect('/', function(req,res,next) {
+                passport.authenticate('local', {
+                    successRedirect: '/users',
+                    failureRedirect: '/'
+                })(req,res,next)
     })
 });
+
 
 /////////////////////////
 // Get the Logged in User
