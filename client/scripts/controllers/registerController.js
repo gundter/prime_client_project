@@ -1,4 +1,4 @@
-App.controller('registerController', ['$scope', '$http', function($scope, $http){
+App.controller('registerController', ['$scope', '$http', '$location',function($scope, $http, $location){
 
     $scope.newUser = {};
 
@@ -7,6 +7,7 @@ App.controller('registerController', ['$scope', '$http', function($scope, $http)
             function(data, status, headers, config) {
                 console.log("User Created ", status);
                 $scope.newUser = {};
+                $location.path('/home');
         });
     }
 
