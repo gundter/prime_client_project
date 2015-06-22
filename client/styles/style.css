@@ -227,7 +227,8 @@ h4 {
 }
 
 .recordBtn{
-  text-align: center;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .ticketSubmit {
@@ -276,10 +277,6 @@ h4 {
 /* div containing the url iframe to copy for the video embed*/
 .videoEmbed {
     border: 1px solid #484848;
-}
-
-.recordBtn {
-    margin-top: 10px;
 }
 
 .heatTicket{
