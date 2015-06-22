@@ -12,13 +12,40 @@ router.post('/', function(req, res, next){
     console.log('Results: ', req.body);
 
     VideoData.create(req.body, function(err, data) {
-       if (err) {
-           console.log("Error with creating videoData: ", err);
-        return next(err);
-       }
-       console.log("Callback Create Video Data: ", data);
-       res.send(data);
+        if (err) {
+            console.log("Error with creating videoData: ", err);
+            return next(err);
+        }
+        console.log("Callback Create Video Data: ", data);
+        res.send(data);
     });
+});
+
+router.post('/nullify', function(req, res, next){
+    var video = new VideoData({
+        token: req.body.token,
+        randtag: req.body.randtag,
+        videoUrl: req.body.videoURL,
+        embededURL: req.body.embededURL,
+        iframe: req.body.iframe,
+    });
+    videoData.findById(req.body.id,
+        function(err, article){
+            if (err){
+                console.log("Find article failed", err);
+                next(err)
+            }
+            try {
+                videoDataSchema.push(video);
+                article.save(function (err) {
+                    if (err) return next(err);
+                });
+                res.send(video);
+            }catch(exception){
+                console.log("Push failed:", exception);
+                next(err);
+            }
+        });
 });
 
 //////////////////////////////////

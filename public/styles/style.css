@@ -17,6 +17,20 @@ li {
     list-style: none;
 }
 
+/*http://codepen.io/pixelass/pen/gbGZYL*/
+/*.primedesk {*/
+    /*text-shadow: -2px -2px 0 #58d6c3, -2px -1px 0 #58d6c3, -2px 0px 0 #58d6c3, -2px 1px 0 #58d6c3, -2px 2px 0 #58d6c3, -1px -2px 0 #58d6c3, -1px -1px 0 #58d6c3, -1px 0px 0 #58d6c3, -1px 1px 0 #58d6c3, -1px 2px 0 #58d6c3, 0px -2px 0 #58d6c3, 0px -1px 0 #58d6c3, 0px 0px 0 #58d6c3, 0px 1px 0 #58d6c3, 0px 2px 0 #58d6c3, 1px -2px 0 #58d6c3, 1px -1px 0 #58d6c3, 1px 0px 0 #58d6c3, 1px 1px 0 #58d6c3, 1px 2px 0 #58d6c3, 2px -2px 0 #58d6c3, 2px -1px 0 #58d6c3, 2px 0px 0 #58d6c3, 2px 1px 0 #58d6c3, 2px 2px 0 #58d6c3;*/
+    /*color: #ff6f69;*/
+    /*font-size: 44px;*/
+/*}*/
+
+.primedesk {
+text-shadow: -5px -5px 0 #58d6c3, -5px -3px 0 #58d6c3, -5px 0px 0 #58d6c3, -5px 3px 0 #58d6c3, -5px 5px 0 #58d6c3, -3px -5px 0 #58d6c3, -3px -3px 0 #58d6c3, -3px 0px 0 #58d6c3, -3px 3px 0 #58d6c3, -3px 5px 0 #58d6c3, 0px -5px 0 #58d6c3, 0px -3px 0 #58d6c3, 0px 0px 0 #58d6c3, 0px 3px 0 #58d6c3, 0px 5px 0 #58d6c3, 3px -5px 0 #58d6c3, 3px -3px 0 #58d6c3, 3px 0px 0 #58d6c3, 3px 3px 0 #58d6c3, 3px 5px 0 #58d6c3, 5px -5px 0 #58d6c3, 5px -3px 0 #58d6c3, 5px 0px 0 #58d6c3, 5px 3px 0 #58d6c3, 5px 5px 0 #58d6c3;
+color: #c2e49c;
+font-size: 50px;
+}
+
+
 .loginInputs li , .signedIn li{
     list-style-type: none;
     display: inline;
@@ -40,17 +54,18 @@ li {
     padding-right: 15px;
 }
 
-.login2, .ticketSubmit, .createuserbtn {
+.login2, .ticketSubmit, .createuserbtn, .videoShow {
     background-color: #37c2bf;
     border-color: #37c2bf;
     color:white;
 }
 
-.login2:hover, .ticketSubmit:hover, .createuserbtn:hover {
+.login2:hover, .ticketSubmit:hover, .createuserbtn:hover, .videoShow:hover {
     background-color: #42a4a1;
     border-color: #42a4a1;
     color:white;
 }
+
 
 .nav-pills li a {
     color:white;
@@ -239,6 +254,27 @@ h4 {
 
 .ticketNum, .ticketDate {
     text-align: right;
+}
+
+.embedShow{
+    color:#37c2bf;
+    background-color: white;
+    border-color:#37c2bf;
+    margin-left:2px;
+}
+.embedShow:hover {
+    color:#42a4a1;
+    background-color: white;
+    border-color:#42a4a1;
+}
+
+.videoShow, .embedShow {
+    margin-top:5px;
+    margin-bottom:3px;
+}
+
+.recordBtn {
+    margin-top: 10px;
 }
 
 .heatTicket{
