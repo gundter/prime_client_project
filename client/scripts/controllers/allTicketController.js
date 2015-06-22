@@ -5,12 +5,10 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
     $scope.users = [];
     $scope.userInfo = {};
 
-    $http.get('/users/user').success(
+    $http.get('/users/admin').success(
         function(data) {
             console.log("All tickets page User response: ", data);
-            $scope.user = data;
-            $scope.ticket.email = $scope.user.email;
-            console.log("Email: ", $scope.user.email);
+            $scope.admin = data;
         });
 
     $scope.getTickets = function() {
