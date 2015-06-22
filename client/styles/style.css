@@ -273,6 +273,11 @@ h4 {
     margin-bottom:3px;
 }
 
+/* div containing the url iframe to copy for the video embed*/
+.videoEmbed {
+    border: 1px solid #484848;
+}
+
 .recordBtn {
     margin-top: 10px;
 }
