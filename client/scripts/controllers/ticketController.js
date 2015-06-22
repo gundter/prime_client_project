@@ -32,10 +32,12 @@ App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, 
                     $scope.returnedData = data;
                     $scope.iframeButton = $sce.trustAsHtml($scope.returnedData.recordButtonIframe);
                     console.log("iframe button: ",$scope.iframeButton);
+
         }).error(
             function(err) {
                     console.log(err);
         });
+
 
         $http.get('/videos').success(
             function(data) {
@@ -50,4 +52,5 @@ App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, 
             function(err) {
                 console.log(err);
         });
+
 }]);
