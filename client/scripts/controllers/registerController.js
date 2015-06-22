@@ -7,7 +7,9 @@ App.controller('registerController', ['$scope', '$http', '$location',function($s
             function(data, status, headers, config) {
                 console.log("User Created ", status);
 
-                $http.post('/', newUser).success(
+
+
+                $http.post('/', {email: newUser.email, password: newUser.password}).success(
                     function(data){
                         console.log("User is logged in", data);
                         $scope.newUser = {};
