@@ -73,7 +73,7 @@ router.post('/createTicket', function(req, res, next) {
                     if (err)
                         next(err);
                     else
-                        res.send('Success ', post);
+                        res.status('Success').send(post);
                 });
             });
         });

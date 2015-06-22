@@ -1,4 +1,4 @@
-App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, $http, $sce){
+App.controller('ticketController', ["$scope", "$http", '$sce', '$interval',function($scope, $http, $sce, $interval){
         console.log("ticketController loads");
 
         $scope.ticket = {};
@@ -47,15 +47,12 @@ App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, 
         ////////////////////////////////////////
         // Get the Last Video that was Recorded
         ///////////////////////////////////////
+        $interval(
 
-        $scope.count = 0;
-        setInterval( function() {
-            $scope.count+=1;
-            console.log("How many times does this run?", $scope.count);
             $http.get('/videos').success(
                 function(data) {
                     var lastVideo = data.length - 1;
-
+                    console.log("SetInterval Happens");
                     console.log("Video Data: ",data);
                     console.log("Video URL: ", data[lastVideo].videoURL);
                     $scope.recordedVideo = data;
@@ -64,8 +61,5 @@ App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, 
                 }).error(
                 function(err) {
                     console.log(err);
-                });
-        }, 1000);
-
-
+                }), 5000);
 }]);
