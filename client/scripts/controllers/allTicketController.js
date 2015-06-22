@@ -5,8 +5,9 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
     $scope.users = [];
     $scope.userInfo = {};
 
-    $http.get('/users/user').success(function(user){
-        $scope.userInfo = user;
+    $http.get('/users/user').then(function(data){
+        console.log('User get fires');
+        $scope.userInfo = data;
         console.log($scope.userInfo);
     });
 
