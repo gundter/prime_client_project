@@ -8,6 +8,7 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
     $http.get('/users/admin').success(
         function(data) {
             console.log("All tickets page User response: ", data);
+            $scope.admin = data;
         });
 
     $scope.getTickets = function() {
