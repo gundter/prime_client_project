@@ -18,6 +18,9 @@ App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, 
                     });
         };
 
+        ////////////////////////
+        // Get User information
+        ///////////////////////
         $http.get('/users/user').success(
             function(data) {
                     console.log("User response: ", data);
@@ -26,6 +29,9 @@ App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, 
                     console.log("Email: ", $scope.user.email);
             });
 
+        //////////////////////////
+        // Get ILOS Record Button
+        //////////////////////////
         $http.get('/api/getData').success(
             function(data) {
                     console.log(data);
@@ -38,9 +44,13 @@ App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, 
                     console.log(err);
         });
 
+        ////////////////////////////////////////
+        // Get the Last Video that was Recorded
+        ///////////////////////////////////////
 
-        $http.get('/videos').success(
-            function(data) {
+        setInterval( function() {
+            $http.get('/videos').success(
+                function(data) {
                     var lastVideo = data.length - 1;
 
                     console.log("Video Data: ",data);
@@ -48,9 +58,11 @@ App.controller('ticketController', ["$scope", "$http", '$sce', function($scope, 
                     $scope.recordedVideo = data;
                     $scope.iframeVideo = $sce.trustAsHtml($scope.recordedVideo[lastVideo].iframe);
                     $scope.embedVideoURL = $sce.trustAsHtml($scope.recordedVideo[lastVideo].embedURL);
-        }).error(
-            function(err) {
-                console.log(err);
-        });
+                }).error(
+                function(err) {
+                    console.log(err);
+                });
+        }, 5000);
+
 
 }]);
