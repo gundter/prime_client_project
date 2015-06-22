@@ -24,13 +24,11 @@ router.post('/create', function(req,res,next) {
         if (err)
             next(err);
         else
-            res.redirect('/', function(req,res,next) {
-                passport.authenticate('local', {
-                    successRedirect: '/users',
-                    failureRedirect: '/'
-                })(req,res,next)
+            passport.authenticate('local', {
+                successRedirect: '/users',
+                failureRedirect: '/'
+            });
     })
-});
 });
 
 
