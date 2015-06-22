@@ -1,4 +1,4 @@
-App.controller('headerController', ['$scope', '$http', function($scope, $http){
+App.controller('headerController', ['$scope', '$http', '$location',function($scope, $http, $location){
 
     $scope.showUser = false;
 
@@ -18,6 +18,7 @@ App.controller('headerController', ['$scope', '$http', function($scope, $http){
             $scope.showLogin = true;
             $scope.showUser = false;
             console.log(data + " has been logged out");
+            $location.path('/home');
         });
     };
 
