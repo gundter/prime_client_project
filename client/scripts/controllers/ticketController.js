@@ -66,7 +66,7 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
                         $scope.iframeVideo = $sce.trustAsHtml($scope.recordedVideo[lastVideo].iframe);
                         $scope.embedVideoURL = $sce.trustAsHtml($scope.recordedVideo[lastVideo].embedURL);
 
-                        $scope.token === data.token ? $scope.matchToken = true : $scope.matchToken = false;
+                        $scope.token === data[0].token ? $scope.matchToken = true : $scope.matchToken = false;
 
                     }).error(
                     function (err) {
