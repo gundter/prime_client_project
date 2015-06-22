@@ -24,7 +24,7 @@ router.post('/create', function(req,res,next) {
         if (err)
             next(err);
         else
-        console.log("this works", req.body)
+        console.log("this works", req.body);
             passport.authenticate('local', {
                 successRedirect: '/users',
                 failureRedirect: '/'
