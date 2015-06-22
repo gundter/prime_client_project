@@ -51,6 +51,31 @@ router.get('/user', function (req, res, next) {
 });
 
 /////////////////////////
+// Are you Batman?
+////////////////////////
+router.get('/admin', function (req, res, next) {
+    console.log("/admin happens");
+    console.log("Here is the request.user " + req.user.name.first + " " + req.user.name.last);
+
+    var user = {
+        _id: req.user._id,
+        email: req.user.email,
+        name: {first: req.user.name.first, last: req.user.name.last},
+        phone: req.user.phone,
+        department: req.user.department
+    };
+
+    var response;
+    if (user.email == "batman@justiceleague.com") {
+        response = true;
+    } else {
+        response = false;
+    }
+
+    res.send(response);
+});
+
+/////////////////////////
 // Logout
 /////////////////////////
 router.get('/logout', function(req, res, next) {
