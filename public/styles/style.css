@@ -269,6 +269,12 @@ h4 {
 }
 
 .videoShow, .embedShow {
+    margin-top:5px;
+    margin-bottom:3px;
+}
+
+.recordBtn {
+    margin-top: 10px;
 }
 
 .heatTicket{
