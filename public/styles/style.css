@@ -54,21 +54,15 @@ font-size: 50px;
     padding-right: 15px;
 }
 
-<<<<<<< HEAD
-.login2, .ticketSubmit, .submitregister{
-=======
+
 .login2, .ticketSubmit, .createuserbtn, .videoShow {
->>>>>>> kelly
     background-color: #37c2bf;
     border-color: #37c2bf;
     color:white;
 }
 
-<<<<<<< HEAD
-.login2:hover, .submitregister:hover, .ticketSubmit:hover {
-=======
+
 .login2:hover, .ticketSubmit:hover, .createuserbtn:hover, .videoShow:hover {
->>>>>>> kelly
     background-color: #42a4a1;
     border-color: #42a4a1;
     color:white;
@@ -181,6 +175,7 @@ h4 {
 /*///////////////////*/
 /*Calulator Buttons styled using ilos Style Guide colors - light gradient dark blue, and medium blue color*/
 /*///////////////////*/
+
 .numBtn, .opBtn{
     width: 40px;
     margin: 5px;
