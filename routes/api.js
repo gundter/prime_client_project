@@ -27,7 +27,7 @@ router.post('/nullify', function(req, res, next){
         randtag: req.body.randtag,
         videoUrl: req.body.videoURL,
         embededURL: req.body.embededURL,
-        iframe: req.body.iframe,
+        iframe: req.body.iframe
     });
     videoData.findById(req.body.id,
         function(err, article){
