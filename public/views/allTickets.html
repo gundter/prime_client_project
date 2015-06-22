@@ -18,9 +18,10 @@
                     <div class="ticketBrowser"><p>BROWSER: {{ticket.browser}}</p></div>
                     <div class="ticketIframe">{{ticket.iframe}}</div>
                 </div>
-                <div class="ticketStatus text-center">
-                    <div class="btn btn-sm" ng-click="ticketClass(ticket, 'tktClosed')">Resolved</div>
-                    <div class="btn btn-sm"  ng-click="ticketClass(ticket, 'tktArchived')">Archive</div>
+                <div class="ticketStatus">
+                    <a ng-click="ticketClass(ticket, 'tktOpen')">Open</a>
+                    <a ng-click="ticketClass(ticket, 'tktClosed')">Close</a>
+                    <a ng-click="ticketClass(ticket, 'tktArchived')">Archive</a>
                 </div>
             </div>
         </div>
