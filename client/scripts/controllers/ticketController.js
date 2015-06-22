@@ -47,20 +47,24 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval',funct
         ////////////////////////////////////////
         // Get the Last Video that was Recorded
         ///////////////////////////////////////
-        $interval(function() {
+        $scope.getVideo = function(){
+            $interval(function() {
 
-            $http.get('/videos').success(
-                function (data) {
-                    var lastVideo = data.length - 1;
-                    console.log("SetInterval Happens");
-                    console.log("Video Data: ", data);
-                    console.log("Video URL: ", data[lastVideo].videoURL);
-                    $scope.recordedVideo = data;
-                    $scope.iframeVideo = $sce.trustAsHtml($scope.recordedVideo[lastVideo].iframe);
-                    $scope.embedVideoURL = $sce.trustAsHtml($scope.recordedVideo[lastVideo].embedURL);
-                }).error(
-                function (err) {
-                    console.log(err);
-                })
-        }, 5000);
+                $http.get('/videos').success(
+                    function (data) {
+                        var lastVideo = data.length - 1;
+                        console.log("SetInterval Happens");
+                        console.log("Video Data: ", data);
+                        console.log("Video URL: ", data[lastVideo].videoURL);
+                        $scope.recordedVideo = data;
+                        $scope.iframeVideo = $sce.trustAsHtml($scope.recordedVideo[lastVideo].iframe);
+                        $scope.embedVideoURL = $sce.trustAsHtml($scope.recordedVideo[lastVideo].embedURL);
+                    }).error(
+                    function (err) {
+                        console.log(err);
+                    })
+            }, 5000);
+        };
+
+    $scope.getVideo();
 }]);
