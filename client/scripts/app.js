@@ -1,4 +1,7 @@
- // myApp is enabling angular functionality within it's scope
+/**
+ * Created by brianaamodt on 6/11/15.
+ */
+//myApp is enabling angular functionality within it's scope
 var App = angular.module('App',['ngRoute', 'appControllers']);
 
 var appControllers = angular.module('appControllers', []);
@@ -33,18 +36,5 @@ App.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
         otherwise({
             redirectTo: "/home"
         });
-
-    $httpProvider.interceptors.push(['$location', '$q', function($location, $q) {
-        return {
-            response: function(response) {
-                return response;
-            },
-            responseError: function(response) {
-                if (response.status === 401)
-                    alert("Incorrect Username or Password");
-                return $q.reject(response);
-            }
-        };
-    }]);
-    }]);
+}]);
 

@@ -321,10 +321,24 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right {
 
 .tktClosed{
     border-radius: 4px;
-    border: 10px solid #e1564f;
+    border: 10px dashed #e1564f;
 }
 
 .tktArchived{
     border-radius: 4px;
     border: 10px solid #484848;
+}
+
+/*API Instructions Page - indent language*/
+.code p {
+    margin-left: 200px;
+}
+
+.indent {
+    margin-left: 100px;
+}
+
+
+span {
+    font-weight:bold;
 }

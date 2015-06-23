@@ -17,12 +17,16 @@
                     <div class="well ticketDescription"><p>DESCRIPTION: {{ticket.description}}</p></div>
                     <div class="ticketBrowser"><p>BROWSER: {{ticket.browser}}</p></div>
                     <div class="ticketIframe">{{ticket.iframe}}</div>
+
+                    <div ng-show="admin" class="ticketStatus">
+                        <button class="btn-primary" ng-click="ticketClass(ticket, 'tktOpen')">Open</button>
+                        <button class="btn-warning" ng-click="ticketClass(ticket, 'tktClosed')">Close</button>
+                        <button class="btn-danger" ng-click="ticketClass(ticket, 'tktArchived')">Archive</button>
+                    </div>
+
                 </div>
-                <div ng-show="admin" class="ticketStatus">
-                    <a ng-click="ticketClass(ticket, 'tktOpen')">Open</a>
-                    <a ng-click="ticketClass(ticket, 'tktClosed')">Close</a>
-                    <a ng-click="ticketClass(ticket, 'tktArchived')">Archive</a>
-                </div>
+
+                <div class="col-md-4 ticketDate"><p>{{ticket.date | date :'medium'}}</p></div>
             </div>
         </div>
     </div>
