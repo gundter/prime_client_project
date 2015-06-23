@@ -1,19 +1,19 @@
-App.controller('registerController', ['$scope', '$http', '$location',function($scope, $http, $location){
+App.controller('registerController', ['$scope', '$http', '$location', '$window',function($scope, $http, $location, $window){
 
     $scope.newUser = {};
+    $scope.waitMsg = false;
 
     $scope.createUser = function(newUser) {
+        $scope.waitMsg = true;
         $http.post('/users/create', newUser).success(
             function(data, status, headers, config) {
                 console.log("User Created ", status);
 
                 $http.post('/', {email: newUser.email, password: newUser.password}).then(
                     function(data, status){
-                        console.log("User is logged in", data);
+                        console.log("User is logged in", status);
                         $scope.newUser = {};
-                        if (status == 200){
-                            $location.path('/home');
-                        }
+                        $window.location.reload($location.path('/home'));
                     });
         });
     }
