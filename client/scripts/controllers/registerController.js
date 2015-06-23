@@ -6,8 +6,15 @@ App.controller('registerController', ['$scope', '$http', '$location',function($s
         $http.post('/users/create', newUser).success(
             function(data, status, headers, config) {
                 console.log("User Created ", status);
-                $scope.newUser = {};
-                $location.path('/home');
+
+                $http.post('/', {email: newUser.email, password: newUser.password}).then(
+                    function(data, status){
+                        console.log("User is logged in", data);
+                        $scope.newUser = {};
+                        if (status == 200){
+                            $location.path('/home');
+                        }
+                    });
         });
     }
 

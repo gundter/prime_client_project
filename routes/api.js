@@ -39,10 +39,10 @@ function GetData(){
 }
 
 var post_data = {
-    api_key: 'RQo7BpjjuVUUprgrinaoLQjecGd3xn',
+    api_key: 'eTnp4mQvjFb5Xb92dYPADytLnSxQLl',
     api_key_type: 'user',
     service_name: 'Prime Digital Academy Team',
-    video_endpoint: 'https://fathomless-brook-8214.herokuapp.com/api',
+    video_endpoint: 'https://polar-reef-6279.herokuapp.com/api',
     video_endpoint_extras: [],
     video_set_public: true
 };
