@@ -13,6 +13,7 @@ router.get('/', function(req, res, next) {
       //res.sendFile(path.resolve(__dirname, '../views/index.html'));
       res.redirect('/');
   } else {
+      console.log("----------NOT LOGGED IN----------");
     res.redirect('/');
   }
 });
