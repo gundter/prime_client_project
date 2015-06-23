@@ -22,6 +22,7 @@
     "grunt-contrib-uglify": "^0.9.1",
     "http": "0.0.0",
     "https": "^1.0.0",
+    "jsdoc": "^3.3.2",
     "mongoose": "^4.0.5",
     "morgan": "~1.5.3",
     "passport": "^0.2.2",
