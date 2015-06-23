@@ -29,12 +29,14 @@
                 <div class="well ticketDescription"><p>DESCRIPTION: {{ticket.description}}</p></div>
                 <div class="ticketBrowser"><p>BROWSER: {{ticket.browser}}</p></div>
                 <div class="ticketIframe">{{ticket.iframe}}</div>
+
+                <div ng-show="admin" class="ticketStatus">
+                    <a ng-click="ticketClass(ticket, 'tktOpen')">Open</a>
+                    <a ng-click="ticketClass(ticket, 'tktClosed')">Close</a>
+                    <a ng-click="ticketClass(ticket, 'tktArchived')">Archive</a>
+                </div>
             </div>
-            <div ng-show="admin" class="ticketStatus">
-                <a ng-click="ticketClass(ticket, 'tktOpen')">Open</a>
-                <a ng-click="ticketClass(ticket, 'tktClosed')">Close</a>
-                <a ng-click="ticketClass(ticket, 'tktArchived')">Archive</a>
-            </div>
+
         </div>
     </div>
 </div>
