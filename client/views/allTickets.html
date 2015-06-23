@@ -3,7 +3,7 @@
         <a ng-click="showHide(archiveStatus)" ng-show="archiveStatus">View Archive</a>
         <a ng-click="showHide(archiveStatus)" ng-hide="archiveStatus">View Archive</a>
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in allTickets" >
-            <div class="well col-md-5 heatTicket {{ticket.tktStatus}}" ng-hide="archiveStatus">
+            <div class="well col-md-5 heatTicket {{ticket.tktStatus}}" ng-show="archiveStatus">
                 <div class="col-md-9 ticketProblem"><p>{{ticket.problem}}</p></div>
                 <div class="col-md-3 ticketNum"><p>{{ticket.ticketNum}}</p></div>
                 <div>
