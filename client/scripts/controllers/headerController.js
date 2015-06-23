@@ -1,7 +1,5 @@
 App.controller('headerController', ['$scope', '$http', '$location', function($scope, $http, $location){
 
-    $scope.showUser = false;
-
     $http.get('/users/user').success(
         function(data) {
             console.log("User reponse: ", data);
@@ -21,4 +19,6 @@ App.controller('headerController', ['$scope', '$http', '$location', function($sc
             $location.path('/home');
         });
     };
+
+    $scope.showUser = false;
 }]);
