@@ -212,9 +212,6 @@ h4 {
 /*///////////////////*/
 /*Ticket Page Styling*/
 /*///////////////////*/
-.ticketPage {
-    color:#484848;
-}
 
 .ticketForm{
     border: 1px solid #313446;
@@ -302,7 +299,7 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right {
     background-color:#177289;
 }
 
-.background {
+.backgroundArea {
     background-color:#f2f2f2;
 }
 
