@@ -33,7 +33,7 @@
         <div class="form-group">
             <div class="recordBtn" ng-bind-html="iframeButton"></div>
             <div ng-show="matchToken">
-                <div class="showHideButtons text-right"><div class="btn btn-xs videoShow" ng-click="clicked=true">Video</div><div class="btn btn-xs embedShow" ng-click="clicked=false">Embed URL</div></div>
+                <div class="showHideButtons text-right"><div class="btn btn-xs videoShow" ng-click="clicked=false">Video</div><div class="btn btn-xs embedShow" ng-click="clicked=true">Embed URL</div></div>
                 <div class="videoDisplay" ng-bind-html="iframeVideo" ng-show="clicked"></div>
                 <div class="urlForToggle" ng-hide="clicked">{{iframeVideo}}</div>
                 <div class="videoEmbed" ng-bind-html="embedURL"></div>
