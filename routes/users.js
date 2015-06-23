@@ -9,10 +9,12 @@ var Users = require('../models/userSchema');
 /////////////////////////
 router.get('/', function(req, res, next) {
   if (req.isAuthenticated()) {
-      console.log("Logged in");
-      res.sendFile(path.resolve(__dirname, '../views/index.html'));
+      console.log("----------LOGGED IN----------");
+      //res.sendFile(path.resolve(__dirname, '../views/index.html'));
+      res.status(200);
   } else {
-    res.redirect('/')
+      console.log("----------NOT LOGGED IN----------");
+    res.redirect('/');
   }
 });
 
@@ -78,6 +80,9 @@ router.get('/admin', function (req, res, next) {
 
     res.send(response);
 });
+
+////////////////////////
+
 
 /////////////////////////
 // Logout

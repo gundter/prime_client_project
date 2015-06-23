@@ -1,5 +1,4 @@
 App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$location',function($scope, $http, $sce, $interval, $location){
-        console.log("ticketController loads");
 
         $scope.ticket = {};
         $scope.user = {};
