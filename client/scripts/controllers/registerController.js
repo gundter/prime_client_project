@@ -7,13 +7,11 @@ App.controller('registerController', ['$scope', '$http', '$location',function($s
             function(data, status, headers, config) {
                 console.log("User Created ", status);
 
-
-
                 $http.post('/', {email: newUser.email, password: newUser.password}).success(
                     function(data, status){
                         console.log("User is logged in", status);
                         $scope.newUser = {};
-                        $location.path('/home');
+                        $location.path('/ticket');
                     });
         });
     }
