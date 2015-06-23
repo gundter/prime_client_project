@@ -1,4 +1,4 @@
-App.controller('headerController', ['$scope', '$http', '$location', function($scope, $http, $location){
+App.controller('headerController', ['$scope', '$http', '$location', '$route', function($scope, $http, $location, $route){
     console.log('headerController loaded');
 
     $scope.showUser = false;
@@ -57,5 +57,7 @@ App.controller('headerController', ['$scope', '$http', '$location', function($sc
         $scope.output = current;
         key = "";
     };
+
+    $route.reload();
 
 }]);
