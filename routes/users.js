@@ -10,7 +10,8 @@ var Users = require('../models/userSchema');
 router.get('/', function(req, res, next) {
   if (req.isAuthenticated()) {
       console.log("----------LOGGED IN----------");
-      res.sendFile(path.resolve(__dirname, '../views/index.html'));
+      //res.sendFile(path.resolve(__dirname, '../views/index.html'));
+      res.send("Success");
   } else {
       console.log("----------NOT LOGGED IN----------");
     res.redirect('/');
