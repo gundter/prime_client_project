@@ -27,7 +27,14 @@ router.post('/create', function(req,res,next) {
             next(err);
         else
             res.redirect('/');
-    })
+
+        res.redirect('/',{email: req.body.email, password: req.body.password},
+            passport.authenticate('local', {
+                successRedirect: '/users',
+                failureRedirect: '/'
+            })(req,res,next)
+        );
+    });
 });
 
 /////////////////////////
