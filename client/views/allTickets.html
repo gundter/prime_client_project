@@ -1,18 +1,21 @@
 <div class="backgroundArea">
     <div class="row">
         <a ng-click="showHide(archiveStatus)" ng-show="archiveStatus">View Archive</a>
+        <a ng-click="showHide(archiveStatus)" ng-hide="archiveStatus">View Archive</a>
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in allTickets" >
             <div class="well col-md-5 heatTicket {{ticket.tktStatus}}" ng-hide="archiveStatus">
                 <div class="col-md-9 ticketProblem"><p>{{ticket.problem}}</p></div>
                 <div class="col-md-3 ticketNum"><p>{{ticket.ticketNum}}</p></div>
                 <div>
                     <div class="well col-md-8 clientField">
-                        <div class="ticketClient"><p>NAME: {{ticket.name}}</p></div>
-                        <div class="ticketClient"><p>EMAIL: {{ticket.email}}</p></div>
-                        <div class="ticketClient"><p>PHONE: {{ticket.phone}}</p></div>
-                        <div class="ticketClient"><p>DEPARTMENT/ DESK: {{ticket.department}}</p></div>
+                        <p>NAME: {{ticket.name}}</p>
+                        <p>EMAIL: {{ticket.email}}</p>
+                        <p>PHONE: {{ticket.phone}}</p>
+                        <p>DEPARTMENT/ DESK: {{ticket.department}}</p>
                     </div>
-                    <div class="col-md-4 ticketDate"><p>{{ticket.date | date :'medium'}}</p></div>
+                    <div class="col-md-4 ticketDate">
+                        <p>{{ticket.date | date :'medium'}}</p>
+                    </div>
                 </div>
                 <div>
                     <div class="col-md-12">
