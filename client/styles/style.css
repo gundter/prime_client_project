@@ -54,11 +54,13 @@ font-size: 50px;
     padding-right: 15px;
 }
 
+
 .login2, .ticketSubmit, .createuserbtn, .videoShow {
     background-color: #37c2bf;
     border-color: #37c2bf;
     color:white;
 }
+
 
 .login2:hover, .ticketSubmit:hover, .createuserbtn:hover, .videoShow:hover {
     background-color: #42a4a1;
@@ -173,6 +175,7 @@ h4 {
 /*///////////////////*/
 /*Calulator Buttons styled using ilos Style Guide colors - light gradient dark blue, and medium blue color*/
 /*///////////////////*/
+
 .numBtn, .opBtn{
     width: 40px;
     margin: 5px;
@@ -227,7 +230,8 @@ h4 {
 }
 
 .recordBtn{
-  text-align: center;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .ticketSubmit {
@@ -273,8 +277,9 @@ h4 {
     margin-bottom:3px;
 }
 
-.recordBtn {
-    margin-top: 10px;
+/* div containing the url iframe to copy for the video embed*/
+.videoEmbed {
+    border: 1px solid #484848;
 }
 
 .heatTicket{
@@ -287,6 +292,10 @@ h4 {
 .videoDisplay{
     text-align: center;
     margin-top: 10px;
+}
+
+.createuser {
+    color: #3F51B5;
 }
 
 header, .nav-pills, .indivnav, .loginInputs, .pull-right {
