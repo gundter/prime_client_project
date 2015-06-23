@@ -1,8 +1,10 @@
 App.controller('registerController', ['$scope', '$http', '$location', '$window',function($scope, $http, $location, $window){
 
     $scope.newUser = {};
+    $scope.waitMsg = false;
 
     $scope.createUser = function(newUser) {
+        $scope.waitMsg = true;
         $http.post('/users/create', newUser).success(
             function(data, status, headers, config) {
                 console.log("User Created ", status);
