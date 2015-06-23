@@ -212,6 +212,9 @@ h4 {
 /*///////////////////*/
 /*Ticket Page Styling*/
 /*///////////////////*/
+.ticketPage {
+    color:#484848;
+}
 
 .ticketForm{
     border: 1px solid #313446;
@@ -299,10 +302,6 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right {
     background-color:#177289;
 }
 
-.backgroundArea {
-    background-color:#f2f2f2;
-}
-
 .nav-pills, .loginInputs {
     padding-top:10px;
 }
@@ -328,4 +327,8 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right {
 
 .clientField{
     background-color:#ffffff;
+}
+
+.ticketClient{
+    background-color: #ffffff;
 }
