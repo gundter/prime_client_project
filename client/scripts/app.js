@@ -36,5 +36,18 @@ App.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
         otherwise({
             redirectTo: "/home"
         });
+
+    $httpProvider.interceptors.push(['$location', '$q', function($location, $q) {
+        return {
+            response: function(response) {
+                return response;
+            },
+            responseError: function(response) {
+                if (response.status === 401)
+                    alert("Incorrect Username or Password");
+                return $q.reject(response);
+            }
+        };
+    }]);
     }]);
 
