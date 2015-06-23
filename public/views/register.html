@@ -1,4 +1,4 @@
-<div class="container" ng-controller="registerController">
+<div class="container">
     <form name="createUserForm" class="col-md-offset-2 col-md-8 form-horizontal" novalidate
           ng-submit="createUser(newUser)">
         <fieldset>
@@ -57,6 +57,7 @@
             </div>
             <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
+                    <p class="lead" ng-show="waitMsg">Please wait while your user is being created...</p>
                     <button type="submit" class="btn createuserbtn" ng-disabled="createUserForm.newUser.$invalid">Create
                         User</button>
                 </div>
