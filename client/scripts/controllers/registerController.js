@@ -9,9 +9,11 @@ App.controller('registerController', ['$scope', '$http', '$location',function($s
 
                 $http.post('/', {email: newUser.email, password: newUser.password}).then(
                     function(data, status){
-                        console.log("User is logged in", status);
+                        console.log("User is logged in", data);
                         $scope.newUser = {};
-                        $location.path('/home');
+                        if (status == 200){
+                            $location.path('/home');
+                        }
                     });
         });
     }
