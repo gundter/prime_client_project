@@ -1,13 +1,5 @@
-App.controller('headerController', ['$scope', '$http', '$location', '$route', function($scope, $http, $location, $route){
-
+App.controller('headerController', ['$scope', '$http', '$location', function($scope, $http, $location){
     console.log('headerController loaded');
-
-    $scope.reloadRoute = function(){
-        console.log("Entering reloadRoute function");
-        $route.reload();
-    };
-
-    $scope.reloadRoute();
 
     $scope.showUser = false;
 

@@ -3,7 +3,12 @@
  */
 
 //demonstrative calculator
-App.controller('calculatorController',['$scope', function($scope){
+App.controller('calculatorController',['$scope', '$route', function($scope, $route){
+
+    $scope.reloadRoute = function(){
+        console.log("Entering reloadRoute function");
+        $route.reload('/home');
+    };
 //current is the up to date equation as entered by the user
     var current = "";
 //key is set to the last button pressed so that each press is registered and appropriate parameters are met
