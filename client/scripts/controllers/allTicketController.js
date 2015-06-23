@@ -29,14 +29,5 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
         return $http.put('/ticket/updateStatus/', $scope.chgTktSts).success($scope.getTickets);
     };
 
-    $scope.showHide = function(status) {
-        status = ticket.tktStatus;
-        if (status == tktArchived) {
-            $scope.archiveStatus = false;
-        } else {
-            $scope.archiveStatus = true;
-        }
-    };
-
     $scope.getTickets();
 }]);
