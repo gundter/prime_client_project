@@ -1,4 +1,4 @@
-<div ng-controller="allTicketController">
+<div>
     <div class="row">
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in allTickets" >
             <div class="well col-md-5 heatTicket {{ticket.tktStatus}}">
@@ -18,7 +18,7 @@
                     <div class="ticketBrowser"><p>BROWSER: {{ticket.browser}}</p></div>
                     <div class="ticketIframe">{{ticket.iframe}}</div>
                 </div>
-                <div class="ticketStatus">
+                <div ng-show="admin" class="ticketStatus">
                     <a ng-click="ticketClass(ticket, 'tktOpen')">Open</a>
                     <a ng-click="ticketClass(ticket, 'tktClosed')">Close</a>
                     <a ng-click="ticketClass(ticket, 'tktArchived')">Archive</a>

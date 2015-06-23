@@ -1,4 +1,4 @@
-App.controller('registerController', ['$scope', '$http', function($scope, $http){
+App.controller('registerController', ['$scope', '$http', '$location',function($scope, $http, $location){
 
     $scope.newUser = {};
 
@@ -6,7 +6,15 @@ App.controller('registerController', ['$scope', '$http', function($scope, $http)
         $http.post('/users/create', newUser).success(
             function(data, status, headers, config) {
                 console.log("User Created ", status);
-                $scope.newUser = {};
+
+                $http.post('/', {email: newUser.email, password: newUser.password}).then(
+                    function(data, status){
+                        console.log("User is logged in", data);
+                        $scope.newUser = {};
+                        if (status == 200){
+                            $location.path('/home');
+                        }
+                    });
         });
     }
 

@@ -12,12 +12,12 @@ router.post('/', function(req, res, next){
     console.log('Results: ', req.body);
 
     VideoData.create(req.body, function(err, data) {
-        if (err) {
-            console.log("Error with creating videoData: ", err);
-            return next(err);
-        }
-        console.log("Callback Create Video Data: ", data);
-        res.send(data);
+       if (err) {
+           console.log("Error with creating videoData: ", err);
+        return next(err);
+       }
+       console.log("Callback Create Video Data: ", data);
+       res.send(data);
     });
 });
 
@@ -29,7 +29,7 @@ router.post('/nullify', function(req, res, next){
         embededURL: req.body.embededURL,
         iframe: req.body.iframe
     });
-    videoData.findById(req.body.id,
+    VideoData.findById(req.body.id,
         function(err, article){
             if (err){
                 console.log("Find article failed", err);
@@ -37,7 +37,7 @@ router.post('/nullify', function(req, res, next){
             }
             try {
                 videoDataSchema.push(video);
-                article.save(function (err) {
+                videoDataSchema.save(function (err) {
                     if (err) return next(err);
                 });
                 res.send(video);
@@ -66,10 +66,10 @@ function GetData(){
 }
 
 var post_data = {
-    api_key: 'nwSDkitfEISvI022Eh57iTITwtTFoY',
+    api_key: 'eTnp4mQvjFb5Xb92dYPADytLnSxQLl',
     api_key_type: 'user',
     service_name: 'Prime Digital Academy Team',
-    video_endpoint: 'https://fathomless-brook-8214.herokuapp.com/api',
+    video_endpoint: 'https://polar-reef-6279.herokuapp.com/api',
     video_endpoint_extras: [],
     video_set_public: true
 };

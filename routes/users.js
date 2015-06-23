@@ -9,10 +9,12 @@ var Users = require('../models/userSchema');
 /////////////////////////
 router.get('/', function(req, res, next) {
   if (req.isAuthenticated()) {
-      console.log("Logged in");
-      res.sendFile(path.resolve(__dirname, '../views/index.html'));
+      console.log("----------LOGGED IN----------");
+      //res.sendFile(path.resolve(__dirname, '../views/index.html'));
+      res.status(200);
   } else {
-    res.redirect('/')
+      console.log("----------NOT LOGGED IN----------");
+    res.redirect('/');
   }
 });
 
@@ -24,18 +26,17 @@ router.post('/create', function(req,res,next) {
         if (err)
             next(err);
         else
-        console.log("this works", req.body);
-            passport.authenticate('local', {
-                successRedirect: '/users',
-                failureRedirect: '/'
-            });
-    })
+        console.log("req", req);
+            passport.authenticate('local')(req, res, function () {
+                res.redirect('/');
+            })
+    });
 });
-
 
 /////////////////////////
 // Get the Logged in User
 /////////////////////////
+
 router.get('/user', function (req, res, next) {
   console.log("/user happens");
   if (req.isAuthenticated()) {
@@ -54,6 +55,34 @@ router.get('/user', function (req, res, next) {
     res.send("false");
   }
 });
+
+/////////////////////////
+// Are you Batman?
+////////////////////////
+router.get('/admin', function (req, res, next) {
+    console.log("/admin happens");
+    console.log("Here is the request.user " + req.user.name.first + " " + req.user.name.last);
+
+    var user = {
+        _id: req.user._id,
+        email: req.user.email,
+        name: {first: req.user.name.first, last: req.user.name.last},
+        phone: req.user.phone,
+        department: req.user.department
+    };
+
+    var response;
+    if (user.email == "batman@justiceleague.com") {
+        response = true;
+    } else {
+        response = false;
+    }
+
+    res.send(response);
+});
+
+////////////////////////
+
 
 /////////////////////////
 // Logout
