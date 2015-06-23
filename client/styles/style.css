@@ -1,7 +1,7 @@
 /*///////////////////*/
 /*Index Page Styling*/
 /*///////////////////*/
-*{
+.backgroundArea{
     background-color:#f2f2f2;
 }
 
@@ -277,6 +277,29 @@ h4 {
     margin-bottom:3px;
 }
 
+.tktOpen{
+    border-radius: 4px;
+    border: 10px solid #96c661;
+}
+
+.tktClosed{
+    border-radius: 4px;
+    border: 10px dashed #e1564f;
+}
+
+.tktArchived{
+    border-radius: 4px;
+    border: 10px solid #484848;
+}
+
+.clientField{
+    background-color: #f2f2f2;
+}
+
+.ticketClient{
+    background-color: #f2f2f2;
+}
+
 /* div containing the url iframe to copy for the video embed*/
 .videoEmbed {
     border: 1px solid #484848;
@@ -308,27 +331,4 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right {
 
 .inline {
     display:inline-block;
-}
-
-.tktOpen{
-    border-radius: 4px;
-    border: 10px solid #96c661;
-}
-
-.tktClosed{
-    border-radius: 4px;
-    border: 10px dashed #e1564f;
-}
-
-.tktArchived{
-    border-radius: 4px;
-    border: 10px solid #484848;
-}
-
-.clientField{
-    background-color:#ffffff;
-}
-
-.ticketClient{
-    background-color: #ffffff;
 }
