@@ -1,27 +1,30 @@
-<div ng-controller="allTicketController">
+<div class="backgroundArea">
     <div class="row">
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in allTickets" >
             <div class="well col-md-5 heatTicket {{ticket.tktStatus}}">
                 <div class="col-md-9 ticketProblem"><p>{{ticket.problem}}</p></div>
                 <div class="col-md-3 ticketNum"><p>{{ticket.ticketNum}}</p></div>
                 <div>
-                    <div class="well col-md-8">
-                        <div class="ticketName"><p>NAME: {{ticket.name}}</p></div>
-                        <div class="ticketEmail"><p>EMAIL: {{ticket.email}}</p></div>
-                        <div class="ticketPhone"><p>PHONE: {{ticket.phone}}</p></div>
-                        <div class="ticketDepartment"><p>DEPARTMENT/ DESK: {{ticket.department}}</p></div>
+                    <div class="well col-md-8 clientField">
+                        <p>NAME: {{ticket.name}}</p>
+                        <p>EMAIL: {{ticket.email}}</p>
+                        <p>PHONE: {{ticket.phone}}</p>
+                        <p>DEPARTMENT/ DESK: {{ticket.department}}</p>
                     </div>
-                    <div class="col-md-4 ticketDate"><p>{{ticket.date | date :'medium'}}</p></div>
+                    <div class="col-md-4 ticketDate">
+                        <p>{{ticket.date | date :'medium'}}</p>
+                    </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="well ticketDescription"><p>DESCRIPTION: {{ticket.description}}</p></div>
-                    <div class="ticketBrowser"><p>BROWSER: {{ticket.browser}}</p></div>
-                    <div class="ticketIframe">{{ticket.iframe}}</div>
-                </div>
-                <div ng-show="admin" class="ticketStatus">
-                    <a ng-click="ticketClass(ticket, 'tktOpen')">Open</a>
-                    <a ng-click="ticketClass(ticket, 'tktClosed')">Close</a>
-                    <a ng-click="ticketClass(ticket, 'tktArchived')">Archive</a>
+                <div>
+                    <div class="col-md-12">
+                        <div class="well ticketDescription"><p>DESCRIPTION: {{ticket.description}}</p></div>
+                        <div class="ticketBrowser"><p>BROWSER: {{ticket.browser}}</p></div>
+                        <div class="ticketIframe">{{ticket.iframe}}</div>
+                        <div ng-show="admin" class="ticketStatus">
+                            <a ng-click="ticketClass(ticket, 'tktClosed')">Close</a>
+                            <a ng-click="ticketClass(ticket, 'tktArchived')">Archive</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
