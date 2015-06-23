@@ -39,8 +39,8 @@ function GetData(){
 }
 
 var post_data = {
-    api_key: 'eTnp4mQvjFb5Xb92dYPADytLnSxQLl',
-    api_key_type: 'user',
+    api_key: 'b6ANvns15XjOUeMbvyzVumTbgJ9stQ',
+    api_key_type: 'org_guest_recorder',
     service_name: 'Prime Digital Academy Team',
     video_endpoint: 'https://fathomless-brook-8214.herokuapp.com/api',
     video_endpoint_extras: [],

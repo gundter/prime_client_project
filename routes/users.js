@@ -10,8 +10,8 @@ var Users = require('../models/userSchema');
 router.get('/', function(req, res, next) {
   if (req.isAuthenticated()) {
       console.log("----------LOGGED IN----------");
-      //res.sendFile(path.resolve(__dirname, '../views/index.html'));
-      res.status(200);
+      res.sendFile(path.resolve(__dirname, '../views/index.html'));
+      //res.status(200);
   } else {
       console.log("----------NOT LOGGED IN----------");
     res.redirect('/');
@@ -27,7 +27,7 @@ router.post('/create', function(req,res,next) {
             next(err);
         else
             res.redirect('/');
-    })
+    });
 });
 
 /////////////////////////
