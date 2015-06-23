@@ -7,7 +7,7 @@ App.controller('calculatorController',['$scope', '$route', function($scope, $rou
 
     $scope.reloadRoute = function(){
         console.log("Entering reloadRoute function");
-        $route.reload('/home');
+        $route.reload();
     };
 
     $scope.reloadRoute();
