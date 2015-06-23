@@ -11,7 +11,7 @@ App.controller('registerController', ['$scope', '$http', '$location', '$window',
                     function(data, status){
                         console.log("User is logged in", status);
                         $scope.newUser = {};
-                        $window.location.reload();
+                        $window.location.reload('/home');
                     });
         });
     }
