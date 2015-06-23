@@ -8,10 +8,10 @@ App.controller('registerController', ['$scope', '$http', '$location',function($s
                 console.log("User Created ", status);
 
                 $http.post('/', {email: newUser.email, password: newUser.password}).then(
-                    function(data, status){
-                        console.log("User is logged in", data);
+                    function(response){
+                        console.log("User is logged in", response);
                         $scope.newUser = {};
-                        if (status == 200){
+                        if (response.status == 200){
                             $location.path('/home');
                         }
                     });
