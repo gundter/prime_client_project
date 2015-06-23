@@ -9,9 +9,8 @@ var Users = require('../models/userSchema');
 /////////////////////////
 router.get('/', function(req, res, next) {
   if (req.isAuthenticated()) {
-      console.log("Logged in");
-      //res.sendFile(path.resolve(__dirname, '../views/index.html'));
-      res.redirect('/');
+      console.log("----------LOGGED IN----------");
+      res.sendFile(path.resolve(__dirname, '../views/index.html'));
   } else {
       console.log("----------NOT LOGGED IN----------");
     res.redirect('/');
