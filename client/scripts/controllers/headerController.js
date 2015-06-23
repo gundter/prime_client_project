@@ -3,7 +3,7 @@ App.controller('headerController', ['$scope', '$http', '$location', '$route', fu
     console.log('headerController loaded');
 
     $scope.reloadRoute = function(){
-        $route.reload();
+        $route.reload('/home');
     };
 
     $scope.reloadRoute();
