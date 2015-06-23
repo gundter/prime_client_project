@@ -19,9 +19,9 @@
                     <div class="ticketIframe">{{ticket.iframe}}</div>
 
                     <div ng-show="admin" class="ticketStatus">
-                        <a ng-click="ticketClass(ticket, 'tktOpen')">Open</a>
-                        <a ng-click="ticketClass(ticket, 'tktClosed')">Close</a>
-                        <a ng-click="ticketClass(ticket, 'tktArchived')">Archive</a>
+                        <button class="btn-primary" ng-click="ticketClass(ticket, 'tktOpen')">Open</button>
+                        <button class="btn-warning" ng-click="ticketClass(ticket, 'tktClosed')">Close</button>
+                        <button class="btn-danger" ng-click="ticketClass(ticket, 'tktArchived')">Archive</button>
                     </div>
 
                 </div>
