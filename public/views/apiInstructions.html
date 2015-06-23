@@ -2,94 +2,138 @@
     <h2>API Instructions</h2>
 
     <p>This will be some basic text about the API instructions and problems that we encountered while implementing</p>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-    </p>
-
-
-    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-    </p>
-
-    <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
 
 
     <div>
         <p class="lead">Step 1: Get API keys from user</p>
-        <ol>
+        <ol class="indent">
             <li>User's API key is located in Options > Account Settings</li>
             <li>Organization's guest user API key is located in Options > Admin > Integrations</li>
         </ol>
-        <button ng-click="codeExample1=!codeExample1" class="btn-sm btn-info">See Code Example</button>
+        <!-- Commented out Code Example 1 because it is not needed to get the API key-->
+        <!--<button ng-click="codeExample1=!codeExample1" class="btn-sm btn-info">See Code Example</button>-->
 
-        <div class="code" ng-show="codeExample1">
-            <blockquote>
-                <p>myApp.controller('getUser', ['$scope', '$http', function($scope, $http){</p>
+        <!--<div class="code" ng-show="codeExample1">-->
+            <!--<blockquote>-->
 
-                    <p>$scope.showUser = false;</p>
-
-                    <p>$http.get('/users/username').success(function(data){</p>
-                    <p>console.log("Username response: ", data);</p>
-                    <p>if (data == "false"){</p>
-                    <p>$scope.showLogin = true;</p>
-                    <p>} else {</p>
-                    <p>$scope.showUser = true;</p>
-                    <p>$scope.username = data.username;</p>
-                    <p>}</p>
-                    <p>});</p>
-
-                    <p>$scope.logout = function() {</p>
-                    <p>$http.get('/users/logout').success(function(data){</p>
-                    <p>$scope.showLogin = true;</p>
-                    <p>$scope.showUser = false;</p>
-                    <p>console.log(data + " has been logged out");</p>
-                    <p>})</p>
-                    <p>}</p>
-                    <p>}]);</p>
-
-            </blockquote>
-        </div>
+            <!--</blockquote>-->
+        <!--</div>-->
     </div>
 
-    <div>
-        <p class="lead">Step 2: Get one-time recorder token using user's API key</p>
+        <p class="lead">Step 2: Build an Object Containing the Parameters to be passed into the POST request </p>
         <ol>
-            <li>User's API key is located in Options > Account Settings</li>
-            <li>Organization's guest user API key is located in Options > Admin > Integrations</li>
+            <li><span> INCLUDE: </span></li>
+            <div class="indent">
+            <li>   API key: a) the guest recorder API key, or b) your individual user API key </li>
+            <li>   API key type: a) 'org_guest_recorder', or b) 'user' </li>
+            <li>   service name: '//the name of your organization//' </li>
+            <li>   video_endpoint: '//set a url for the video endpoint on user site or application//'</li>
+            <li>   video_endpoint_extras: [] </li>
+            <li>   video_set_public: false </li>
+            </div>
         </ol>
         <button ng-click="codeExample2=!codeExample2" class="btn-sm btn-info">See Code Example</button>
 
         <div class="code" ng-show="codeExample2">
-            <blockquote>
-                <p>myApp.controller('getUser', ['$scope', '$http', function($scope, $http){</p>
-
-                <p>$scope.showUser = false;</p>
-
-                <p>$http.get('/users/username').success(function(data){</p>
-                <p>console.log("Username response: ", data);</p>
-                <p>if (data == "false"){</p>
-                <p>$scope.showLogin = true;</p>
-                <p>} else {</p>
-                <p>$scope.showUser = true;</p>
-                <p>$scope.username = data.username;</p>
-                <p>}</p>
-                <p>});</p>
-
-                <p>$scope.logout = function() {</p>
-                <p>$http.get('/users/logout').success(function(data){</p>
-                <p>$scope.showLogin = true;</p>
-                <p>$scope.showUser = false;</p>
-                <p>console.log(data + " has been logged out");</p>
-                <p>})</p>
-                <p>}</p>
-                <p>}]);</p>
-
-            </blockquote>
+                <div class="code2">
+                    <p> var post_data = { </p>
+                    <div class="indent">
+                    <p>    api_key: "'<insert guest recorder API key from Integrations tab>'", </p>
+                    <p>    api_key_type: 'org_guest_recorder', </p>
+                    <p>    service_name: 'Prime Digital Academy Team', </p>
+                    <p>    video_endpoint: 'polar-reef-6279.herokuapp.com/api', </p>
+                    <p>    video_endpoint_extras: [], </p>
+                    <p>    video_set_public: false }; </p>
+                    </div>
+                </div>
+                <div></div>
+                <div class="code2part2">
+                    <p> You'll need to encode the object prior to passing it into the post request. </p>
+                    <div class="indent">
+                    <p> var post_data_encode = formUrlEncoded.encode(post_data); </p>
+                    </div>
+                    <p> For this you may need to install middleware to use form-urlencoded in Node.js. </p>
+                    <div class="indent">
+                    <p> npm install form-urlencoded --save </p>
+                    </div>
+                </div>
         </div>
+    <div>
+        <p class="lead">Step 3: Get one-time recorder token using user's API key</p>
+        <ol>
+            <li>Do a POST operation to retrieve a one-time recorder token</li>
+            <div class="indent">
+            <li> Operation: POST </li>
+            <li> URL: https://www.ilosvideos.com/api/auth/token </li>
+            <li> Content-Type: application/x-www-form-urlencoded </li>
+            </div>
+        </ol>
+        <button ng-click="codeExample3=!codeExample3" class="btn-sm btn-info">See Code Example</button>
+
+        <div class="code" ng-show="codeExample3">
+
+                <div class="code3">
+                <p> var post_options = {  </p>
+                    <div class="indent">
+                    <p>    hostname: 'www.ilosvideos.com', </p>
+                    <p>    path: '/api/auth/token', </p>
+                    <p>    method: 'POST', </p>
+                    <p>    headers: { </p>
+                    <p>    'Content-Type': 'application/x-www-form-urlencoded', </p>
+                    <p>    'Content-Length': post_data_encode.length} </p>
+                    </div>
+                </div>
+                <div></div>
+        </div>
+</div>
+
+        <div>
+            <p class="lead">Step 4: An example of an https request for obtaining the Object for the Record Button </p>
+            <ol>
+                <li>You'll need to install https in Node.js,  npm install https --save</li>
+                <div class="indent">
+                    <li> Operation: POST </li>
+                    <li> URL: https://www.ilosvideos.com/api/auth/token </li>
+                    <li> Content-Type: application/x-www-form-urlencoded </li>
+                </div>
+
+            </ol>
+            <button ng-click="codeExample4=!codeExample4" class="btn-sm btn-info">See Code Example</button>
+
+            <div class="code well" ng-show="codeExample4">
+                <p> var request = https.request(post_options, function(response){ </p>
+                <p class="miniIndent">// You'll want to include some helpful console logs </p>
+                <div class="indent">
+                    <p>console.log('STATUS: ' + response.statusCode); </p>
+                    <p>console.log('HEADERS: ' + JSON.stringify(response.headers)); </p>
+                    <p>console.log('DATA:' + post_data_encode); </p>
+                    <br/>
+                    <p>response.setEncoding('utf8'); </p>
+                    <p>jsonObject = ''; </p>
+                    <br/>
+                    <p>response.on('data', function(res){ </p>
+                    <p>jsonObject += res; </p>
+                    <p>process.stdout.write(res); </p>
+                    <p>console.log("response.on runs");
+                    <p>}); </p>
+                    <br/>
+                    <p>response.on('end', function(){ </p>
+                    <p>console.log('At response.end'); </p>
+                    <p>jsonObject = JSON.parse(jsonObject); </p>
+                    <p>callback(jsonObject); </p>
+                    <p>console.log(jsonObject); </p>
+                    <p>});  </p>
+                    <br/>
+
+                <p> request.on('error', function(e) {  </p>
+                <p> console.log('problem with request: ' + e.message);  </p>
+                <p> }); </p>
+                <p></p>
+                    </div>
+                    <br/>
+                <p>request.write(post_data_string); </p>
+                <p>request.end(); </p>
+            </div>
     </div>
-
-
-
-
 
 </div>
