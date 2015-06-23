@@ -33,6 +33,7 @@ router.post('/create', function(req,res,next) {
 /////////////////////////
 // Get the Logged in User
 /////////////////////////
+
 router.get('/user', function (req, res, next) {
   console.log("/user happens");
   if (req.isAuthenticated()) {
