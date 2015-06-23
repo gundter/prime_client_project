@@ -29,11 +29,11 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
         return $http.put('/ticket/updateStatus/', $scope.chgTktSts).success($scope.getTickets);
     };
 
-    $scope.showHide = function(tktArchived) {
-        if ($scope.tktArchived == tktArchived) {
-            $scope.tktArchived = false;
+    $scope.showHide = function(status) {
+        if (status == tktArchived) {
+            $scope.archiveStatus = false;
         } else {
-            $scope.tktArchived = true;
+            $scope.archiveStatus = true;
         }
     };
 
