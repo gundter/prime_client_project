@@ -70,7 +70,7 @@ passport.deserializeUser(function(id, done) {
 
 passport.use('local', new localStrategy({
         passReqToCallback : true,
-        usernameField: 'username'
+        usernameField: 'email'
     },
     function(req, emailAddress, password, done){
         console.log("finding user...");
