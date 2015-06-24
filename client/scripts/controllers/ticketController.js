@@ -14,6 +14,7 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
         console.log("appVersion: ", navigator.appVersion);
         console.log("userAgent: ", navigator.userAgent);
         console.log("platform: ", navigator.platform);
+        console.log("navigator: ", navigator);
 
 
         /////////////////////////
