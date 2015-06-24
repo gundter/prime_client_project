@@ -9,47 +9,9 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
         $scope.embedVideoURL = '';
         $scope.token = '';
 
-        console.log("appCodeName: ",navigator.appCodeName);
-        console.log("appName: ", navigator.appName);
-        console.log("appVersion: ", navigator.appVersion);
+        $scope.ticket.browser = nagivator.userAgent;
+        console.log("userInfo: ", navigator.userInfo);
         console.log("userAgent: ", navigator.userAgent);
-        console.log("platform: ", navigator.platform);
-        console.log("navigator: ", navigator);
-
-        var browserDetect = {
-            init: function () {
-                    // Feature detection: Check if navigator.userAgent exists
-                    if (typeof navigator.userAgent === 'undefined') {
-                        browserDetect.showInfo('navigator.userAgent is not available in your browser.');
-                    } else {
-                        browserDetect.detectJS();
-                    }
-            },
-            detectJS: function () {
-                b = parse(navigator.userAgent);
-                // Display the Detect.js parsed properties in the message area
-                browserDetect.showInfo =
-                    'Your browser is ' + b.browser.name +
-                    'Your device type is ' + b.device.type +
-                    'Your operating system is ' + b.os.name;
-            },
-            // Update message area with the string argument
-        };
-
-        browserDetect.init();
-        console.log(browserDetect.showInfo());
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         /////////////////////////
