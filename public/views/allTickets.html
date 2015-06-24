@@ -2,7 +2,7 @@
     <div class="row">
         <a ng-click="showHide(ticket.tktStatus)">Show Archive</a>
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in allTickets" >
-            <div class="well col-md-5 heatTicket {{ticket.tktStatus}}" ng-name="{{ticket.tktStatus}}">
+            <div ng-hide="ticket.tktStatus == 'tktArchived'" class="well col-md-5 heatTicket {{ticket.tktStatus}}">
                 <div class="col-md-9 ticketProblem"><p>{{ticket.problem}}</p></div>
                 <div class="col-md-3 ticketNum"><p>{{ticket.ticketNum}}</p></div>
                 <div>
@@ -20,7 +20,7 @@
                     <div class="col-md-12">
                         <div class="well ticketDescription"><p>DESCRIPTION: {{ticket.description}}</p></div>
                         <div class="ticketBrowser"><p>BROWSER: {{ticket.browser}}</p></div>
-                        <div class="ticketIframe">{{ticket.iframe}}</div>
+                        <div class="ticketIframe">{{ticket.iframe}}</a></div>
                         <div ng-show="admin" class="ticketStatus">
                             <a ng-click="ticketClass(ticket, 'tktClosed')">Close</a>
                             <a ng-click="ticketClass(ticket, 'tktArchived')">Archive</a>
