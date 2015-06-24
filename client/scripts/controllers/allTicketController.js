@@ -18,16 +18,14 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
     $scope.getTickets = function() {
         $http.get('/ticket/getTickets').then(
             function(response) {
-                console.log("All Tickets", response);
+                $scope.allTickets=response.data;
+                console.log("All Tickets", $scope.allTickets);
 
-                for (var i=0; i<response.data.length; i++) {
-
-                    $scope.allTickets.push(response.data[i]);
-
-                    if (response.data[i].tktStatus == 'tktClosed') {
-                        $scope.closeTickets.push(response.data[i]);
-                    } else if (response.data[i].tktStatus == 'tktArchived') {
-                        $scope.archivedTickets.push(response.data[i]);
+                for (var i=0; i<$scope.allTickets.length; i++) {
+                    if ($scope.allTickets[i].tktStatus == 'tktClosed') {
+                        $scope.closedTickets.push($scope.allTickets[i]);
+                    } else if ($scope.allTickets[i].tktStatus == 'tktArchived') {
+                        $scope.archivedTickets.push($scope.allTickets[i]);
                     }
                 }
                 $scope.viewtkt(1);
