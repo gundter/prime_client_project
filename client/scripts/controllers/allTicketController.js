@@ -62,5 +62,5 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
         return $http.put('/ticket/updateStatus/', $scope.chgTktSts).success($scope.getTickets);
     };
 
-    $scope.getTickets($scope.viewtkt(1));
+    $scope.getTickets();
 }]);
