@@ -37,10 +37,13 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
         console.log("viewtkt happens");
             if (chgTktStatus == 1) {
                 $scope.tickets = $scope.allTickets;
+                console.log("alltickets: ",$scope.allTickets);
             } else if (chgTktStatus == 2) {
                 $scope.tickets = $scope.closedTickets;
+                console.log("alltickets: ",$scope.closedTickets);
             } else if (chgTktStatus == 3) {
                 $scope.tickets = $scope.archivedTickets;
+                console.log("alltickets: ",$scope.archivedTickets);
             }
     };
 
