@@ -1,7 +1,7 @@
 <div class="backgroundArea">
     <div class="row">
-        <a ng-click="'tktArchived'' = 'tktArchive'"  ng-show="tktArchive'">Show Archive</a>
-        <a ng-click="'tktArchive' = 'tktArchived'"  ng-hide="'tktArchived'">Show Archive</a>
+        <a ng-click="'tktArchive' = 'tktArchived'"  ng-show="'tktArchive'">Show Archive</a>
+        <a ng-click="'tktArchived' = 'tktArchive'"  ng-hide="'tktArchived'">Show Archive</a>
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in allTickets" >
             <div ng-hide="ticket.tktStatus == 'tktArchived'" class="well col-md-5 heatTicket {{ticket.tktStatus}}">
                 <div class="col-md-9 ticketProblem"><p>{{ticket.problem}}</p></div>
