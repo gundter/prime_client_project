@@ -9,7 +9,12 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
         $scope.embedVideoURL = '';
         $scope.token = '';
 
-        console.log("Browser: ",navigator.userAgent);
+        console.log("appCodeName: ",navigator.appCodeName);
+        console.log("appName: ", navigator.appName);
+        console.log("appVersion: ", navigator.appVersion);
+        console.log("userAgent: ", navigator.userAgent);
+        console.log("platform: ", navigator.platform);
+
 
         /////////////////////////
         // Create a New Ticket
