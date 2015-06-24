@@ -4,7 +4,6 @@
     <button class="btn-danger" ng-click="viewtkt(2)">Closed</button>
     <button class="btn-danger" ng-click="viewtkt(3)">Archived</button>
     <div class="row">
-        <a ng-click="">Show Archive</a>
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in allTickets" >
             <div class="well col-md-5 heatTicket {{ticket.tktStatus}}">
                 <div class="col-md-9 ticketProblem"><p>{{ticket.problem}}</p></div>
