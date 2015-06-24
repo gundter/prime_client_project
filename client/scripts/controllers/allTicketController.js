@@ -25,8 +25,10 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
                 for (var i=0; i<$scope.allTickets.length; i++) {
                     if ($scope.allTickets[i].tktStatus == 'tktClosed') {
                         $scope.closedTickets.push($scope.allTickets[i]);
+
                     } else if ($scope.allTickets[i].tktStatus == 'tktArchived') {
                         $scope.archivedTickets.push($scope.allTickets[i]);
+
                     } else if ($scope.allTickets[i].tktStatus == 'tktOpen'){
                         $scope.openTickets.push($scope.allTickets[i]);
                     }
@@ -36,6 +38,11 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
     };
 
     $scope.viewtkt = function(chgTktStatus) {
+
+            console.log("viewtkt happens");
+            console.log("closedTickets: ", $scope.closedTickets);
+            console.log("archivedTickets: ", $scope.archivedTickets);
+            console.log("openTickets: ", $scope.openTickets);
             if (chgTktStatus == 1) {
                 $scope.tickets = $scope.allTickets;
             } else if (chgTktStatus == 2) {
@@ -43,7 +50,7 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
             } else if (chgTktStatus == 3) {
                 $scope.tickets = $scope.archivedTickets;
             } else if (chgTktStatus == 4) {
-                $scope.ticekts = $scope.openTickets;
+                $scope.tickets = $scope.openTickets;
             }
     };
 
