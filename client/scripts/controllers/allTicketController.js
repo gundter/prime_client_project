@@ -28,6 +28,19 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
         };
         return $http.put('/ticket/updateStatus/', $scope.chgTktSts).success($scope.getTickets);
     };
+    $scope.showHide = function(status){
+        $scope.tktArchived.addClass(hide);
+        if (status == 'tktArchived'){
+            $scope.tktArchived.removeClass(hide);
+        }
+    };
+    $scope.showHide = function(status) {
+        if (status == 'tktArchived') {
+            $scope.ticket.tktStatus = false;
+        } else {
+            $scope.ticket.tktStatus = true;
+        }
+    };
 
     $scope.getTickets();
 }]);
