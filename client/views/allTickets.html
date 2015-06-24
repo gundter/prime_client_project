@@ -1,8 +1,12 @@
 <div class="backgroundArea">
+
+    <button class="btn-warning" ng-click="viewtkt(1)">All Tickets</button>
+    <button class="btn-danger" ng-click="viewtkt(2)">Closed</button>
+    <button class="btn-danger" ng-click="viewtkt(3)">Archived</button>
     <div class="row">
         <a ng-click="">Show Archive</a>
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in allTickets" >
-            <div ng-hide="ticket.tktStatus == 'tktArchived'" class="well col-md-5 heatTicket {{ticket.tktStatus}}">
+            <div class="well col-md-5 heatTicket {{ticket.tktStatus}}">
                 <div class="col-md-9 ticketProblem"><p>{{ticket.problem}}</p></div>
                 <div class="col-md-3 ticketNum"><p>{{ticket.ticketNum}}</p></div>
                 <div>
@@ -15,17 +19,17 @@
                     <div class="col-md-4 ticketDate">
                         <p>{{ticket.date | date :'medium'}}</p>
                     </div>
-                <div class="col-md-12">
-                    <div class="well ticketDescription"><p>DESCRIPTION: {{ticket.description}}</p></div>
-                    <div class="ticketBrowser"><p>BROWSER: {{ticket.browser}}</p></div>
-                    <div class="ticketIframe">{{ticket.iframe}}</div>
-                    <div ng-show="admin" class="ticketStatus">
-                        <button class="btn-warning" ng-click="ticketClass(ticket, 'tktClosed')">Close</button>
-                        <button class="btn-danger" ng-click="ticketClass(ticket, 'tktArchived')">Archive</button>
+                    <div class="col-md-12">
+                        <div class="well ticketDescription"><p>DESCRIPTION: {{ticket.description}}</p></div>
+                        <div class="ticketBrowser"><p>BROWSER: {{ticket.browser}}</p></div>
+                        <div class="ticketIframe"><a>{{ticket.videoURL}}</a></div>
+                        <div ng-show="admin" class="ticketStatus">
+                            <button class="btn-warning" ng-click="ticketClass(ticket, 'tktClosed')">Close</button>
+                            <button class="btn-danger" ng-click="ticketClass(ticket, 'tktArchived')">Archive</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
