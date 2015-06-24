@@ -21,7 +21,6 @@ router.post('/', function(req, res, next){
     });
 });
 
-<<<<<<< HEAD
 router.post('/nullify', function(req, res, next){
     var video = new VideoData({
         token: req.body.token,
@@ -52,11 +51,6 @@ router.post('/nullify', function(req, res, next){
 //////////////////////////////////
 // Get the Video Recording Button
 //////////////////////////////////
-=======
-////////////////////////////////////
-// Get the Video Recording Button //
-////////////////////////////////////
->>>>>>> 70e75ef809139872a0088cb101cb4decbaaa8267
 router.get('/getData', function(req, res, next){
     var results = new GetData();
     console.log('Data Created');
