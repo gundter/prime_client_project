@@ -174,11 +174,15 @@
             <ol>
                 <li> Using a ticket Controller, include an http service, and add http.request </li>
                 <div class="indent">
-                    <li>  </li>
-                    <li> </li>
-                    <li>  </li>
+                        <li> An example of a controller, including $http: </li>
                 </div>
+                        <li class="space"> Hold Open </li>
+                    <div class="indent">
+                        <li> App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$location', function($scope, $http, $sce, $interval, $location) </li>
+                    </div>
+
             </ol>
+        </div>
             <button ng-click="codeExample6=!codeExample6" class="btn-sm btn-info">See Code Example</button>
 
             <div class="code" ng-show="codeExample6">
@@ -219,5 +223,7 @@
                     <li class="space">Saving some space</li>
                     <li> In this example, the token is stored to a database, MongoDB, for later retreival and use.</li>
                 </ol>
+            </div>
         </div>
-</div>
+
+    </div>

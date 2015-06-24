@@ -1,7 +1,7 @@
 <div class="container">
     <h2>API Instructions</h2>
 
-    <p>This will be some basic text about interacting with the API instructions to use the Record Button and Object data to build a web application.</p>
+    <p>This will be some basic text about interacting with the API instructions to use the Record Button and object data to build a web application.</p>
 
 
     <div>
@@ -174,11 +174,15 @@
             <ol>
                 <li> Using a ticket Controller, include an http service, and add http.request </li>
                 <div class="indent">
-                    <li>  </li>
-                    <li> </li>
-                    <li>  </li>
+                        <li> An example of a controller, including $http: </li>
                 </div>
+                        <li class="space"> Hold Open </li>
+                    <div class="indent">
+                        <li> App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$location', function($scope, $http, $sce, $interval, $location) </li>
+                    </div>
+
             </ol>
+        </div>
             <button ng-click="codeExample6=!codeExample6" class="btn-sm btn-info">See Code Example</button>
 
             <div class="code" ng-show="codeExample6">
@@ -205,7 +209,7 @@
                 </div>
             </div>
             <div>
-                <p class="lead">Step 7: After the video is recorded and uploaded, wait for a POST, that will return an Object</p>
+                <p class="lead">Step 7: After the video is recorded and uploaded, wait for a POST, that will return an object</p>
                 <ol>
                     <li>After a video is recorded using the one-time token, the following data will be sent via a POST with JSON in the body containing the following data: </li>
                     <div class="indent">
@@ -219,5 +223,7 @@
                     <li class="space">Saving some space</li>
                     <li> In this example, the token is stored to a database, MongoDB, for later retreival and use.</li>
                 </ol>
+            </div>
         </div>
-</div>
+
+    </div>

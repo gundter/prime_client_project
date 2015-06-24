@@ -49,7 +49,7 @@ font-size: 50px;
     margin-right: 8em;
 }
 
-#username, #password {
+#email, #password {
     padding: 5px;
     padding-right: 15px;
 }
@@ -149,10 +149,6 @@ h4 {
     margin: 6px auto 6px 18%;
     padding-top: 20px;
 }
-
-/*.issue {*/
-    /**/
-/*}*/
 
 .aboutContent {
     padding-top: 30px;
