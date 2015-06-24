@@ -12,6 +12,7 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
         $scope.ticket.browser = navigator.userAgent;
         console.log("userInfo: ", navigator.userInfo);
         console.log("userAgent: ", navigator.userAgent);
+        console.log(navigator);
 
 
         /////////////////////////
