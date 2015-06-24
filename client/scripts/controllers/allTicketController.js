@@ -20,7 +20,7 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
             function(response) {
                 console.log("All Tickets", response);
 
-                for (var i=0; i<response.data; i++) {
+                for (var i=0; i<response.data.length; i++) {
 
                     $scope.allTickets.push(response.data[i]);
 
