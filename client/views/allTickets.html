@@ -1,6 +1,11 @@
 <div class="backgroundArea">
+
+    <button class="btn-warning" ng-click="viewtkt('all')">Close</button>
+    <button class="btn-danger" ng-click="viewtkt('closed')">Archive</button>
+    <button class="btn-danger" ng-click="viewtkt('archived')">Archive</button>
+
     <div class="row">
-        <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in allTickets" >
+        <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in tickets" >
             <div class="well col-md-5 heatTicket {{ticket.tktStatus}}">
                 <div class="col-md-9 ticketProblem"><p>{{ticket.problem}}</p></div>
                 <div class="col-md-3 ticketNum"><p>{{ticket.ticketNum}}</p></div>
