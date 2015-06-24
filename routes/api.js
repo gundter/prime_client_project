@@ -21,33 +21,6 @@ router.post('/', function(req, res, next){
     });
 });
 
-router.post('/nullify', function(req, res, next){
-    var video = new VideoData({
-        token: req.body.token,
-        randtag: req.body.randtag,
-        videoUrl: req.body.videoURL,
-        embededURL: req.body.embededURL,
-        iframe: req.body.iframe
-    });
-    VideoData.findById(req.body.id,
-        function(err, article){
-            if (err){
-                console.log("Find article failed", err);
-                next(err)
-            }
-            try {
-                videoDataSchema.push(video);
-                videoDataSchema.save(function (err) {
-                    if (err) return next(err);
-                });
-                res.send(video);
-            }catch(exception){
-                console.log("Push failed:", exception);
-                next(err);
-            }
-        });
-});
-
 //////////////////////////////////
 // Get the Video Recording Button
 //////////////////////////////////
