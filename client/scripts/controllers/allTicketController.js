@@ -36,10 +36,9 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
     };
     $scope.showHide = function(status) {
         if (status == 'tktArchived') {
-            $scope.ticket.tktStatus = true;
-        } else {
-            $scope.ticket.tktStatus = false;
-        }
+            $scope.ticket.tktStatus = 'tktArchive';
+        }else if (status == 'tktArchive') {
+            $scope.ticket.tktStatus = 'tktArchived'}
     };
 
     $scope.getTickets();
