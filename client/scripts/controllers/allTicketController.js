@@ -43,7 +43,7 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
             }
     };
 
-    $scope.viewtkt();
+    $scope.viewtkt('open');
 
     $scope.ticketClass = function(ticket, status){
         console.log("Ticket: ",ticket);
