@@ -38,19 +38,22 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
     };
 
     $scope.viewtkt = function(chgTktStatus) {
+            $scope.tickets = [];
 
-            console.log("viewtkt happens");
-            console.log("closedTickets: ", $scope.closedTickets);
-            console.log("archivedTickets: ", $scope.archivedTickets);
-            console.log("openTickets: ", $scope.openTickets);
             if (chgTktStatus == 1) {
                 $scope.tickets = $scope.allTickets;
+
             } else if (chgTktStatus == 2) {
+                console.log("closedTickets: ", $scope.closedTickets);
                 $scope.tickets = $scope.closedTickets;
+
             } else if (chgTktStatus == 3) {
                 $scope.tickets = $scope.archivedTickets;
+                console.log("archivedTickets: ", $scope.archivedTickets);
+
             } else if (chgTktStatus == 4) {
                 $scope.tickets = $scope.openTickets;
+                console.log("openTickets: ", $scope.openTickets);
             }
     };
 
