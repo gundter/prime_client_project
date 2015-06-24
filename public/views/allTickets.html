@@ -20,10 +20,10 @@
                     <div class="col-md-12">
                         <div class="well ticketDescription"><p>DESCRIPTION: {{ticket.description}}</p></div>
                         <div class="ticketBrowser"><p>BROWSER: {{ticket.browser}}</p></div>
-                        <div class="ticketIframe">{{ticket.iframe}}</a></div>
+                        <div class="ticketIframe"><a>{{ticket.videoURL}}</a></div>
                         <div ng-show="admin" class="ticketStatus">
-                            <a ng-click="ticketClass(ticket, 'tktClosed')">Close</a>
-                            <a ng-click="ticketClass(ticket, 'tktArchived')">Archive</a>
+                            <button class="btn-warning" ng-click="ticketClass(ticket, 'tktClosed')">Close</button>
+                            <button class="btn-danger" ng-click="ticketClass(ticket, 'tktArchived')">Archive</button>
                         </div>
                     </div>
                 </div>
