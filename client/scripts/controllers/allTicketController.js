@@ -30,6 +30,7 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
                         $scope.archivedTickets.push(response.data[i]);
                     }
                 }
+                $scope.viewtkt(1);
             });
     };
 
@@ -46,8 +47,6 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
                 console.log("alltickets: ",$scope.archivedTickets);
             }
     };
-
-    $scope.viewtkt(1);
 
     $scope.ticketClass = function(ticket, status){
         console.log("Ticket: ",ticket);
