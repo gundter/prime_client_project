@@ -26,7 +26,7 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
                     }
             },
             detectJS: function () {
-                b = detect.parse(navigator.userAgent);
+                b = parse(navigator.userAgent);
                 // Display the Detect.js parsed properties in the message area
                 browserDetect.showInfo =
                     'Your browser is ' + b.browser.name +
