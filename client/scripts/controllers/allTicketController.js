@@ -19,7 +19,6 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
     $scope.getTickets = function() {
         $http.get('/ticket/getTickets').then(
             function(response) {
-
                 $scope.allTickets=response.data;
                 console.log("All Tickets", $scope.allTickets);
                 $scope.openTickets = [];
@@ -27,26 +26,23 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
                 $scope.closedTickets = [];
 
                 for (var i=0; i<$scope.allTickets.length; i++) {
-                    if ($scope.allTickets[i].tktStatus == 'Closed') {
+                    if ($scope.allTickets[i].tktStatus == 'Resolved') {
                         $scope.closedTickets.push($scope.allTickets[i]);
                     } else if ($scope.allTickets[i].tktStatus == 'Open'){
                         $scope.openTickets.push($scope.allTickets[i]);
                     }
                 }
-                $scope.viewtkt('All');
+                $scope.viewtkt('Open');
             });
     };
 
     $scope.viewtkt = function(chgTktStatus) {
         $scope.tickets = [];
-
         if (chgTktStatus == 'All') {
             $scope.tickets = $scope.allTickets;
-
         } else if (chgTktStatus == 'Closed') {
             console.log("closedTickets: ", $scope.closedTickets);
             $scope.tickets = $scope.closedTickets;
-
         } else if (chgTktStatus == 'Open') {
             $scope.tickets = $scope.openTickets;
             console.log("openTickets: ", $scope.openTickets);

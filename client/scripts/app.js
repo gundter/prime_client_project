@@ -36,7 +36,7 @@ App.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
         otherwise({
             redirectTo: "/home"
         });
-    }]);
+}]);
 
 App.service('browser', ['$window', function($window) {
 
@@ -52,4 +52,3 @@ App.service('browser', ['$window', function($window) {
         return 'unknown';
     }
 }]);
-

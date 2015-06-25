@@ -1,10 +1,7 @@
 /*///////////////////*/
 /*Index Page Styling*/
 /*///////////////////*/
-<<<<<<< HEAD
 
-=======
->>>>>>> 9af926916f823f69eec5ce01aa4e936afea911c9
 body{
     background-color:#f2f2f2;
 }
@@ -26,7 +23,6 @@ li {
     color: #c2e49c;
     font-size: 50px;
 }
-
 
 .loginInputs li , .signedIn li{
     list-style-type: none;
@@ -210,7 +206,7 @@ h4 {
 /*Ticket Page Styling*/
 /*///////////////////*/
 .ticketPage {
-    color:#ffffff;
+    color:#484848;
     margin-top:15px;
 }
 
@@ -321,20 +317,11 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
     border: 10px solid #96c661;
 }
 
-<<<<<<< HEAD
 .Resolved{
     border-radius: 4px;
     border: 10px solid #484848;
 }
 
-
-=======
-.Closed{
-    border-radius: 4px;
-    border: 10px dashed #e1564f;
-}
-
->>>>>>> 9af926916f823f69eec5ce01aa4e936afea911c9
 /*API Instructions Page - indent language*/
 .code p {
     margin-left: 200px;
@@ -358,8 +345,4 @@ span {
     width: 150px;
     margin: 5px auto;
     padding: auto;
-}
-
-.clientField {
-    margin-left: 10px;
 }

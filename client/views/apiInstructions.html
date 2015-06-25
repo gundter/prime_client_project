@@ -193,23 +193,20 @@
 
         <div class="code" ng-show="codeExample6">
             <div class="code6">
-                <p class="indent"><li class="indent"> App.controller('ticketController', ["$scope", "$http", '$sce',
-                '$interval', '$location',
-                function($scope, $http, $sce, $interval, $location)... </li></p>
+
+                <p><li> App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$location', function($scope, $http, $sce, $interval, $location)... </li></p>
                 <br/>
                 <p><i>// Create a $http.get that runs a function on success that takes in the data Object and adds to the DOM </i></p>
                 <p> $http.get('/api/getData').success( </p>
                     <div class="indent">
                         <p>   function(data) { </p>
-                        <div class="indent">
-                            <p>   console.log(data); </p>
-                            <p>   $scope.returnedData = data; </p>
-                            <p>   $scope.iframeButton = $sce.trustAsHtml($scope.returnedData.recordButtonIframe); </p>
-                            <p>   $scope.token = $scope.returnedData.token; </p>
-                            <p>   console.log("iframe button: ",$scope.iframeButton); </p>
-                        </div>
+                        <p>   console.log(data); </p>
+                        <p>   $scope.returnedData = data; </p>
+                        <p>   $scope.iframeButton = $sce.trustAsHtml($scope.returnedData.recordButtonIframe); </p>
+                        <p>   $scope.token = $scope.returnedData.token; </p>
+                        <p>   console.log("iframe button: ",$scope.iframeButton); </p>
                     </div>
-                        <p class="indent">   }).error(  </p>
+                        <p>   }).error(  </p>
                     <div class="indent">
                         <p>   function(err) {  </p>
                         <p>   console.log(err);  </p>

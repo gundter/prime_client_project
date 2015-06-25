@@ -39,10 +39,14 @@ function GetData(){
 }
 
 var post_data = {
-    api_key: 'b6ANvns15XjOUeMbvyzVumTbgJ9stQ',
-    api_key_type: 'org_guest_recorder',
+    api_key: 'eTnp4mQvjFb5Xb92dYPADytLnSxQLl',
+    api_key_type: 'user',
     service_name: 'Prime Digital Academy Team',
+<<<<<<< HEAD
     video_endpoint: 'https://polar-reef-6279.herokuapp.com/api',
+=======
+    video_endpoint: 'https://guarded-wave-5600.herokuapp.com/api',
+>>>>>>> 4ad6f2630f8eb934d93975c61477aba1ff94b188
     video_endpoint_extras: [],
     video_set_public: false
 };

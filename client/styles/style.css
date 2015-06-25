@@ -24,7 +24,6 @@ li {
     font-size: 50px;
 }
 
-
 .loginInputs li , .signedIn li{
     list-style-type: none;
     display: inline;
@@ -346,8 +345,4 @@ span {
     width: 150px;
     margin: 5px auto;
     padding: auto;
-}
-
-.clientField {
-    margin-left: 10px;
 }
