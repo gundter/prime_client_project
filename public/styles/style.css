@@ -37,7 +37,7 @@ font-size: 50px;
     padding: 5px;
     background-color:#177289;
 }
-.signedIn li {
+.signedIn li, .waitMessage {
     color: white;
 }
 
@@ -49,7 +49,7 @@ font-size: 50px;
     margin-right: 8em;
 }
 
-#username, #password {
+#email, #password {
     padding: 5px;
     padding-right: 15px;
 }
@@ -59,6 +59,10 @@ font-size: 50px;
     background-color: #37c2bf;
     border-color: #37c2bf;
     color:white;
+}
+
+.createuserbtn {
+    margin-left: 165px;
 }
 
 
@@ -149,10 +153,6 @@ h4 {
     margin: 6px auto 6px 18%;
     padding-top: 20px;
 }
-
-/*.issue {*/
-    /**/
-/*}*/
 
 .aboutContent {
     padding-top: 30px;
@@ -294,16 +294,20 @@ h4 {
     margin-top: 10px;
 }
 
-.createuser {
-    color: #3F51B5;
-}
-
-header, .nav-pills, .indivnav, .loginInputs, .pull-right {
+header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
     background-color:#177289;
 }
 
-.background {
+.waitMessage {
+    margin-left: 85px;
+}
+
+.background, {
     background-color:#f2f2f2;
+}
+
+.space {
+    color:#f2f2f2;
 }
 
 .nav-pills, .loginInputs {
@@ -321,10 +325,24 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right {
 
 .tktClosed{
     border-radius: 4px;
-    border: 10px solid #e1564f;
+    border: 10px dashed #e1564f;
 }
 
 .tktArchived{
     border-radius: 4px;
     border: 10px solid #484848;
+}
+
+/*API Instructions Page - indent language*/
+.code p {
+    margin-left: 200px;
+}
+
+.indent {
+    margin-left: 100px;
+}
+
+
+span {
+    font-weight:bold;
 }

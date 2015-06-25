@@ -1,7 +1,7 @@
 /**
  * Created by brianaamodt on 6/11/15.
  */
-    // myApp is enabling angular functionality within it's scope
+//myApp is enabling angular functionality within it's scope
 var App = angular.module('App',['ngRoute', 'appControllers']);
 
 var appControllers = angular.module('appControllers', []);
