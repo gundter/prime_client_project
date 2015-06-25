@@ -22,8 +22,8 @@
                     <div class="col-md-12">
                         <div class="well"><p><b>Desciption:</b> {{ticket.description}}</p></div>
                         <p><b>Browser:</b> {{ticket.browser}}</p>
-                        <a ng-href="ticket.videoURL">View the Video</a>
-                        <p><b>Status:</b> {{ticket.status}}</p>
+                        <a ng-href="{{ticket.videoURL}}" target="_blank">View the Video</a>
+                        <p><b>Status:</b> {{ticket.tktStatus}}</p>
                         <div ng-show="admin" class="ticketStatus">
                             <button class="btn-warning" ng-click="ticketClass(ticket, 'tktClosed')">Close</button>
                             <button class="btn-info" ng-click="ticketClass(ticket, 'tktOpen')">Open</button>
