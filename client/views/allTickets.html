@@ -10,22 +10,25 @@
                 <div class="col-md-9 ticketProblem"><p>{{ticket.problem}}</p></div>
                 <div class="col-md-3 ticketNum"><p>{{ticket.ticketNum}}</p></div>
                 <div>
-                    <div class="well col-md-8 clientField">
-                        <p><b>Name:</b> {{ticket.name}}</p>
-                        <p><b>Email:</b> {{ticket.email}}</p>
-                        <p><b>Phone:</b> {{ticket.phone}}</p>
-                        <p><b>Department / Desk:</b> {{ticket.department}}</p>
-                    </div>
-                    <div class="col-md-4 ticketDate">
-                        <p>{{ticket.date | date :'medium'}}</p>
-                    </div>
+                        <div class="well col-md-8 clientField">
+                            <p><b>Name:</b> {{ticket.name}}</p>
+                            <p><b>Email:</b> {{ticket.email}}</p>
+                            <p><b>Phone:</b> {{ticket.phone}}</p>
+                            <p><b>Department / Desk:</b> {{ticket.department}}</p>
+                        </div>
+                        <div class="col-md-4 ticketDate">
+                            <p>{{ticket.date | date :'medium'}}</p>
+                        </div>
                     <div class="col-md-12">
-                        <div class="well ticketDescription"><p>DESCRIPTION: {{ticket.description}}</p></div>
-                        <div class="ticketBrowser"><p>BROWSER: {{ticket.browser}}</p></div>
-                        <div class="ticketIframe"><a href="{{ticket.videoURL}}">{{ticket.videoURL}}</a></div>
-                        <div ng-show="admin" class="ticketStatus">
-                            <button class="btn-warning" ng-click="ticketClass(ticket, 'Resolved')">Resolve</button
-                            <button class="btn-info" ng-click="ticketClass(ticket, 'Open')">Open</button>
+                        <div class="well"><p><b>Desciption:</b> {{ticket.description}}</p></div>
+                        <p><b>Browser:</b> {{ticket.browser}}</p>
+                        <a ng-href="{{ticket.embedURL}}" target="_blank">View the Video</a>
+                        <div class="statusBtns">
+                            <p><b>Status:</b><br>{{ticket.tktStatus}}</p>
+                            <div ng-show="admin" class="ticketStatus">
+                                <button class="btn-warning" ng-click="ticketClass(ticket, 'Closed')">Resolved</button>
+                                <button class="btn-info" ng-click="ticketClass(ticket, 'Open')">Open</button>
+                            </div>
                         </div>
                     </div>
                 </div>
