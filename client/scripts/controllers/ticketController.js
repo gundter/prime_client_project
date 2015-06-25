@@ -1,5 +1,4 @@
-App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$location',function($scope, $http, $sce, $interval, $location){
-        console.log("ticketController loads");
+App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$location', 'browser',function($scope, $http, $sce, $interval, $location, browser){
 
         $scope.ticket = {};
         $scope.user = {};
@@ -9,6 +8,9 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
         $scope.iframeVideo = '';
         $scope.embedVideoURL = '';
         $scope.token = '';
+
+        $scope.ticket.browser = browser();
+        console.log("Broswer service: ", $scope.ticket.browser);
 
         /////////////////////////
         // Create a New Ticket
@@ -65,9 +67,7 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
                         $scope.recordedVideo = data;
                         $scope.iframeVideo = $sce.trustAsHtml($scope.recordedVideo[lastVideo].iframe);
                         $scope.embedVideoURL = $sce.trustAsHtml($scope.recordedVideo[lastVideo].embedURL);
-
                         $scope.token === data[0].token ? $scope.matchToken = true : $scope.matchToken = false;
-
                     }).error(
                     function (err) {
                         console.log(err);

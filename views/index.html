@@ -5,11 +5,13 @@
     <title>primeDesk</title>
 
     <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/styles/style.css">
 
 </head>
 
-<body>
+<body class="backgroundArea">
 
     <header class="container-fluid" ng-controller="headerController">
 
@@ -20,7 +22,7 @@
             <ul class="nav nav-pills">
                 <li class="indivnav"><a href="#home">About</a></li>
                 <li class="indivnav"><a href="#ticket" target="_blank">Report An Issue</a></li>
-                <li class="indivnav"><a href="#allTickets">All Tickets</a></li>
+                <li class="indivnav" ng-if="showUser"><a href="#allTickets">All Tickets</a></li>
             </ul>
         </div>
 
@@ -47,7 +49,7 @@
                                    value="Log In"></li>
                         <li><a href="#register" class="registerstyle btn">Register</a></li>
                     </ul>
-                    <p ng-show="waitMsg">Please wait while you're being Logged In...</p>
+                    <p class="waitMessage" ng-show="waitMsg">Please wait while you're being Logged In...</p>
                 </form>
             </div>
         </div>
@@ -71,14 +73,6 @@
     <script type="text/javascript" src="/vendors/angular/angular.js"></script>
     <script type="text/javascript" src="/vendors/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="/javascripts/app.min.js"></script>
-    <script type="text/javascript" src="/javascripts/allControllers.min.js"></script>
-    <!--<script type="text/javascript" src="/javascripts/controllers/apiInstructionsController.min.js"></script>-->
-    <!--<script type="text/javascript" src="/javascripts/controllers/ticketController.min.js"></script>-->
-    <!--<script type="text/javascript" src="/javascripts/controllers/headerController.min.js"></script>-->
-    <!--<script type="text/javascript" src="/javascripts/controllers/registerController.min.js"></script>-->
-    <!--<script type="text/javascript" src="/javascripts/controllers/calculatorController.min.js"></script>-->
-    <!--<script type="text/javascript" src="/javascripts/controllers/allTicketController.min.js"></script>-->
-
 
 </body>
 </html>

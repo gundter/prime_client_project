@@ -1,7 +1,7 @@
 /**
  * Created by brianaamodt on 6/11/15.
  */
-    // myApp is enabling angular functionality within it's scope
+//myApp is enabling angular functionality within it's scope
 var App = angular.module('App',['ngRoute', 'appControllers']);
 
 var appControllers = angular.module('appControllers', []);
@@ -37,4 +37,19 @@ App.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
             redirectTo: "/home"
         });
     }]);
+
+App.service('browser', ['$window', function($window) {
+
+    return function() {
+        var userAgent = $window.navigator.userAgent;
+        var browsers = {chrome: /chrome/i, safari: /safari/i, firefox: /firefox/i, ie: /internet explorer/i};
+
+        for(var key in browsers) {
+            if (browsers[key].test(userAgent)) {
+                return key;
+            }
+        }
+        return 'unknown';
+    }
+}]);
 

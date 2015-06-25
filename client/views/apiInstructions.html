@@ -1,223 +1,240 @@
 <div class="container">
     <h2>API Instructions</h2>
 
-    <p>This will be some basic text about interacting with the API instructions to use the Record Button and Object data to build a web application.</p>
+    <p><b>Technologies Used:</b> Node.js, Express, Angular, MongoDB, HTML5, CSS3, including user registration and authentication with Passport.</p>
+    <br/>
+    <p><b>Overview:</b> In this application a POST request from application server to ilos server is done to retrieve an object.  That object contains several elements,
+        including a iframe for a Record Button.  When the video is completed, and upload, a response object is returned containing a token for that video. The token is
+        saved to the database for later retrieval.  User registration allows users to be created so that tickets can be tied to specific users and the status of the tickets
+        can be viewed on the All Tickets page.</p>
 
-
+    <!------------------------>
+    <!--------STEP 1---------->
+    <!------------------------>
+    <br/>
     <div>
         <p class="lead">Step 1: Get API keys from user</p>
-        <ol class="indent">
+        <ol class="tab">
             <li>User's API key is located in Options > Account Settings</li>
             <li>Organization's guest user API key is located in Options > Admin > Integrations</li>
         </ol>
-        <!-- Commented out Code Example 1 because it is not needed to get the API key-->
-        <!--<button ng-click="codeExample1=!codeExample1" class="btn-sm btn-info">See Code Example</button>-->
-
-        <!--<div class="code" ng-show="codeExample1">-->
-            <!--<blockquote>-->
-
-            <!--</blockquote>-->
-        <!--</div>-->
     </div>
 
-        <p class="lead">Step 2: Build an Object Containing the Parameters to be passed into the POST request </p>
-        <ol>
-            <li><span> INCLUDE: </span></li>
-            <div class="indent">
+    <!------------------------>
+    <!--------STEP 2---------->
+    <!------------------------>
+    <p class="lead">Step 2: Build an Object Containing the Parameters to be passed into the POST request </p>
+    <ol>
+        <li><span> INCLUDE: </span></li>
+        <div class="tab">
             <li>   API key: a) the guest recorder API key, or b) your individual user API key </li>
             <li>   API key type: a) 'org_guest_recorder', or b) 'user' </li>
             <li>   service name: '//the name of your organization//' </li>
             <li>   video_endpoint: '//set a url for the video endpoint on user site or application//'</li>
             <li>   video_endpoint_extras: [] </li>
             <li>   video_set_public: false </li>
-            </div>
-        </ol>
-        <button ng-click="codeExample2=!codeExample2" class="btn-sm btn-info">See Code Example</button>
-
-        <div class="code" ng-show="codeExample2">
-                <div class="code2">
-                    <p> var post_data = { </p>
-                    <div class="indent">
-                    <p>    api_key: "'<insert guest recorder API key from Integrations tab>'", </p>
-                    <p>    api_key_type: 'org_guest_recorder', </p>
-                    <p>    service_name: 'Prime Digital Academy Team', </p>
-                    <p>    video_endpoint: 'polar-reef-6279.herokuapp.com/api', </p>
-                    <p>    video_endpoint_extras: [], </p>
-                    <p>    video_set_public: false }; </p>
-                    </div>
-                </div>
-                <div></div>
-                <div class="code2part2">
-                    <p> You'll need to encode the object prior to passing it into the post request. </p>
-                    <div class="indent">
-                    <p> var post_data_encode = formUrlEncoded.encode(post_data); </p>
-                    </div>
-                    <p> For this you may need to install middleware to use form-urlencoded in Node.js. </p>
-                    <div class="indent">
-                    <p> npm install form-urlencoded --save </p>
-                    </div>
-                </div>
         </div>
+    </ol>
+    <button ng-click="codeExample2=!codeExample2" class="btn-sm btn-info">See Code Example</button>
+
+    <div class="code well" ng-show="codeExample2">
+        <div class="code2">
+            <p> var post_data = { </p>
+            <div class="indent">
+                <p>    api_key: "'<insert guest recorder API key from Integrations tab>'", </p>
+                <p>    api_key_type: 'org_guest_recorder', </p>
+                <p>    service_name: 'Prime Digital Academy Team', </p>
+                <p>    video_endpoint: 'polar-reef-6279.herokuapp.com/api', </p>
+                <p>    video_endpoint_extras: [], </p>
+                <p>    video_set_public: false }; </p>
+            </div>
+        </div>
+        <div class="code2part2">
+            <br/>
+            <p><i> // Encode the object prior to passing it into the post request. </i></p>
+            <div class="indent">
+                <p> var post_data_encode = formUrlEncoded.encode(post_data); </p>
+            </div>
+            <p><i> //  Install middleware to use form-urlencoded in Node.js. </i></p>
+            <div class="indent">
+                <p><i> // npm install form-urlencoded --save </i></p>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------>
+    <!--------STEP 3---------->
+    <!------------------------>
     <div>
         <p class="lead">Step 3: Get one-time recorder token using user's API key</p>
         <ol>
             <li>Do a POST operation to retrieve a one-time recorder token</li>
-            <div class="indent">
-            <li> Operation: POST </li>
-            <li> URL: https://www.ilosvideos.com/api/auth/token </li>
-            <li> Content-Type: application/x-www-form-urlencoded </li>
+            <div class="tab">
+                <li> Operation: POST </li>
+                <li> URL: https://www.ilosvideos.com/api/auth/token </li>
+                <li> Content-Type: application/x-www-form-urlencoded </li>
             </div>
         </ol>
         <button ng-click="codeExample3=!codeExample3" class="btn-sm btn-info">See Code Example</button>
 
         <div class="code" ng-show="codeExample3">
-
-                <div class="code3">
+            <div class="code3">
                 <p> var post_options = {  </p>
-                    <div class="indent">
+                <div class="indent">
                     <p>    hostname: 'www.ilosvideos.com', </p>
                     <p>    path: '/api/auth/token', </p>
                     <p>    method: 'POST', </p>
                     <p>    headers: { </p>
                     <p>    'Content-Type': 'application/x-www-form-urlencoded', </p>
                     <p>    'Content-Length': post_data_encode.length} </p>
-                    </div>
                 </div>
-                <div></div>
+            </div>
         </div>
-</div>
+    </div>
 
-        <div>
-            <p class="lead">Step 4: An example of an https request for obtaining the Object for the Record Button </p>
-            <ol>
-                <li>You'll need to install https in Node.js,  npm install https --save</li>
-                <div class="indent">
-                    <li> Operation: POST </li>
-                    <li> URL: https://www.ilosvideos.com/api/auth/token </li>
-                    <li> Content-Type: application/x-www-form-urlencoded </li>
-                </div>
+    <!------------------------>
+    <!--------STEP 4---------->
+    <!------------------------>
+    <div>
+        <p class="lead">Step 4: An example of an https request for obtaining the Object for the Record Button </p>
+        <ol>
+            <li>In Node.js, install https:  npm install https --save</li>
+            <div class="tab">
+                <li> Operation: POST </li>
+                <li> URL: https://www.ilosvideos.com/api/auth/token </li>
+                <li> Content-Type: application/x-www-form-urlencoded </li>
+            </div>
 
-            </ol>
-            <button ng-click="codeExample4=!codeExample4" class="btn-sm btn-info">See Code Example</button>
+        </ol>
+        <button ng-click="codeExample4=!codeExample4" class="btn-sm btn-info">See Code Example</button>
 
-            <div class="code well" ng-show="codeExample4">
-                <p> var request = https.request(post_options, function(response){ </p>
-                <p class="miniIndent">// You'll want to include some helpful console logs </p>
-                <div class="indent">
-                    <p>console.log('STATUS: ' + response.statusCode); </p>
-                    <p>console.log('HEADERS: ' + JSON.stringify(response.headers)); </p>
-                    <p>console.log('DATA:' + post_data_encode); </p>
-                    <br/>
-                    <p>response.setEncoding('utf8'); </p>
-                    <p>jsonObject = ''; </p>
-                    <br/>
-                    <p>response.on('data', function(res){ </p>
-                    <p>jsonObject += res; </p>
-                    <p>process.stdout.write(res); </p>
-                    <p>console.log("response.on runs");
-                    <p>}); </p>
-                    <br/>
-                    <p>response.on('end', function(){ </p>
-                    <p>console.log('At response.end'); </p>
-                    <p>jsonObject = JSON.parse(jsonObject); </p>
-                    <p>callback(jsonObject); </p>
-                    <p>console.log(jsonObject); </p>
-                    <p>});  </p>
-                    <br/>
+        <div class="code" ng-show="codeExample4">
+            <p> var request = https.request(post_options, function(response){ </p>
+            <p class="miniIndent"><i>// You'll want to include some helpful console logs </i></p>
+            <div class="indent">
+                <p>console.log('STATUS: ' + response.statusCode); </p>
+                <p>console.log('HEADERS: ' + JSON.stringify(response.headers)); </p>
+                <p>console.log('DATA:' + post_data_encode); </p>
+                <br/>
+                <p>response.setEncoding('utf8'); </p>
+                <p>jsonObject = ''; </p>
+                <br/>
+                <p>response.on('data', function(res){ </p>
+                <p>jsonObject += res; </p>
+                <p>process.stdout.write(res); </p>
+                <p>console.log("response.on runs");
+                <p>}); </p>
+                <br/>
+                <p>response.on('end', function(){ </p>
+                <p>console.log('At response.end'); </p>
+                <p>jsonObject = JSON.parse(jsonObject); </p>
+                <p>callback(jsonObject); </p>
+                <p>console.log(jsonObject); </p>
+                <p>});  </p>
+                <br/>
 
                 <p> request.on('error', function(e) {  </p>
                 <p> console.log('problem with request: ' + e.message);  </p>
                 <p> }); </p>
                 <p></p>
-                    </div>
-                    <br/>
-                <p>request.write(post_data_string); </p>
-                <p>request.end(); </p>
             </div>
+            <br/>
+            <p>request.write(post_data_string); </p>
+            <p>request.end(); </p>
+        </div>
     </div>
+
+    <!------------------------>
+    <!--------STEP 5---------->
+    <!------------------------>
     <div>
-        <p class="lead">Step 5: You'll want to wrap your https request in a prototype to enable retrieving with a client-side call</p>
+        <p class="lead">Step 5: Wrap the https request in a prototype to enable retrieving with a client-side call</p>
         <ol>
             <li>Create a GetData function and use .go to create a Prototype </li>
-            <div class="indent">
-                <li>  </li>
-                <li> </li>
-                <li>  </li>
-            </div>
+            <br/>
         </ol>
         <button ng-click="codeExample5=!codeExample5" class="btn-sm btn-info">See Code Example</button>
 
         <div class="code" ng-show="codeExample5">
 
             <div class="code5">
-                <p>Create a function to GetData, if there is not an instance of GetData already.  This limits the call to one get for the Record Button</p>
-                <p>function GetData(){</p>
+                <p><i>//Create a function to GetData, if there is not an instance of GetData already.  This limits the call to one get for the Record Button</i></p>
                 <div class="indent">
-                    <p> if (!this instanceof GetData){ </p>
-                    <p> return new GetData(); </p>
-                    <p> } </p>
-                    <p> } </p>
-                </div>
-
-                <p>Create a Prototype</p>
-                    <p> GetData.prototype.go = function(callback){    </p>
+                    <p>function GetData(){</p>
                     <div class="indent">
-                    <p> (Enter in the entire "var request =" defined in step 4) </p>
-                    <p>    ..... from Step 4 ...... </p>
-                    <p>   };  </p>
-                    <p>       </p>
+                        <p> if (!this instanceof GetData){ </p>
+                        <p> return new GetData(); </p>
+                        <p> } </p>
+                        <p> } </p>
                     </div>
                 </div>
-            </div>
-        <div>
-            <p class="lead">Step 6: Using Angular Make an https.request</p>
-            <ol>
-                <li> Using a ticket Controller, include an http service, and add http.request </li>
+
+                <p><i> //Create a Prototype </i></p>
+                <p> GetData.prototype.go = function(callback){    </p>
                 <div class="indent">
-                    <li>  </li>
-                    <li> </li>
-                    <li>  </li>
+                    <p><i> //(Enter in the entire "var request =" defined in step 4) </i></p>
+                    <p><i> //  ..... from Step 4 ...... </i></p>
                 </div>
-            </ol>
-            <button ng-click="codeExample6=!codeExample6" class="btn-sm btn-info">See Code Example</button>
-
-            <div class="code" ng-show="codeExample6">
-
-                <div class="code6">
-                    <p> Create a $http.get that runs a function on success that takes in the data Object and adds to the DOM </p>
-                    <div class="indent">
-                        <p> $http.get('/api/getData').success( </p>
-                        <div class="miniIndent">
-                        <p>   function(data) { </p>
-                        <p>   console.log(data); </p>
-                        <p>   $scope.returnedData = data; </p>
-                        <p>   $scope.iframeButton = $sce.trustAsHtml($scope.returnedData.recordButtonIframe); </p>
-                        <p>   $scope.token = $scope.returnedData.token; </p>
-                        <p>   console.log("iframe button: ",$scope.iframeButton); </p>
-                        </div>
-                            }).error(
-                        <div class="miniIndent">
-                            function(err) {
-                            console.log(err);
-                            });
-                        </div>
-                    </div>
-                </div>
+                <p>   };  </p>
             </div>
-            <div>
-                <p class="lead">Step 7: After the video is recorded and uploaded, wait for a POST, that will return an Object</p>
-                <ol>
-                    <li>After a video is recorded using the one-time token, the following data will be sent via a POST with JSON in the body containing the following data: </li>
-                    <div class="indent">
-                        <li>  token: The token that the video was uploaded to.  Matches the one-time token from step 1.  </li>
-                        <li>   randtag: Video's unique ID  </li>
-                        <li>   videoURL: URL to view the video on ilosvideos.com  </li>
-                        <li>   embedURL: URL that an iframe would use as SRC </li>
-                        <li>    iframe: iframe containing the embedded video  </li>
-                        <li>    video_endpoint_extras: Any extra key/values sent in step 2 </li>
-                    </div>
-                    <li class="space">Saving some space</li>
-                    <li> In this example, the token is stored to a database, MongoDB, for later retreival and use.</li>
-                </ol>
         </div>
+    </div>
+
+    <!------------------------>
+    <!--------STEP 6---------->
+    <!------------------------>
+    <div>
+        <p class="lead">Step 6: Using Angular Make an AJAX call</p>
+        <ol>
+            <li> Using a Controller, include an http service, and make a GET request to the server</li>
+            <br/>
+        </ol>
+    </div>
+
+    <button ng-click="codeExample6=!codeExample6" class="btn-sm btn-info">See Code Example</button>
+
+    <div class="code" ng-show="codeExample6">
+        <div class="code6">
+            <p><li> App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$location', function($scope, $http, $sce, $interval, $location)... </li></p>
+            <br/>
+            <p><i>// Create a $http.get that runs a function on success that takes in the data Object and adds to the DOM </i></p>
+            <p> $http.get('/api/getData').success( </p>
+            <div class="indent">
+                <p>   function(data) { </p>
+                <div class="indent">
+                    <p>   console.log(data); </p>
+                    <p>   $scope.returnedData = data; </p>
+                    <p>   $scope.iframeButton = $sce.trustAsHtml($scope.returnedData.recordButtonIframe); </p>
+                    <p>   $scope.token = $scope.returnedData.token; </p>
+                    <p>   console.log("iframe button: ",$scope.iframeButton); </p>
+                </div>
+            </div>
+            <p>   }).error(  </p>
+            <div class="indent">
+                <p>   function(err) {  </p>
+                <p>   console.log(err);  </p>
+            </div>
+            <p>   });  </p>
+        </div>
+    </div>
+
+    <!------------------------>
+    <!--------STEP 7---------->
+    <!------------------------>
+    <div>
+        <p class="lead">Step 7: After the video is recorded and uploaded, wait for a POST, that will return an Object</p>
+        <ol>
+            <li>After a video is recorded using the one-time token, the following data will be sent via a POST with JSON in the body containing the following data: </li>
+            <div class="tab">
+                <li>  token: The token that the video was uploaded to.  Matches the one-time token from step 1.  </li>
+                <li>   randtag: Video's unique ID  </li>
+                <li>   videoURL: URL to view the video on ilosvideos.com  </li>
+                <li>   embedURL: URL that an iframe would use as SRC </li>
+                <li>    iframe: iframe containing the embedded video  </li>
+                <li>    video_endpoint_extras: Any extra key/values sent in step 2 </li>
+            </div>
+            <br/>
+            <li> In this example, the token is stored to a database, MongoDB, for later retreival and use.</li>
+        </ol>
+    </div>
 </div>
