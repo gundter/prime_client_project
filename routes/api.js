@@ -47,7 +47,6 @@ router.post('/nullify', function(req, res, next){
             }
         });
 });
-
 //////////////////////////////////
 // Get the Video Recording Button
 //////////////////////////////////

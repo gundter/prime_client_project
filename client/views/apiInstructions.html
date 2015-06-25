@@ -1,7 +1,7 @@
 <div class="container">
     <h2>API Instructions</h2>
 
-    <p>This will be some basic text about the API instructions and problems that we encountered while implementing</p>
+    <p>This will be some basic text about interacting with the API instructions to use the Record Button and Object data to build a web application.</p>
 
 
     <div>
@@ -136,7 +136,7 @@
             </div>
     </div>
     <div>
-        <p class="lead">Step 5: You'll want to wrap your https request in a prototype to enable retreiving with a client-side call</p>
+        <p class="lead">Step 5: You'll want to wrap your https request in a prototype to enable retrieving with a client-side call</p>
         <ol>
             <li>Create a GetData function and use .go to create a Prototype </li>
             <div class="indent">
@@ -160,14 +160,70 @@
                 </div>
 
                 <p>Create a Prototype</p>
-                    <p>    path: '/api/auth/token', </p>
-                    <p>    method: 'POST', </p>
-                    <p>    headers: { </p>
-                    <p>    'Content-Type': 'application/x-www-form-urlencoded', </p>
-                    <p>    'Content-Length': post_data_encode.length} </p>
+                    <p> GetData.prototype.go = function(callback){    </p>
+                    <div class="indent">
+                    <p> (Enter in the entire "var request =" defined in step 4) </p>
+                    <p>    ..... from Step 4 ...... </p>
+                    <p>   };  </p>
+                    <p>       </p>
+                    </div>
                 </div>
             </div>
-            <div></div>
+        <div>
+            <p class="lead">Step 6: Using Angular Make an https.request</p>
+            <ol>
+                <li> Using a ticket Controller, include an http service, and add http.request </li>
+                <div class="indent">
+                        <li> An example of a controller, including $http: </li>
+                </div>
+                        <li class="space"> Hold Open </li>
+                    <div class="indent">
+                        <li> App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$location', function($scope, $http, $sce, $interval, $location) </li>
+                    </div>
+
+            </ol>
+        </div>
+            <button ng-click="codeExample6=!codeExample6" class="btn-sm btn-info">See Code Example</button>
+
+            <div class="code" ng-show="codeExample6">
+
+                <div class="code6">
+                    <p> Create a $http.get that runs a function on success that takes in the data Object and adds to the DOM </p>
+                    <div class="indent">
+                        <p> $http.get('/api/getData').success( </p>
+                        <div class="miniIndent">
+                        <p>   function(data) { </p>
+                        <p>   console.log(data); </p>
+                        <p>   $scope.returnedData = data; </p>
+                        <p>   $scope.iframeButton = $sce.trustAsHtml($scope.returnedData.recordButtonIframe); </p>
+                        <p>   $scope.token = $scope.returnedData.token; </p>
+                        <p>   console.log("iframe button: ",$scope.iframeButton); </p>
+                        </div>
+                            }).error(
+                        <div class="miniIndent">
+                            function(err) {
+                            console.log(err);
+                            });
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="lead">Step 7: After the video is recorded and uploaded, wait for a POST, that will return an Object</p>
+                <ol>
+                    <li>After a video is recorded using the one-time token, the following data will be sent via a POST with JSON in the body containing the following data: </li>
+                    <div class="indent">
+                        <li>  token: The token that the video was uploaded to.  Matches the one-time token from step 1.  </li>
+                        <li>   randtag: Video's unique ID  </li>
+                        <li>   videoURL: URL to view the video on ilosvideos.com  </li>
+                        <li>   embedURL: URL that an iframe would use as SRC </li>
+                        <li>    iframe: iframe containing the embedded video  </li>
+                        <li>    video_endpoint_extras: Any extra key/values sent in step 2 </li>
+                    </div>
+                    <li class="space">Saving some space</li>
+                    <li> In this example, the token is stored to a database, MongoDB, for later retreival and use.</li>
+                </ol>
+            </div>
         </div>
 
-</div>
+    </div>
