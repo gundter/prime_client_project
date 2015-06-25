@@ -11,10 +11,12 @@
                 <div class="col-md-3 ticketNum"><p>{{ticket.ticketNum}}</p></div>
                 <div>
                         <div class="col-md-8 clientField">
-                            <p><b>Name:</b> {{ticket.name}}</p>
-                            <p><b>Email:</b> {{ticket.email}}</p>
-                            <p><b>Phone:</b> {{ticket.phone}}</p>
-                            <p><b>Department / Desk:</b> {{ticket.department}}</p>
+                            <div class="well">
+                                <p><b>Name:</b> {{ticket.name}}</p>
+                                <p><b>Email:</b> {{ticket.email}}</p>
+                                <p><b>Phone:</b> {{ticket.phone}}</p>
+                                <p><b>Department / Desk:</b> {{ticket.department}}</p>
+                            </div>
                         </div>
                         <div class="col-md-4 ticketDate">
                             <p>{{ticket.date | date :'medium'}}</p>
