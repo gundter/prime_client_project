@@ -33,21 +33,21 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
                         $scope.openTickets.push($scope.allTickets[i]);
                     }
                 }
-                $scope.viewtkt(1);
+                $scope.viewtkt('All');
             });
     };
 
     $scope.viewtkt = function(chgTktStatus) {
         $scope.tickets = [];
 
-        if (chgTktStatus == 3) {
+        if (chgTktStatus == 'All') {
             $scope.tickets = $scope.allTickets;
 
-        } else if (chgTktStatus == 2) {
+        } else if (chgTktStatus == 'Closed') {
             console.log("closedTickets: ", $scope.closedTickets);
             $scope.tickets = $scope.closedTickets;
 
-        } else if (chgTktStatus == 1) {
+        } else if (chgTktStatus == 'Open') {
             $scope.tickets = $scope.openTickets;
             console.log("openTickets: ", $scope.openTickets);
         }

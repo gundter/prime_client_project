@@ -1,8 +1,8 @@
 <div class="backgroundArea">
 
-    <button class="btn-info" ng-click="viewtkt(1)">View Open Tickets</button>
-    <button class="btn-warning" ng-click="viewtkt(2)">View Closed Tickets</button>
-    <button class="btn-primary" ng-click="viewtkt(3)">View All Tickets</button>
+    <button class="btn-info" ng-click="viewtkt('Open')">View Open Tickets</button>
+    <button class="btn-warning" ng-click="viewtkt('Closed')">View Closed Tickets</button>
+    <button class="btn-primary" ng-click="viewtkt('All')">View All Tickets</button>
 
     <div class="row">
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in tickets" >
@@ -25,8 +25,8 @@
                         <a ng-href="{{ticket.embedURL}}" target="_blank">View the Video</a>
                         <p><b>Status:</b> {{ticket.tktStatus}}</p>
                         <div ng-show="admin" class="ticketStatus">
-                            <button class="btn-warning" ng-click="ticketClass(ticket, 'tktClosed')">Close</button>
-                            <button class="btn-info" ng-click="ticketClass(ticket, 'tktOpen')">Open</button>
+                            <button class="btn-warning" ng-click="ticketClass(ticket, 'Closed')">Close</button>
+                            <button class="btn-info" ng-click="ticketClass(ticket, 'Open')">Open</button>
                         </div>
                     </div>
                 </div>
