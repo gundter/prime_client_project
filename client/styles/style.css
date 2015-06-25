@@ -345,7 +345,8 @@ span {
 }
 
 .statusBtns {
-    display: block;
+    text-align: center;
     width: 150px;
     margin: 5px auto;
+    padding: auto;
 }
