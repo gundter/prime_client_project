@@ -350,8 +350,8 @@ span {
 }
 
 .statusBtns {
-    diplay: block;
+    display: block;
     margin-top: auto;
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: auto;
+    margin-right: auto;
 }
