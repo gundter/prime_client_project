@@ -348,3 +348,8 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
 span {
     font-weight:bold;
 }
+
+.statusBtns {
+    diplay: block;
+    margin: 5px auto;
+}
