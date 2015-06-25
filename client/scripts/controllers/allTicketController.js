@@ -10,8 +10,6 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
     $scope.users = [];
     $scope.userInfo = {};
 
-    var j = $scope.status;
-
     $http.get('/users/admin').success(
         function(data) {
             console.log("All tickets page User response: ", data);
@@ -35,7 +33,7 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
                     }
                 }
             });
-        $scope.viewtkt(j);
+        $scope.viewtkt();
     };
 
     $scope.viewtkt = function(chgTktStatus) {
