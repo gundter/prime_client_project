@@ -201,11 +201,13 @@
                 <p> $http.get('/api/getData').success( </p>
                     <div class="indent">
                         <p>   function(data) { </p>
-                        <p>   console.log(data); </p>
-                        <p>   $scope.returnedData = data; </p>
-                        <p>   $scope.iframeButton = $sce.trustAsHtml($scope.returnedData.recordButtonIframe); </p>
-                        <p>   $scope.token = $scope.returnedData.token; </p>
-                        <p>   console.log("iframe button: ",$scope.iframeButton); </p>
+                        <div class="indent">
+                            <p>   console.log(data); </p>
+                            <p>   $scope.returnedData = data; </p>
+                            <p>   $scope.iframeButton = $sce.trustAsHtml($scope.returnedData.recordButtonIframe); </p>
+                            <p>   $scope.token = $scope.returnedData.token; </p>
+                            <p>   console.log("iframe button: ",$scope.iframeButton); </p>
+                        </div>
                     </div>
                         <p>   }).error(  </p>
                     <div class="indent">
