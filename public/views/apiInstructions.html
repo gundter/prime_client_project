@@ -1,11 +1,17 @@
 <div class="container">
     <h2>API Instructions</h2>
 
-    <p>This will be some basic text about interacting with the API instructions to use the Record Button and Object data to build a web application.</p>
+    <p><b>Technologies Used:</b> Node.js, Express, Angular, MongoDB, HTML5, CSS3, including user registration and authentication</p>
+    <br/>
+    <p><b>Overview:</b> In this application a POST request from application server to ilos server is done to retrieve an object.  That object contains several elements,
+    including a iframe for a Record Button.  When the video is completed, and upload, a response object is returned containing a token for that video. The token is
+    saved to the database for later retrieval.  User registration allows users to be created so that tickets can be tied to specific users and the status of the tickets
+    can be viewed on the All Tickets page.</p>
 
     <!------------------------>
     <!--------STEP 1---------->
     <!------------------------>
+    <br/>
     <div>
         <p class="lead">Step 1: Get API keys from user</p>
         <ol class="tab">
@@ -43,15 +49,15 @@
                     <p>    video_set_public: false }; </p>
                     </div>
                 </div>
-                <div></div>
                 <div class="code2part2">
-                    <p> Encode the object prior to passing it into the post request. </p>
+                    <br/>
+                    <p><i> // Encode the object prior to passing it into the post request. </i></p>
                     <div class="indent">
                     <p> var post_data_encode = formUrlEncoded.encode(post_data); </p>
                     </div>
-                    <p> For this you may need to install middleware to use form-urlencoded in Node.js. </p>
+                    <p><i> //  Install middleware to use form-urlencoded in Node.js. </i></p>
                     <div class="indent">
-                    <p> npm install form-urlencoded --save </p>
+                    <p><i> // npm install form-urlencoded --save </i></p>
                     </div>
                 </div>
         </div>
@@ -131,7 +137,7 @@
                 <p> console.log('problem with request: ' + e.message);  </p>
                 <p> }); </p>
                 <p></p>
-                    </div>
+                </div>
                     <br/>
                 <p>request.write(post_data_string); </p>
                 <p>request.end(); </p>
@@ -170,9 +176,9 @@
                                 <p><i> //  ..... from Step 4 ...... </i></p>
                             </div>
                                 <p>   };  </p>
-                    </div>
                 </div>
             </div>
+        </div>
 
     <!------------------------>
     <!--------STEP 6---------->
