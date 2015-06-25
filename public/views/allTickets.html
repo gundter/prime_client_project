@@ -1,4 +1,4 @@
-<div class="backgroundArea">
+<div class="container">
 
     <button class="btn-info" ng-click="viewtkt('Open')">View Open Tickets</button>
     <button class="btn-warning" ng-click="viewtkt('Closed')">View Resolved Tickets</button>
@@ -20,12 +20,11 @@
                         <p>{{ticket.date | date :'medium'}}</p>
                     </div>
                     <div class="col-md-12">
-                        <div class="well"><p><b>Desciption:</b> {{ticket.description}}</p></div>
-                        <p><b>Browser:</b> {{ticket.browser}}</p>
-                        <a ng-href="{{ticket.embedURL}}" target="_blank">View the Video</a>
-                        <p><b>Status:</b> {{ticket.tktStatus}}</p>
+                        <div class="well ticketDescription"><p>DESCRIPTION: {{ticket.description}}</p></div>
+                        <div class="ticketBrowser"><p>BROWSER: {{ticket.browser}}</p></div>
+                        <div class="ticketIframe"><a href="{{ticket.videoURL}}">{{ticket.videoURL}}</a></div>
                         <div ng-show="admin" class="ticketStatus">
-                            <button class="btn-warning" ng-click="ticketClass(ticket, 'Closed')">Resolved</button>
+                            <button class="btn-warning" ng-click="ticketClass(ticket, 'Resolved')">Resolve</button
                             <button class="btn-info" ng-click="ticketClass(ticket, 'Open')">Open</button>
                         </div>
                     </div>
