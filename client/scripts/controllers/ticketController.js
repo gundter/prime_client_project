@@ -1,4 +1,4 @@
-App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$location',function($scope, $http, $sce, $interval, $location){
+App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$location', 'browser',function($scope, $http, $sce, $interval, $location, browser){
 
         $scope.ticket = {};
         $scope.user = {};
@@ -9,11 +9,8 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
         $scope.embedVideoURL = '';
         $scope.token = '';
 
-        $scope.ticket.browser = navigator.userAgent;
-        console.log("userInfo: ", navigator.userInfo);
-        console.log("userAgent: ", navigator.userAgent);
-        console.log(navigator);
-
+        $scope.ticket.browser = browser();
+        console.log("Broswer service: ", $scope.ticket.browser);
 
         /////////////////////////
         // Create a New Ticket
