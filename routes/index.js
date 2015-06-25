@@ -8,19 +8,13 @@ router.get("/", function(req,res,next){
 });
 
 router.post('/',
-    passport.authenticate('local'), function( req, res, next){
-        console.log(req.user);
-        res.send(req.user);
-    });
-
-/*router.post('/',
     function(req,res,next) {
       passport.authenticate('local', {
         successRedirect: '/users',
         failureRedirect: '/'
       })(req,res,next)
     }
-);*/
+);
 
 console.log('index route loaded');
 module.exports = router;
