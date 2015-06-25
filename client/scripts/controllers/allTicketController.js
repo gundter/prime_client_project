@@ -33,7 +33,7 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
                     }
                 }
             });
-        $scope.viewtkt();
+        $scope.viewtkt(chgTktStatus);
     };
 
     $scope.viewtkt = function(chgTktStatus) {

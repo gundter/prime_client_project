@@ -1,25 +1,12 @@
 <div class="backgroundArea">
 
-    <button class="btn-primary" ng-click="viewtkt(1)">View All Tickets</button>
-    <button class="btn-info" ng-click="viewtkt(4)">View Open Tickets</button>
+    <button class="btn-info" ng-click="viewtkt(1)">View Open Tickets</button>
     <button class="btn-warning" ng-click="viewtkt(2)">View Closed Tickets</button>
-    <button class="btn-danger" ng-click="viewtkt(3)">View Archived Tickets</button>
+    <button class="btn-primary" ng-click="viewtkt(3)">View All Tickets</button>
 
     <div class="row">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <a ng-click="">Show Archive</a>
-        <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in allTickets" >
-            <div ng-hide="ticket.tktStatus == 'tktArchived'" class="well col-md-5 heatTicket {{ticket.tktStatus}}">
-=======
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in tickets" >
             <div class="well col-md-5 heatTicket {{ticket.tktStatus}}">
->>>>>>> 087b016245a7ca280179a1bfa7f0f96cc295ca93
-=======
-        <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in tickets" >
-            <div class="well col-md-5 heatTicket {{ticket.tktStatus}}">
-
->>>>>>> d496e06f12be271b35286eb562147ca4e44a560c
                 <div class="col-md-9 ticketProblem"><p>{{ticket.problem}}</p></div>
                 <div class="col-md-3 ticketNum"><p>{{ticket.ticketNum}}</p></div>
                 <div>
@@ -32,40 +19,17 @@
                     <div class="col-md-4 ticketDate">
                         <p>{{ticket.date | date :'medium'}}</p>
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div class="col-md-12">
-                    <div class="well ticketDescription"><p>DESCRIPTION: {{ticket.description}}</p></div>
-                    <div class="ticketBrowser"><p>BROWSER: {{ticket.browser}}</p></div>
-                    <div class="ticketIframe">{{ticket.iframe}}</div>
-                    <div ng-show="admin" class="ticketStatus">
-                        <button class="btn-warning" ng-click="ticketClass(ticket, 'tktClosed')">Close</button>
-                        <button class="btn-danger" ng-click="ticketClass(ticket, 'tktArchived')">Archive</button>
-=======
-=======
->>>>>>> d496e06f12be271b35286eb562147ca4e44a560c
                     <div class="col-md-12">
                         <div class="well ticketDescription"><p>DESCRIPTION: {{ticket.description}}</p></div>
                         <div class="ticketBrowser"><p>BROWSER: {{ticket.browser}}</p></div>
-                        <div class="ticketIframe">{{ticket.iframe}}</div>
+                        <div class="ticketIframe"><a>{{ticket.videoURL}}</a></div>
                         <div ng-show="admin" class="ticketStatus">
                             <button class="btn-warning" ng-click="ticketClass(ticket, 'tktClosed')">Close</button>
-                            <button class="btn-danger" ng-click="ticketClass(ticket, 'tktArchived')">Archive</button>
+                            <button class="btn-info" ng-click="ticketClass(ticket, 'tktOpen')">Open</button>
                         </div>
-<<<<<<< HEAD
->>>>>>> 087b016245a7ca280179a1bfa7f0f96cc295ca93
-=======
->>>>>>> d496e06f12be271b35286eb562147ca4e44a560c
                     </div>
                 </div>
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-</div>
-=======
->>>>>>> 087b016245a7ca280179a1bfa7f0f96cc295ca93
-=======
->>>>>>> d496e06f12be271b35286eb562147ca4e44a560c
 </div>
