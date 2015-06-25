@@ -3,6 +3,9 @@
 /*///////////////////*/
 body{
     background-color:#f2f2f2;
+    font: 14px "Roboto", "Roboto Slab", "Lucida Grande", Helvetica, Arial, sans-serif;
+    height: 100%;
+    margin: 0;
 }
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
@@ -99,12 +102,6 @@ li.inactive a {
 
 .createuser {
     color:#3F51B5;
-}
-
-body {
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    height: 100%;
-    margin: 0;
 }
 
 .page-wrap {
