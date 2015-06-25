@@ -1,4 +1,4 @@
-App.controller('headerController', ['$scope', '$http', '$location', '$route', function($scope, $http, $location, $route) {
+App.controller('headerController', ['$scope', '$http', '$location', function($scope, $http, $location) {
     console.log('headerController loaded');
 
     $scope.showUser = false;
