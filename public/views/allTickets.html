@@ -1,8 +1,8 @@
 <div class="backgroundArea">
 
-    <button class="btn-info" ng-click="viewtkt(status)" name="status = 1">View Open Tickets</button>
-    <button class="btn-warning" ng-click="viewtkt(status)" name="status = 2">View Closed Tickets</button>
-    <button class="btn-primary" ng-click="viewtkt(status)" name="status = 3">View All Tickets</button>
+    <button class="btn-info" ng-click="viewtkt(1)">View Open Tickets</button>
+    <button class="btn-warning" ng-click="viewtkt(2)">View Closed Tickets</button>
+    <button class="btn-primary" ng-click="viewtkt(3)">View All Tickets</button>
 
     <div class="row">
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in tickets" >
