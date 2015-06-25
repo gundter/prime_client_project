@@ -321,20 +321,11 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
     border: 10px solid #96c661;
 }
 
-<<<<<<< HEAD
-.Closed{
-    border-radius: 4px;
-    border: 10px dashed #e1564f;
-}
-
-=======
 .Resolved{
     border-radius: 4px;
     border: 10px solid #484848;
 }
 
-
->>>>>>> Brian
 /*API Instructions Page - indent language*/
 .code p {
     margin-left: 200px;
