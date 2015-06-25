@@ -350,3 +350,7 @@ span {
     margin: 5px auto;
     padding: auto;
 }
+
+.clientField {
+    margin-left: 10px;
+}
