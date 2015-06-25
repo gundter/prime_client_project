@@ -210,8 +210,9 @@ h4 {
 /*Ticket Page Styling*/
 /*///////////////////*/
 .ticketPage {
-    color:#ffffff;
+    color:#484848;
     margin-top:15px;
+    background-color: #ffffff;
 }
 
 .ticketForm{
@@ -318,7 +319,7 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
 
 .Open{
     border-radius: 4px;
-    border: 10px solid #96c661;
+    border: 10px solid red;
 }
 
 .Resolved {
