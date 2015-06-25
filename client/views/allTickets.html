@@ -11,16 +11,17 @@
                     <p class="lead">{{ticket.problem}}</p>
                     <p>{{ticket.date | date :'medium'}}</p>
                 </div>
-                <p>{{ticket.ticketNum}}</p>
-                <!--<div>-->
-                    <div class="well col-md-8 clientField">
-                        <p><b>Name:</b> {{ticket.name}}</p>
-                        <p><b>Email:</b> {{ticket.email}}</p>
-                        <p><b>Phone:</b> {{ticket.phone}}</p>
-                        <p><b>Department / Desk:</b> {{ticket.department}}</p>
+                <p class="">{{ticket.ticketNum}}</p>
+                <div>
+                    <div class="col-md-8 clientField">
+                        <div class="well">
+                            <p><b>Name:</b> {{ticket.name}}</p>
+                            <p><b>Email:</b> {{ticket.email}}</p>
+                            <p><b>Phone:</b> {{ticket.phone}}</p>
+                            <p><b>Department / Desk:</b> {{ticket.department}}</p>
+                        </div>
                     </div>
-
-                    <!--<div class="col-md-12">-->
+                    <div class="col-md-12">
                         <div class="well"><p><b>Desciption:</b> {{ticket.description}}</p></div>
                         <p><b>Browser:</b> {{ticket.browser}}</p>
                         <a ng-href="{{ticket.embedURL}}" target="_blank">View the Video</a>
@@ -31,8 +32,8 @@
                                 <button class="btn-info" ng-click="ticketClass(ticket, 'Open')">Open</button>
                             </div>
                         </div>
-                    <!--</div>-->
-                <!--</div>-->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
