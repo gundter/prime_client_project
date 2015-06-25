@@ -21,9 +21,9 @@ router.post('/', function(req, res, next){
     });
 });
 
-////////////////////////////////////
-// Get the Video Recording Button //
-////////////////////////////////////
+//////////////////////////////////
+// Get the Video Recording Button
+//////////////////////////////////
 router.get('/getData', function(req, res, next){
     var results = new GetData();
     console.log('Data Created');

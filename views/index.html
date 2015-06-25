@@ -20,7 +20,7 @@
             <ul class="nav nav-pills">
                 <li class="indivnav"><a href="#home">About</a></li>
                 <li class="indivnav"><a href="#ticket" target="_blank">Report An Issue</a></li>
-                <li class="indivnav"><a href="#allTickets">All Tickets</a></li>
+                <li class="indivnav" ng-if="showUser"><a href="#allTickets">All Tickets</a></li>
             </ul>
         </div>
 
@@ -71,14 +71,6 @@
     <script type="text/javascript" src="/vendors/angular/angular.js"></script>
     <script type="text/javascript" src="/vendors/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="/javascripts/app.min.js"></script>
-    <script type="text/javascript" src="/javascripts/allControllers.min.js"></script>
-    <!--<script type="text/javascript" src="/javascripts/controllers/apiInstructionsController.min.js"></script>-->
-    <!--<script type="text/javascript" src="/javascripts/controllers/ticketController.min.js"></script>-->
-    <!--<script type="text/javascript" src="/javascripts/controllers/headerController.min.js"></script>-->
-    <!--<script type="text/javascript" src="/javascripts/controllers/registerController.min.js"></script>-->
-    <!--<script type="text/javascript" src="/javascripts/controllers/calculatorController.min.js"></script>-->
-    <!--<script type="text/javascript" src="/javascripts/controllers/allTicketController.min.js"></script>-->
-
 
 </body>
 </html>

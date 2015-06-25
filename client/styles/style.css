@@ -325,7 +325,7 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
 
 .tktClosed{
     border-radius: 4px;
-    border: 10px solid #e1564f;
+    border: 10px dashed #e1564f;
 }
 
 .tktArchived{
