@@ -1,35 +1,46 @@
 <div class="container">
-
-    <button class="btn-info" ng-click="viewtkt(1)">View Open Tickets</button>
-    <button class="btn-warning" ng-click="viewtkt(2)">View Closed Tickets</button>
-    <button class="btn-primary" ng-click="viewtkt(3)">View All Tickets</button>
-
-    <div class="row">
-        <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in tickets" >
-            <div class="well col-md-5 heatTicket {{ticket.tktStatus}}">
-                <div class="col-md-9 ticketProblem"><p>{{ticket.problem}}</p></div>
-                <div class="col-md-3 ticketNum"><p>{{ticket.ticketNum}}</p></div>
-                <div>
-                    <div class="well col-md-8 clientField">
-                        <p>NAME: {{ticket.name}}</p>
-                        <p>EMAIL: {{ticket.email}}</p>
-                        <p>PHONE: {{ticket.phone}}</p>
-                        <p>DEPARTMENT/ DESK: {{ticket.department}}</p>
-                    </div>
-                    <div class="col-md-4 ticketDate">
-                        <p>{{ticket.date | date :'medium'}}</p>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="well ticketDescription"><p>DESCRIPTION: {{ticket.description}}</p></div>
-                        <div class="ticketBrowser"><p>BROWSER: {{ticket.browser}}</p></div>
-                        <div class="ticketIframe"><a>{{ticket.videoURL}}</a></div>
-                        <div ng-show="admin" class="ticketStatus">
-                            <button class="btn-warning" ng-click="ticketClass(ticket, 'Resolved')">Close</button>
-                            <button class="btn-info" ng-click="ticketClass(ticket, 'Open')">Open</button>
-                        </div>
-                    </div>
-                </div>
+    <form class="col-md-offset-2 col-md-8 ticketForm" name='ticketForm' novalidate ng-submit="createTicket(ticket)">
+        <h2 class="ticketHeader">Issue Report</h2>
+        <div class="form-group">
+            <label class="col-md-3" for="problem">Problem:*</label>
+            <div class="col-md-9">
+                <input type="text" id="problem" class="col-md-12 field" name="problem" ng-model="ticket.problem" ng-required="true"/>
+                <p class="incomplete" ng-show="ticketForm.problem.$invalid && ticketForm.email.$touched">Please input a problem</p>
             </div>
         </div>
-    </div>
+
+        <div class="form-group">
+            <label class="col-md-3" for="email">Contact Email:*</label>
+            <div class="col-md-9">
+                <input type="email" id="email" class="col-md-12 field" name="email" ng-model="ticket.email" ng-required="true" />
+                <p class="incomplete" ng-show="ticketForm.email.$invalid && ticketForm.email.$touched"> Please input email</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3" for="browser">Browser Used:*</label>
+            <div class="col-md-9">
+                <input type="text" id="browser" class="col-md-12 field" name="browser" ng-model="ticket.browser" ng-required="true"/>
+                <p class="incomplete" ng-show="ticketForm.browser.$invalid && ticketForm.browser.$touched"> Please input browser</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3" for="description">Description:*</label>
+            <div class="col-md-9">
+                <textarea type="text" id="description" class="col-md-12 field" name="description" ng-model="ticket.description" ng-required="true"></textarea>
+                <p class="incomplete" ng-show="ticketForm.description.$invalid && ticketForm.description.$touched"> Please input description</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="recordBtn" ng-bind-html="iframeButton"></div>
+            <div ng-show="matchToken">
+                <div class="showHideButtons text-right"><div class="btn btn-xs videoShow" ng-click="clicked=false">Video</div><div class="btn btn-xs embedShow" ng-click="clicked=true">Embed URL</div></div>
+                <div class="videoDisplay" ng-bind-html="iframeVideo" ng-show="clicked"></div>
+                <div class="urlForToggle" ng-hide="clicked">{{iframeVideo}}</div>
+                <div class="videoEmbed" ng-bind-html="embedURL"></div>
+            </div>
+            <button type="submit" class="btn ticketSubmit" ng-disabled="ticketForm.$invalid">Submit Ticket</button>
+            <br/>
+            <p class="incomplete fieldsrequired" ng-show="ticketForm.description.$invalid">*Required fields</p>
+        </div>
+    </form>
 </div>
