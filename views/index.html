@@ -5,74 +5,73 @@
     <title>primeDesk</title>
 
     <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/styles/style.css">
 
 </head>
 
 <body class="backgroundArea">
 
-    <header class="container-fluid" ng-controller="headerController">
+<header class="container-fluid" ng-controller="headerController">
+    <h1 class="primedesk"> primeDesk </h1>
 
-        <!-- /////////////////////////// -->
-        <!-- Navigation -->
-        <!-- /////////////////////////// -->
-        <div class="navBar pull-left ng-cloak">
-            <ul class="nav nav-pills">
-                <li class="indivnav"><a href="#home">About</a></li>
-                <li class="indivnav"><a href="#ticket" target="_blank">Report An Issue</a></li>
-                <li class="indivnav" ng-if="showUser"><a href="#allTickets">All Tickets</a></li>
+    <!-- /////////////////////////// -->
+    <!-- Navigation -->
+    <!-- /////////////////////////// -->
+    <div class="navBar pull-left ng-cloak">
+        <ul class="nav nav-pills">
+            <li class="indivnav"><a href="#home">About</a></li>
+            <li class="indivnav"><a href="#ticket" target="_blank">Report An Issue</a></li>
+            <li class="indivnav" ng-if="showUser"><a href="#allTickets">All Tickets</a></li>
+        </ul>
+    </div>
+
+    <!-- /////////////////// -->
+    <!-- Login Functionality -->
+    <!-- /////////////////// -->
+    <div class="login pull-right ng-cloak">
+
+        <div ng-if="showUser">
+            <ul class="signedIn">
+                <li class="lead" ng-cloak>Hi, {{user}}</li>
+                <li><button class="btn btn-warning" ng-click="logout()" ng-cloak>Logout</button></li>
             </ul>
         </div>
 
-        <!-- /////////////////// -->
-        <!-- Login Functionality -->
-        <!-- /////////////////// -->
-        <div class="login pull-right ng-cloak">
-
-            <div ng-if="showUser">
-                <ul class="signedIn">
-                    <li class="lead" ng-cloak>Hi, {{user}}</li>
-                    <li><button class="btn btn-warning" ng-click="logout()" ng-cloak>Logout</button></li>
+        <div ng-if="showLogin">
+            <form action="/" method="post">
+                <ul class="loginInputs">
+                    <li><input type="text" name="email" id="email"
+                               placeholder="Email"/></li>
+                    <li><input type="password" name="password" id="password"
+                               placeholder="password"/></li>
+                    <li><input class="btn btn-primary login2" ng-click="showWaitMsg()" type="submit"
+                               value="Log In"></li>
+                    <li><a href="#register" class="registerstyle btn">Register</a></li>
                 </ul>
-            </div>
-
-            <div ng-if="showLogin">
-                <form action="/" method="post">
-                    <ul class="loginInputs">
-                        <li><input type="text" name="email" id="email"
-                                  placeholder="Email"/></li>
-                        <li><input type="password" name="password" id="password"
-                                   placeholder="password"/></li>
-                        <li><input class="btn btn-primary login2" ng-click="showWaitMsg()" type="submit"
-                                   value="Log In"></li>
-                        <li><a href="#register" class="registerstyle btn">Register</a></li>
-                    </ul>
-                    <p class="waitMessage" ng-show="waitMsg">Please wait while you're being Logged In...</p>
-                </form>
-            </div>
+                <p class="waitMessage" ng-show="waitMsg">Please wait while you're being Logged In...</p>
+            </form>
         </div>
-    </header>
-
-     <!-- /////////////////////////// -->
-     <!-- Bring in all the pages here -->
-    <!-- /////////////////////////// -->
-    <div class="page-wrap">
-        <main ng-view></main>
     </div>
+</header>
+
+<!-- /////////////////////////// -->
+<!-- Bring in all the pages here -->
+<!-- /////////////////////////// -->
+<div class="page-wrap">
+    <main ng-view></main>
+</div>
 
 
-    <footer class="site-footer">
-        <a href="#apiInstructions">API Instructions</a>
-    </footer>
+<footer class="site-footer">
+    <a href="#apiInstructions">API Instructions</a>
+</footer>
 
-    <!-- /////////////////////////// -->
-    <!-- Scripts Start -->
-    <!-- /////////////////////////// -->
-    <script type="text/javascript" src="/vendors/angular/angular.js"></script>
-    <script type="text/javascript" src="/vendors/angular-route/angular-route.min.js"></script>
-    <script type="text/javascript" src="/javascripts/app.min.js"></script>
+<!-- /////////////////////////// -->
+<!-- Scripts Start -->
+<!-- /////////////////////////// -->
+<script type="text/javascript" src="/vendors/angular/angular.js"></script>
+<script type="text/javascript" src="/vendors/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="/javascripts/app.min.js"></script>
 
 </body>
 </html>
