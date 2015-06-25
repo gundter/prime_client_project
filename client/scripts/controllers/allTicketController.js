@@ -52,7 +52,7 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
             $scope.tickets = $scope.openTickets;
             console.log("openTickets: ", $scope.openTickets);
         }
-    }
+    };
 
     $scope.ticketClass = function(ticket, status){
         console.log("Ticket: ",ticket);
