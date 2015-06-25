@@ -351,5 +351,7 @@ span {
 
 .statusBtns {
     diplay: block;
-    margin: 5px auto;
+    margin-top: auto;
+    margin-left: 40%;
+    margin-right: 40%;
 }
