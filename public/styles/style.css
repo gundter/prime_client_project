@@ -1,8 +1,11 @@
 /*///////////////////*/
 /*Index Page Styling*/
 /*///////////////////*/
-*{
+body{
     background-color:#f2f2f2;
+    font: 14px "Roboto", "Roboto Slab", "Lucida Grande", Helvetica, Arial, sans-serif;
+    height: 100%;
+    margin: 0;
 }
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
@@ -99,12 +102,6 @@ li.inactive a {
 
 .createuser {
     color:#3F51B5;
-}
-
-body {
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    height: 100%;
-    margin: 0;
 }
 
 .page-wrap {
@@ -214,6 +211,7 @@ h4 {
 /*///////////////////*/
 .ticketPage {
     color:#484848;
+    margin-top:15px;
 }
 
 .ticketForm{
@@ -336,12 +334,16 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
 /*API Instructions Page - indent language*/
 .code p {
     margin-left: 200px;
+    background-color: white;
 }
 
-.indent {
+.code, .indent, .miniIndent i {
+    background-color:white;
+}
+
+.indent, .tab {
     margin-left: 100px;
 }
-
 
 span {
     font-weight:bold;
