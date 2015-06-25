@@ -44,7 +44,7 @@ var post_data = {
     service_name: 'Prime Digital Academy Team',
     video_endpoint: 'https://fathomless-brook-8214.herokuapp.com/api',
     video_endpoint_extras: [],
-    video_set_public: true
+    video_set_public: false
 };
 
 var post_data_string = formUrlEncoded.encode(post_data);
@@ -58,6 +58,7 @@ var post_options = {
         'Content-Length': post_data_string.length
     }
 };
+
 GetData.prototype.go = function(callback){
     var request = https.request(post_options, function(response){
         console.log('STATUS: ' + response.statusCode);

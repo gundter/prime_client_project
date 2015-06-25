@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
     //Project Configuration
 
-    var controllerList = ['client/scripts/controllers/apiInstructionsController.js', 'client/scripts/controllers/ticketController.js', 'client/scripts/controllers/calculatorController.js', 'client/scripts/controllers/headerController.js', 'client/scripts/controllers/registerController.js', 'client/scripts/controllers/allTicketController.js'];
+    var controllerList = ['client/scripts/app.js', 'client/scripts/controllers/apiInstructionsController.js', 'client/scripts/controllers/ticketController.js', 'client/scripts/controllers/calculatorController.js', 'client/scripts/controllers/headerController.js', 'client/scripts/controllers/registerController.js', 'client/scripts/controllers/allTicketController.js'];
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -10,42 +10,14 @@ module.exports = function(grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %>*/\n'
             },
             build: {
-                src: 'client/scripts/app.js',
-                dest: 'public/javascripts/app.min.js'
-            },
-            controllerBuild: {
                 files: [
                     {
                         src: controllerList,
-                        dest: 'public/javascripts/allControllers.min.js'
+                        dest: 'public/javascripts/app.min.js'
                     }
                 ]
 
             }
-            //controller1: {
-            //    src: 'client/scripts/controllers/apiInstructionsController.js',
-            //    dest: 'public/javascripts/controllers/apiInstructionsController.min.js'
-            //},
-            //controller2: {
-            //    src: 'client/scripts/controllers/ticketController.js',
-            //    dest: 'public/javascripts/controllers/ticketController.min.js'
-            //},
-            //controller3: {
-            //    src: 'client/scripts/controllers/calculatorController.js',
-            //    dest: 'public/javascripts/controllers/calculatorController.min.js'
-            //},
-            //controller4: {
-            //    src: 'client/scripts/controllers/headerController.js',
-            //    dest: 'public/javascripts/controllers/headerController.min.js'
-            //},
-            //controller5: {
-            //    src: 'client/scripts/controllers/registerController.js',
-            //    dest: 'public/javascripts/controllers/registerController.min.js'
-            //},
-            //controller6: {
-            //    src: 'client/scripts/controllers/allTicketController.js',
-            //    dest: 'public/javascripts/controllers/allTicketController.min.js'
-            //}
         },
         copy: {
             main: {

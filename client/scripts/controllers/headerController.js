@@ -27,5 +27,4 @@ App.controller('headerController', ['$scope', '$http', '$location', function($sc
             $location.path('/home');
         });
     };
-
 }]);
