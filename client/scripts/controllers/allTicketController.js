@@ -19,6 +19,7 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
     $scope.getTickets = function() {
         $http.get('/ticket/getTickets').then(
             function(response) {
+
                 $scope.allTickets=response.data;
                 console.log("All Tickets", $scope.allTickets);
                 $scope.openTickets = [];
