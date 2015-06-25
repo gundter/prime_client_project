@@ -323,7 +323,6 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
     border: 10px solid #484848;
 }
 
-
 /*API Instructions Page - indent language*/
 .code p {
     margin-left: 200px;
@@ -340,4 +339,15 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
 
 span {
     font-weight:bold;
+}
+
+.statusBtns {
+    text-align: center;
+    width: 150px;
+    margin: 5px auto;
+    padding: auto;
+}
+
+.clientField {
+    margin-left: 10px;
 }
