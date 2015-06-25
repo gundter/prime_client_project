@@ -320,20 +320,16 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
     display:inline-block;
 }
 
-.tktOpen{
+.Open{
     border-radius: 4px;
     border: 10px solid #96c661;
 }
 
-.tktClosed{
+.Resolved{
     border-radius: 4px;
-    border: 10px dashed #e1564f;
+    border: 10px dashed #484848;
 }
 
-.tktArchived{
-    border-radius: 4px;
-    border: 10px solid #484848;
-}
 
 /*API Instructions Page - indent language*/
 .code p {

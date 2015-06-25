@@ -26,7 +26,7 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
                 $scope.closedTickets = [];
 
                 for (var i=0; i<$scope.allTickets.length; i++) {
-                    if ($scope.allTickets[i].tktStatus == 'Closed') {
+                    if ($scope.allTickets[i].tktStatus == 'Resolved') {
                         $scope.closedTickets.push($scope.allTickets[i]);
                     } else if ($scope.allTickets[i].tktStatus == 'Open'){
                         $scope.openTickets.push($scope.allTickets[i]);

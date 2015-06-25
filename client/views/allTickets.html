@@ -24,7 +24,7 @@
                         <div class="ticketBrowser"><p>BROWSER: {{ticket.browser}}</p></div>
                         <div class="ticketIframe"><a href="{{ticket.videoURL}}">{{ticket.videoURL}}</a></div>
                         <div ng-show="admin" class="ticketStatus">
-                            <button class="btn-warning" ng-click="ticketClass(ticket, 'Closed')">Close</button>
+                            <button class="btn-warning" ng-click="ticketClass(ticket, 'Resolved')">Close</button>
                             <button class="btn-info" ng-click="ticketClass(ticket, 'Open')">Open</button>
                         </div>
                     </div>
