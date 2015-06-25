@@ -1,6 +1,9 @@
 App.controller('headerController', ['$scope', '$http', '$location', function($scope, $http, $location){
 
-    $http.get('/users/user').success(
+    $scope.showUser = false;
+    $scope.waitMsg = false;
+
+        $http.get('/users/user').success(
         function(data) {
             console.log("User reponse: ", data);
             if (data == "false") {
@@ -9,7 +12,12 @@ App.controller('headerController', ['$scope', '$http', '$location', function($sc
                 $scope.showUser = true;
                 $scope.user = data.name.first + " " + data.name.last;
             }
+            $scope.waitMsg = false;
         });
+
+    $scope.showWaitMsg = function () {
+        $scope.waitMsg = true;
+    };
 
     $scope.logout = function() {
         $http.get('/users/logout').success(function(data){
@@ -19,6 +27,4 @@ App.controller('headerController', ['$scope', '$http', '$location', function($sc
             $location.path('/home');
         });
     };
-
-    $scope.showUser = false;
 }]);

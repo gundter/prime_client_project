@@ -10,7 +10,7 @@ router.get("/", function(req,res,next){
 router.post('/',
     function(req,res,next) {
       passport.authenticate('local', {
-        successRedirect: '/',
+        successRedirect: '/users',
         failureRedirect: '/'
       })(req,res,next)
     }

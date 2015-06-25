@@ -21,33 +21,6 @@ router.post('/', function(req, res, next){
     });
 });
 
-router.post('/nullify', function(req, res, next){
-    var video = new VideoData({
-        token: req.body.token,
-        randtag: req.body.randtag,
-        videoUrl: req.body.videoURL,
-        embededURL: req.body.embededURL,
-        iframe: req.body.iframe
-    });
-    VideoData.findById(req.body.id,
-        function(err, article){
-            if (err){
-                console.log("Find article failed", err);
-                next(err)
-            }
-            try {
-                videoDataSchema.push(video);
-                videoDataSchema.save(function (err) {
-                    if (err) return next(err);
-                });
-                res.send(video);
-            }catch(exception){
-                console.log("Push failed:", exception);
-                next(err);
-            }
-        });
-});
-
 //////////////////////////////////
 // Get the Video Recording Button
 //////////////////////////////////
@@ -69,9 +42,9 @@ var post_data = {
     api_key: 'eTnp4mQvjFb5Xb92dYPADytLnSxQLl',
     api_key_type: 'user',
     service_name: 'Prime Digital Academy Team',
-    video_endpoint: 'https://polar-reef-6279.herokuapp.com/api',
+    video_endpoint: 'https://guarded-wave-5600.herokuapp.com/api',
     video_endpoint_extras: [],
-    video_set_public: true
+    video_set_public: false
 };
 
 var post_data_string = formUrlEncoded.encode(post_data);
@@ -85,6 +58,7 @@ var post_options = {
         'Content-Length': post_data_string.length
     }
 };
+
 GetData.prototype.go = function(callback){
     var request = https.request(post_options, function(response){
         console.log('STATUS: ' + response.statusCode);

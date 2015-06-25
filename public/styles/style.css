@@ -1,7 +1,8 @@
 /*///////////////////*/
 /*Index Page Styling*/
 /*///////////////////*/
-.backgroundArea{
+
+body{
     background-color:#f2f2f2;
 }
 
@@ -37,7 +38,7 @@ font-size: 50px;
     padding: 5px;
     background-color:#177289;
 }
-.signedIn li {
+.signedIn li, .waitMessage {
     color: white;
 }
 
@@ -49,7 +50,7 @@ font-size: 50px;
     margin-right: 8em;
 }
 
-#username, #password {
+#email, #password {
     padding: 5px;
     padding-right: 15px;
 }
@@ -59,6 +60,10 @@ font-size: 50px;
     background-color: #37c2bf;
     border-color: #37c2bf;
     color:white;
+}
+
+.createuserbtn {
+    margin-left: 165px;
 }
 
 
@@ -150,10 +155,6 @@ h4 {
     padding-top: 20px;
 }
 
-/*.issue {*/
-    /**/
-/*}*/
-
 .aboutContent {
     padding-top: 30px;
     margin: 0 auto;
@@ -214,6 +215,7 @@ h4 {
 /*///////////////////*/
 .ticketPage {
     color:#484848;
+    margin-top:15px;
 }
 
 .ticketForm{
@@ -237,9 +239,6 @@ h4 {
 .ticketSubmit {
     margin: 5px auto;
     float:right;
-}
-.ticketStatus{
-    text-align: center;
 }
 
 .form-group{
@@ -280,6 +279,47 @@ h4 {
     margin-bottom:3px;
 }
 
+/* div containing the url iframe to copy for the video embed*/
+.videoEmbed {
+    border: 1px solid #484848;
+}
+
+.heatTicket{
+    margin: 5px;
+    padding: 5px;
+    background-color: #adadad;
+    border-radius: 5px;
+}
+
+.videoDisplay{
+    text-align: center;
+    margin-top: 10px;
+}
+
+header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
+    background-color:#177289;
+}
+
+.waitMessage {
+    margin-left: 85px;
+}
+
+.background, {
+    background-color:#f2f2f2;
+}
+
+.space {
+    color:#f2f2f2;
+}
+
+.nav-pills, .loginInputs {
+    padding-top:10px;
+}
+
+.inline {
+    display:inline-block;
+}
+
 .tktOpen{
     border-radius: 4px;
     border: 10px solid #96c661;
@@ -295,43 +335,20 @@ h4 {
     border: 10px solid #484848;
 }
 
-.clientField{
-    background-color: #f2f2f2;
+/*API Instructions Page - indent language*/
+.code p {
+    margin-left: 200px;
+    background-color: white;
 }
 
-.ticketClient{
-    background-color: #f2f2f2;
+.code, .indent, .miniIndent i {
+    background-color:white;
 }
 
-.heatTicket{
-    margin: 5px;
-    padding: 5px;
-    background-color:#ffffff;
-    border-radius: 5px;
+.indent, .tab {
+    margin-left: 100px;
 }
 
-/* div containing the url iframe to copy for the video embed*/
-.videoEmbed {
-    border: 1px solid #484848;
-}
-
-.videoDisplay{
-    text-align: center;
-    margin-top: 10px;
-}
-
-.createuser {
-    color: #3F51B5;
-}
-
-header, .nav-pills, .indivnav, .loginInputs, .pull-right {
-    background-color:#177289;
-}
-
-.nav-pills, .loginInputs {
-    padding-top:10px;
-}
-
-.inline {
-    display:inline-block;
+span {
+    font-weight:bold;
 }

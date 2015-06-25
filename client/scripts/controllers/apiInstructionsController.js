@@ -1,4 +1,5 @@
 App.controller('apiInstructionsController', ['$scope', '$http', function($scope, $http){
 
-    console.log("Meow, apiInstructionCollers");
+    console.log("apiInstructionsController");
 }]);
+

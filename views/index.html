@@ -43,9 +43,11 @@
                                   placeholder="Email"/></li>
                         <li><input type="password" name="password" id="password"
                                    placeholder="password"/></li>
-                        <li><input class="btn btn-primary login2" type="submit" value="Log In"></li>
+                        <li><input class="btn btn-primary login2" ng-click="showWaitMsg()" type="submit"
+                                   value="Log In"></li>
                         <li><a href="#register" class="registerstyle btn">Register</a></li>
                     </ul>
+                    <p class="waitMessage" ng-show="waitMsg">Please wait while you're being Logged In...</p>
                 </form>
             </div>
         </div>
@@ -69,13 +71,6 @@
     <script type="text/javascript" src="/vendors/angular/angular.js"></script>
     <script type="text/javascript" src="/vendors/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="/javascripts/app.min.js"></script>
-    <script type="text/javascript" src="/javascripts/controllers/apiInstructionsController.min.js"></script>
-    <script type="text/javascript" src="/javascripts/controllers/ticketController.min.js"></script>
-    <script type="text/javascript" src="/javascripts/controllers/headerController.min.js"></script>
-    <script type="text/javascript" src="/javascripts/controllers/registerController.min.js"></script>
-    <script type="text/javascript" src="/javascripts/controllers/calculatorController.min.js"></script>
-    <script type="text/javascript" src="/javascripts/controllers/allTicketController.min.js"></script>
-
 
 </body>
 </html>
