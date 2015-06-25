@@ -8,7 +8,7 @@
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in tickets" >
             <div class="well col-md-5 heatTicket {{ticket.tktStatus}}">
                 <div class="col-md-9 ticketProblem">
-                    <p>{{ticket.problem}}</p>
+                    <p class="lead">{{ticket.problem}}</p>
                     <p>{{ticket.date | date :'medium'}}</p>
                 </div>
                 <div class="col-md-3 ticketNum"><p>{{ticket.ticketNum}}</p></div>
