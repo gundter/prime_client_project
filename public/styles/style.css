@@ -1,13 +1,6 @@
 /*///////////////////*/
 /*Index Page Styling*/
 /*///////////////////*/
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> Brian
->>>>>>> master
 body{
     background-color:#f2f2f2;
 }
@@ -157,7 +150,7 @@ h4 {
 .aboutContent {
     padding-top: 30px;
     margin: 0 auto;
-    width: 475px;
+    width: 600px;
     text-align: center;
 }
 /*///////////////////*/
@@ -355,13 +348,7 @@ span {
     padding: auto;
 }
 
-<<<<<<< HEAD
-.clientField {
-    /*margin-left: 10px;*/
-}
-=======
 .tktDescription {
     height: 150px;
     overflow: auto;
 }
->>>>>>> master
