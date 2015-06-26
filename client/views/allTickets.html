@@ -7,10 +7,10 @@
     <div class="row">
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in tickets" >
             <div class="well col-md-5 heatTicket {{ticket.tktStatus}}">
-                <div class="col-md-9">
+                <div class="col-md-8">
                     <p class="lead">{{ticket.problem}}</p>
                 </div>
-                <p class="col-md-3"><b>Ticket Number:</b> {{ticket.ticketNum}}</p>
+                <p class="col-md-4"><b>Ticket Number:</b> {{ticket.ticketNum}}</p>
                 <div>
                     <div class="col-md-8">
                         <div class="well clientField">
@@ -26,8 +26,8 @@
                 </div>
                     <div class="col-md-12">
                         <div class="well tktDescription"><p><b>Desciption:</b> {{ticket.description}}</p></div>
-                        <div class="well"><p><b>Browser:</b> {{ticket.browser}}</p></div>
-                        <a class="text-center" ng-href="{{ticket.embedURL}}" target="_blank">View the Video</a>
+                        <div class="well"><p><b>Browser Used:</b> {{ticket.browser}}</p></div>
+                        <div class="text-center"><a ng-href="{{ticket.embedURL}}" target="_blank">View the Video</a></div>
                         <div class="statusBtns">
                             <p><b>Status:</b><br>{{ticket.tktStatus}}</p>
                             <div ng-show="admin" class="ticketStatus">
