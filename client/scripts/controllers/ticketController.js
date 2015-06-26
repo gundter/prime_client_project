@@ -26,19 +26,6 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
             $location.path('/allTickets');
         };
 
-        ////////////////////////
-        // Get User information
-        ///////////////////////
-        $http.get('/users/user').success(
-            function(data) {
-                    console.log("User response: ", data);
-                    $scope.user = data;
-                    $scope.ticket.email = $scope.user.email;
-                    console.log("Email: ", $scope.user.email);
-            });
-        $scope.ticket = {};
-        $location.path('/allTickets');
-
     ////////////////////////
     // Get User information
     ///////////////////////
