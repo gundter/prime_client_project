@@ -358,3 +358,7 @@ span {
     overflow: auto;
 }
 
+.btn-default {
+    background-color: #777777;
+}
+
