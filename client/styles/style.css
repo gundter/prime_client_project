@@ -351,3 +351,8 @@ span {
     margin: 5px auto;
     padding: auto;
 }
+
+.tktDescription {
+    height: 150px;
+    overflow: auto;
+}
