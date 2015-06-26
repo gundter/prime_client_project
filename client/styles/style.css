@@ -150,7 +150,7 @@ h4 {
 .aboutContent {
     padding-top: 30px;
     margin: 0 auto;
-    width: 475px;
+    width: 600px;
     text-align: center;
 }
 /*///////////////////*/
@@ -346,7 +346,11 @@ span {
     width: 150px;
     margin: 5px auto;
     padding: auto;
+}
 
+.clientField {
+    height:250px;
+    overflow: auto;
 }
 
 .tktDescription {
