@@ -8,6 +8,7 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
         $scope.iframeVideo = '';
         $scope.embedVideoURL = '';
         $scope.token = '';
+        $scope.clicked = true;
 
         $scope.ticket.browser = browser();
         console.log("Broswer service: ", $scope.ticket.browser);
@@ -77,16 +78,4 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
 
         $scope.getVideo();
 
-        ///////////////////////////////////////////////////////////////////////////////////////
-        //// Make the 'video' and 'embed URL' buttons visible when there is a video present. //
-        ///////////////////////////////////////////////////////////////////////////////////////
-        //
-        //$scope.toggleButtons = function(){
-        //  //if ($scope.recordedVideo[lastVideo].token == $scope.returnedData.token){
-        //    if (2 == 2) {
-        //       return $scope.showValue = true;
-        //    } else {
-        //       return $scope.showValue = false;
-        //    }
-        //};
 }]);
