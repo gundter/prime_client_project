@@ -26,8 +26,8 @@
                 </div>
                     <div class="col-md-12">
                         <div class="well tktDescription"><p><b>Desciption:</b> {{ticket.description}}</p></div>
-                        <p><b>Browser:</b> {{ticket.browser}}</p>
-                        <a ng-href="{{ticket.embedURL}}" target="_blank">View the Video</a>
+                        <div class="well"><p><b>Browser:</b> {{ticket.browser}}</p></div>
+                        <a class="text-center" ng-href="{{ticket.embedURL}}" target="_blank">View the Video</a>
                         <div class="statusBtns">
                             <p><b>Status:</b><br>{{ticket.tktStatus}}</p>
                             <div ng-show="admin" class="ticketStatus">
