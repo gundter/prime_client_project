@@ -297,7 +297,7 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
     margin-left: 85px;
 }
 
-.background, {
+.background {
     background-color:#f2f2f2;
 }
 
@@ -315,7 +315,7 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
 
 .Open{
     border-radius: 4px;
-    border: 10px solid red;
+    border: 10px solid #d9534f;
 }
 
 .Resolved {
@@ -348,12 +348,17 @@ span {
     padding: auto;
 }
 
-.clientField {
-    height:250px;
-    overflow: auto;
-}
-
 .tktDescription {
     height: 150px;
     overflow: auto;
+}
+
+.clientField {
+    height: 175px;
+    overflow: auto;
+}
+
+.btn-default {
+    background-color: #484848;
+    color: #ffffff;
 }
