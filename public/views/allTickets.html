@@ -4,7 +4,7 @@
     <button class="btn-default" ng-click="viewtkt('Resolved')">View Resolved Tickets</button>
     <button class="btn-info" ng-click="viewtkt('All')">View All Tickets</button>
 
-    <!--<div class="row">-->
+    <div>
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in tickets" >
             <div class="well col-md-5 heatTicket {{ticket.tktStatus}}">
                 <div class="col-md-9">
@@ -40,5 +40,5 @@
                 </div>
             </div>
         </div>
-    <!--</div>-->
+    </div>
 </div>
