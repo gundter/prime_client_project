@@ -68,7 +68,7 @@ var post_data = {
     api_key: 'b6ANvns15XjOUeMbvyzVumTbgJ9stQ',
     api_key_type: 'org_guest_recorder',
     service_name: 'Prime Digital Academy Team',
-    video_endpoint: 'https://fathomless-brook-8214.herokuapp.com/api',
+    video_endpoint: 'https://primedesk.herokuapp.com/api',
     video_endpoint_extras: [],
     video_set_public: false
 };

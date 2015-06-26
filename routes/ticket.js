@@ -65,7 +65,7 @@ router.post('/createTicket', function(req, res, next) {
                     videoURL: videoData[videoDataLen].videoURL,
                     embedURL: videoData[videoDataLen].embedURL,
                     iframe: videoData[videoDataLen].iframe,
-                    tktStatus: "tktOpen"
+                    tktStatus: "Open"
                 };
 
                 // Create a New Ticket
