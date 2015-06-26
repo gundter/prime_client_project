@@ -1,13 +1,6 @@
 /*///////////////////*/
 /*Index Page Styling*/
 /*///////////////////*/
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> Brian
->>>>>>> master
 body{
     background-color:#f2f2f2;
 }
@@ -304,7 +297,7 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
     margin-left: 85px;
 }
 
-.background, {
+.background {
     background-color:#f2f2f2;
 }
 
@@ -355,13 +348,8 @@ span {
     padding: auto;
 }
 
-<<<<<<< HEAD
-.clientField {
-    /*margin-left: 10px;*/
-}
-=======
 .tktDescription {
     height: 150px;
     overflow: auto;
 }
->>>>>>> master
+
