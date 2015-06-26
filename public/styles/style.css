@@ -362,3 +362,7 @@ span {
     background-color: #484848;
     color: #ffffff;
 }
+
+.bottomMargin {
+    margin-bottom: 15px;
+}
