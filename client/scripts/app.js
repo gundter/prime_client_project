@@ -12,7 +12,7 @@ App.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
         // directs to about/ home page
         when('/home', {
             templateUrl: "/views/about.html",
-            controller: 'calculatorController'
+            controller: 'headerController'
         }).
         // directs to ticket page
         when('/ticket',{
@@ -36,7 +36,7 @@ App.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
         otherwise({
             redirectTo: "/home"
         });
-    }]);
+}]);
 
 App.service('browser', ['$window', function($window) {
 
