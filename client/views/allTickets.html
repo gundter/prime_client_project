@@ -2,7 +2,7 @@
 
     <button class="btn-danger" ng-click="viewtkt('Open')">View Open Tickets</button>
     <button class="btn-default" ng-click="viewtkt('Resolved')">View Resolved Tickets</button>
-    <button class="btn-primary" ng-click="viewtkt('All')">View All Tickets</button>
+    <button class="btn-info" ng-click="viewtkt('All')">View All Tickets</button>
     <div class="row">
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in tickets" >
             <div class="well col-md-5 heatTicket {{ticket.tktStatus}}">
@@ -10,7 +10,8 @@
                     <p class="lead">{{ticket.problem}}</p>
                 </div>
                 <p class="col-md-3"><b>Ticket Number:</b> {{ticket.ticketNum}}</p>
-                <div>
+                <div class="ticketStatus"><button class="btn-info" ng-click="ticketData=!ticketData">See Info</button></div>
+                <div ng-show="ticketData">
                     <div class="col-md-8">
                         <div class="well clientField">
                             <p><b>Name:</b> {{ticket.name}}</p>
@@ -22,7 +23,7 @@
                     <div class="col-md-4 ticketDate">
                         <p>{{ticket.date | date :'medium'}}</p>
                     </div>
-                </div>
+
                     <div class="col-md-12">
                         <div class="well tktDescription"><p><b>Desciption:</b> {{ticket.description}}</p></div>
                         <div class="well"><p><b>Browser Used:</b> {{ticket.browser}}</p></div>
