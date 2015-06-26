@@ -1,9 +1,7 @@
-<div class="container">
-
-    <button class="btn-info" ng-click="viewtkt(1)">View Open Tickets</button>
-    <button class="btn-warning" ng-click="viewtkt(2)">View Closed Tickets</button>
-    <button class="btn-primary" ng-click="viewtkt(3)">View All Tickets</button>
-
+<div class="backgroundArea">
+    <button class="btn-info" ng-click="viewtkt('Open')">View Open Tickets</button>
+    <button class="btn-warning" ng-click="viewtkt('Closed')">View Resolved Tickets</button>
+    <button class="btn-primary" ng-click="viewtkt('All')">View All Tickets</button>
     <div class="row">
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in tickets" >
             <div class="well col-md-5 heatTicket {{ticket.tktStatus}}">

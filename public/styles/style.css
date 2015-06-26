@@ -1,9 +1,15 @@
 /*///////////////////*/
 /*Index Page Styling*/
 /*///////////////////*/
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9af926916f823f69eec5ce01aa4e936afea911c9
 body{
     background-color:#f2f2f2;
+    font: 14px "Roboto", "Roboto Slab", "Lucida Grande", Helvetica, Arial, sans-serif;
+    height: 100%;
+    margin: 0;
 }
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
@@ -100,12 +106,15 @@ li.inactive a {
 
 .createuser {
     color:#3F51B5;
+<<<<<<< HEAD
 }
 
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     height: 100%;
     margin: 0;
+=======
+>>>>>>> 9af926916f823f69eec5ce01aa4e936afea911c9
 }
 
 .page-wrap {
@@ -214,7 +223,11 @@ h4 {
 /*Ticket Page Styling*/
 /*///////////////////*/
 .ticketPage {
+<<<<<<< HEAD
     color:#ffffff;
+=======
+    color:#484848;
+>>>>>>> 9af926916f823f69eec5ce01aa4e936afea911c9
     margin-top:15px;
 }
 
@@ -325,12 +338,20 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
     border: 10px solid #96c661;
 }
 
+<<<<<<< HEAD
 .Resolved{
     border-radius: 4px;
     border: 10px solid #484848;
 }
 
 
+=======
+.Closed{
+    border-radius: 4px;
+    border: 10px dashed #e1564f;
+}
+
+>>>>>>> 9af926916f823f69eec5ce01aa4e936afea911c9
 /*API Instructions Page - indent language*/
 .code p {
     margin-left: 200px;
@@ -347,4 +368,18 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
 
 span {
     font-weight:bold;
+<<<<<<< HEAD
+=======
+}
+
+.statusBtns {
+    text-align: center;
+    width: 150px;
+    margin: 5px auto;
+    padding: auto;
+}
+
+.clientField {
+    margin-left: 10px;
+>>>>>>> 9af926916f823f69eec5ce01aa4e936afea911c9
 }
