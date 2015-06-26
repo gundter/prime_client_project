@@ -68,11 +68,8 @@ var post_data = {
     api_key: 'eTnp4mQvjFb5Xb92dYPADytLnSxQLl',
     api_key_type: 'user',
     service_name: 'Prime Digital Academy Team',
-<<<<<<< HEAD
     video_endpoint: 'https://dry-everglades-2662.herokuapp.com/api',
-=======
-    video_endpoint: 'https://primedesk.herokuapp.com/api',
->>>>>>> 242bade06eaa742f0e0b070b299092fc6360a198
+    //video_endpoint: 'https://primedesk.herokuapp.com/api'
     video_endpoint_extras: [],
     video_set_public: false
 };
