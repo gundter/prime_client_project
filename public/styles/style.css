@@ -1,10 +1,6 @@
 /*///////////////////*/
 /*Index Page Styling*/
 /*///////////////////*/
-<<<<<<< HEAD
-
-=======
->>>>>>> 9af926916f823f69eec5ce01aa4e936afea911c9
 body{
     background-color:#f2f2f2;
     font: 14px "Roboto", "Roboto Slab", "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -26,15 +22,15 @@ li {
 
 /*http://codepen.io/pixelass/pen/gbGZYL*/
 /*.primedesk {*/
-    /*text-shadow: -2px -2px 0 #58d6c3, -2px -1px 0 #58d6c3, -2px 0px 0 #58d6c3, -2px 1px 0 #58d6c3, -2px 2px 0 #58d6c3, -1px -2px 0 #58d6c3, -1px -1px 0 #58d6c3, -1px 0px 0 #58d6c3, -1px 1px 0 #58d6c3, -1px 2px 0 #58d6c3, 0px -2px 0 #58d6c3, 0px -1px 0 #58d6c3, 0px 0px 0 #58d6c3, 0px 1px 0 #58d6c3, 0px 2px 0 #58d6c3, 1px -2px 0 #58d6c3, 1px -1px 0 #58d6c3, 1px 0px 0 #58d6c3, 1px 1px 0 #58d6c3, 1px 2px 0 #58d6c3, 2px -2px 0 #58d6c3, 2px -1px 0 #58d6c3, 2px 0px 0 #58d6c3, 2px 1px 0 #58d6c3, 2px 2px 0 #58d6c3;*/
-    /*color: #ff6f69;*/
-    /*font-size: 44px;*/
+/*text-shadow: -2px -2px 0 #58d6c3, -2px -1px 0 #58d6c3, -2px 0px 0 #58d6c3, -2px 1px 0 #58d6c3, -2px 2px 0 #58d6c3, -1px -2px 0 #58d6c3, -1px -1px 0 #58d6c3, -1px 0px 0 #58d6c3, -1px 1px 0 #58d6c3, -1px 2px 0 #58d6c3, 0px -2px 0 #58d6c3, 0px -1px 0 #58d6c3, 0px 0px 0 #58d6c3, 0px 1px 0 #58d6c3, 0px 2px 0 #58d6c3, 1px -2px 0 #58d6c3, 1px -1px 0 #58d6c3, 1px 0px 0 #58d6c3, 1px 1px 0 #58d6c3, 1px 2px 0 #58d6c3, 2px -2px 0 #58d6c3, 2px -1px 0 #58d6c3, 2px 0px 0 #58d6c3, 2px 1px 0 #58d6c3, 2px 2px 0 #58d6c3;*/
+/*color: #ff6f69;*/
+/*font-size: 44px;*/
 /*}*/
 
 .primedesk {
-text-shadow: -5px -5px 0 #58d6c3, -5px -3px 0 #58d6c3, -5px 0px 0 #58d6c3, -5px 3px 0 #58d6c3, -5px 5px 0 #58d6c3, -3px -5px 0 #58d6c3, -3px -3px 0 #58d6c3, -3px 0px 0 #58d6c3, -3px 3px 0 #58d6c3, -3px 5px 0 #58d6c3, 0px -5px 0 #58d6c3, 0px -3px 0 #58d6c3, 0px 0px 0 #58d6c3, 0px 3px 0 #58d6c3, 0px 5px 0 #58d6c3, 3px -5px 0 #58d6c3, 3px -3px 0 #58d6c3, 3px 0px 0 #58d6c3, 3px 3px 0 #58d6c3, 3px 5px 0 #58d6c3, 5px -5px 0 #58d6c3, 5px -3px 0 #58d6c3, 5px 0px 0 #58d6c3, 5px 3px 0 #58d6c3, 5px 5px 0 #58d6c3;
-color: #c2e49c;
-font-size: 50px;
+    text-shadow: -5px -5px 0 #58d6c3, -5px -3px 0 #58d6c3, -5px 0px 0 #58d6c3, -5px 3px 0 #58d6c3, -5px 5px 0 #58d6c3, -3px -5px 0 #58d6c3, -3px -3px 0 #58d6c3, -3px 0px 0 #58d6c3, -3px 3px 0 #58d6c3, -3px 5px 0 #58d6c3, 0px -5px 0 #58d6c3, 0px -3px 0 #58d6c3, 0px 0px 0 #58d6c3, 0px 3px 0 #58d6c3, 0px 5px 0 #58d6c3, 3px -5px 0 #58d6c3, 3px -3px 0 #58d6c3, 3px 0px 0 #58d6c3, 3px 3px 0 #58d6c3, 3px 5px 0 #58d6c3, 5px -5px 0 #58d6c3, 5px -3px 0 #58d6c3, 5px 0px 0 #58d6c3, 5px 3px 0 #58d6c3, 5px 5px 0 #58d6c3;
+    color: #c2e49c;
+    font-size: 50px;
 }
 
 
@@ -106,15 +102,6 @@ li.inactive a {
 
 .createuser {
     color:#3F51B5;
-<<<<<<< HEAD
-}
-
-body {
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    height: 100%;
-    margin: 0;
-=======
->>>>>>> 9af926916f823f69eec5ce01aa4e936afea911c9
 }
 
 .page-wrap {
@@ -141,7 +128,7 @@ a:hover {
 }
 
 blockquote {
-  background-color: #e6e1dc;
+    background-color: #e6e1dc;
 }
 
 header, .nav-pills, .indivnav, .loginInputs, .pull-right, .navBar, .login ul, .login form {
@@ -223,11 +210,7 @@ h4 {
 /*Ticket Page Styling*/
 /*///////////////////*/
 .ticketPage {
-<<<<<<< HEAD
-    color:#ffffff;
-=======
     color:#484848;
->>>>>>> 9af926916f823f69eec5ce01aa4e936afea911c9
     margin-top:15px;
 }
 
@@ -236,7 +219,7 @@ h4 {
 }
 
 .incomplete {
-  color: gray;
+    color: gray;
 }
 
 .ticketHeader{
@@ -255,16 +238,16 @@ h4 {
 }
 
 .form-group{
-  margin: 20px;
-  padding: 20px;
+    margin: 20px;
+    padding: 20px;
 }
 
 .field{
-  height: 30px
+    height: 30px
 }
 
 #description{
-  height: 200px;
+    height: 200px;
 }
 
 .btn {
@@ -338,20 +321,11 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
     border: 10px solid #96c661;
 }
 
-<<<<<<< HEAD
 .Resolved{
     border-radius: 4px;
     border: 10px solid #484848;
 }
 
-
-=======
-.Closed{
-    border-radius: 4px;
-    border: 10px dashed #e1564f;
-}
-
->>>>>>> 9af926916f823f69eec5ce01aa4e936afea911c9
 /*API Instructions Page - indent language*/
 .code p {
     margin-left: 200px;
@@ -368,8 +342,6 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
 
 span {
     font-weight:bold;
-<<<<<<< HEAD
-=======
 }
 
 .statusBtns {
@@ -377,9 +349,4 @@ span {
     width: 150px;
     margin: 5px auto;
     padding: auto;
-}
-
-.clientField {
-    margin-left: 10px;
->>>>>>> 9af926916f823f69eec5ce01aa4e936afea911c9
 }
