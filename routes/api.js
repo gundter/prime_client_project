@@ -21,6 +21,32 @@ router.post('/', function(req, res, next){
     });
 });
 
+router.post('/nullify', function(req, res, next){
+    var video = new VideoData({
+        token: req.body.token,
+        randtag: req.body.randtag,
+        videoUrl: req.body.videoURL,
+        embededURL: req.body.embededURL,
+        iframe: req.body.iframe
+    });
+    VideoData.findById(req.body.id,
+        function(err, article){
+            if (err){
+                console.log("Find article failed", err);
+                next(err)
+            }
+            try {
+                videoDataSchema.push(video);
+                videoDataSchema.save(function (err) {
+                    if (err) return next(err);
+                });
+                res.send(video);
+            }catch(exception){
+                console.log("Push failed:", exception);
+                next(err);
+            }
+        });
+});
 //////////////////////////////////
 // Get the Video Recording Button
 //////////////////////////////////
@@ -42,7 +68,11 @@ var post_data = {
     api_key: 'eTnp4mQvjFb5Xb92dYPADytLnSxQLl',
     api_key_type: 'user',
     service_name: 'Prime Digital Academy Team',
+<<<<<<< HEAD
     video_endpoint: 'https://dry-everglades-2662.herokuapp.com/api',
+=======
+    video_endpoint: 'https://primedesk.herokuapp.com/api',
+>>>>>>> 242bade06eaa742f0e0b070b299092fc6360a198
     video_endpoint_extras: [],
     video_set_public: false
 };
