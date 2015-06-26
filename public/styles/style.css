@@ -348,6 +348,11 @@ span {
     padding: auto;
 }
 
+.clientField {
+    height:250px;
+    overflow: auto;
+}
+
 .tktDescription {
     height: 150px;
     overflow: auto;
