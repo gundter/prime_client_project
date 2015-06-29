@@ -364,7 +364,8 @@ span {
     height: 75px;
 }
 
-.btn-info {
+div.btn-info {
+    background-color: transparent;
     font-size: 12px;
-    border-radius: 5px;
+    color:#177289;
 }
