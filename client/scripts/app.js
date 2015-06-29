@@ -12,7 +12,7 @@ App.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
         // directs to about/ home page
         when('/home', {
             templateUrl: "/views/about.html",
-            controller: 'headerController'
+            controller: 'calculatorController'
         }).
         // directs to ticket page
         when('/ticket',{
