@@ -309,6 +309,12 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
     padding-top:10px;
 }
 
+.nav>li>a:hover,
+.nav>li>a:focus {
+    text-decoration: none;
+    background-color: #42a4a1;
+}
+
 .inline {
     display:inline-block;
 }
