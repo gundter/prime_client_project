@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
     //Project Configuration
 
-    var controllerList = ['client/scripts/app.js', 'client/scripts/controllers/apiInstructionsController.js', 'client/scripts/controllers/ticketController.js', 'client/scripts/controllers/calculatorController.js', 'client/scripts/controllers/headerController.js', 'client/scripts/controllers/registerController.js', 'client/scripts/controllers/allTicketController.js'];
+    var controllerList = ['client/scripts/app.js', 'client/scripts/controllers/ticketController.js', 'client/scripts/controllers/calculatorController.js', 'client/scripts/controllers/headerController.js', 'client/scripts/controllers/registerController.js', 'client/scripts/controllers/allTicketController.js'];
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
