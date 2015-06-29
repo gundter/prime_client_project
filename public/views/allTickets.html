@@ -8,6 +8,7 @@
             <div class="well col-md-5 heatTicket {{ticket.tktStatus}}">
                 <div class="col-md-9">
                     <p class="lead">{{ticket.problem}}</p>
+                    <div class="ticketStatus"><button class="btn-info" ng-click="ticketData=!ticketData">See Info</button></div>
                 </div>
                 <a class="col-md-3"><b>Ticket Number:</b> {{ticket.ticketNum}}</a>
                 <div ng-show="ticketData">
@@ -22,9 +23,6 @@
                     <div class="col-md-4 ticketDate">
                         <p>{{ticket.date | date :'medium'}}</p>
                     </div>
-                </div>
-                <div class="ticketStatus"><button class="btn-info" ng-click="ticketData=!ticketData">See Info</button></div>
-                <div ng-show="ticketData">
                     <div class="col-md-12">
                         <div class="well tktDescription"><p><b>Desciption:</b> {{ticket.description}}</p></div>
                         <div class="well"><p><b>Browser Used:</b> {{ticket.browser}}</p></div>
