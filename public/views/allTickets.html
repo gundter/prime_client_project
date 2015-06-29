@@ -10,7 +10,6 @@
                     <p class="lead">{{ticket.problem}}</p>
                 </div>
                 <p class="col-md-3"><b>Ticket Number:</b> {{ticket.ticketNum}}</p>
-                <div class="ticketStatus"><button class="btn-info" ng-click="ticketData=!ticketData">See Info</button></div>
                 <div ng-show="ticketData">
                     <div class="col-md-8">
                         <div class="well clientField">
@@ -37,6 +36,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="ticketStatus"><button class="btn-info" ng-click="ticketData=!ticketData">See Info</button></div>
             </div>
         </div>
     </div>
