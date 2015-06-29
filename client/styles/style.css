@@ -366,3 +366,8 @@ span {
 .bottomMargin {
     margin-bottom: 15px;
 }
+
+.logo {
+    background-image: url("/public/images/primedesk.png");
+    height: 50 px;
+}
