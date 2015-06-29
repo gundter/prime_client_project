@@ -37,9 +37,9 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
                     console.log("Email: ", $scope.user.email);
             });
 
-        //////////////////////////
-        // Get ILOS Record Button
-        //////////////////////////
+        ///////////////////////////
+        // Get ILOS Record Button//
+        ///////////////////////////
         $http.get('/api/getData').success(
             function(data) {
                     console.log(data);
