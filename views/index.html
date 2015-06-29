@@ -36,22 +36,37 @@
             </ul>
         </div>
 
-        <div ng-if="showLogin">
-            <form action="/" method="post">
-                <ul class="loginInputs">
-                    <li><input type="text" name="email" id="email"
-                               placeholder="Email"/></li>
-                    <li><input type="password" name="password" id="password"
-                               placeholder="password"/></li>
-                    <li><input class="btn btn-primary login2" ng-click="showWaitMsg()" type="submit"
-                               value="Log In"></li>
-                    <li><a href="#register" class="registerstyle btn">Register</a></li>
+        <!-- /////////////////// -->
+        <!-- Login Functionality -->
+        <!-- /////////////////// -->
+        <div class="login pull-right ng-cloak">
+
+            <div ng-if="showUser">
+                <ul class="signedIn">
+                    <li class="lead" ng-cloak>Hi, {{user}}</li>
+                    <li><button class="btn btn-warning" ng-click="logout()" ng-cloak>Logout</button></li>
                 </ul>
-                <p class="waitMessage" ng-show="waitMsg">Please wait while you're being Logged In...</p>
-            </form>
+            </div>
+
+            <div ng-if="showLogin">
+                <form action="/" method="post">
+                    <ul class="loginInputs">
+                        <li><input type="text" name="email" id="email"
+                                  placeholder="Email"/></li>
+                        <li><input type="password" name="password" id="password"
+                                   placeholder="password"/></li>
+                        <li><input class="btn btn-primary login2" ng-click="showWaitMsg()" type="submit"
+                                   value="Log In"></li>
+                        <li><a href="#register" class="registerstyle btn">Register</a></li>
+                    </ul>
+                    <p class="waitMessage" ng-show="waitMsg">Please wait while you're being Logged In...</p>
+                </form>
+            </div>
         </div>
     </div>
 </header>
+
+<div class="underHeader"></div>
 
 <!-- /////////////////////////// -->
 <!-- Bring in all the pages here -->
@@ -59,18 +74,14 @@
 <div class="page-wrap">
     <main ng-view></main>
 </div>
-
-
-<footer class="site-footer">
-    <a href="#apiInstructions">API Instructions</a>
-</footer>
-
-<!-- /////////////////////////// -->
-<!-- Scripts Start -->
-<!-- /////////////////////////// -->
-<script type="text/javascript" src="/vendors/angular/angular.js"></script>
-<script type="text/javascript" src="/vendors/angular-route/angular-route.min.js"></script>
-<script type="text/javascript" src="/javascripts/app.min.js"></script>
-
+    <footer class="site-footer">
+        <a href="#apiInstructions">API Instructions</a>
+    </footer>
+    <!-- /////////////////////////// -->
+    <!-- Scripts Start -->
+    <!-- /////////////////////////// -->
+    <script type="text/javascript" src="/vendors/angular/angular.js"></script>
+    <script type="text/javascript" src="/vendors/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="/javascripts/app.min.js"></script>
 </body>
 </html>

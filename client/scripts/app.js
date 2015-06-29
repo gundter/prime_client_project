@@ -52,4 +52,3 @@ App.service('browser', ['$window', function($window) {
         return 'unknown';
     }
 }]);
-

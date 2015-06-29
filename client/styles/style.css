@@ -17,13 +17,6 @@ li {
     list-style: none;
 }
 
-.primedesk {
-    text-shadow: -5px -5px 0 #58d6c3, -5px -3px 0 #58d6c3, -5px 0px 0 #58d6c3, -5px 3px 0 #58d6c3, -5px 5px 0 #58d6c3, -3px -5px 0 #58d6c3, -3px -3px 0 #58d6c3, -3px 0px 0 #58d6c3, -3px 3px 0 #58d6c3, -3px 5px 0 #58d6c3, 0px -5px 0 #58d6c3, 0px -3px 0 #58d6c3, 0px 0px 0 #58d6c3, 0px 3px 0 #58d6c3, 0px 5px 0 #58d6c3, 3px -5px 0 #58d6c3, 3px -3px 0 #58d6c3, 3px 0px 0 #58d6c3, 3px 3px 0 #58d6c3, 3px 5px 0 #58d6c3, 5px -5px 0 #58d6c3, 5px -3px 0 #58d6c3, 5px 0px 0 #58d6c3, 5px 3px 0 #58d6c3, 5px 5px 0 #58d6c3;
-    color: #c2e49c;
-    font-size: 50px;
-}
-
-
 .loginInputs li , .signedIn li{
     list-style-type: none;
     display: inline;
@@ -42,7 +35,7 @@ li {
     margin-right: 8em;
 }
 
-#email, #password {
+#email, #password, .newUserpassword, #confirmPassword, #nameFirst, #nameLast, #phone, #department {
     padding: 5px;
     padding-right: 15px;
 }
@@ -91,7 +84,7 @@ li.inactive a {
 }
 
 .createuser {
-    color:#3F51B5;
+    color:#177289;
 }
 
 body {
@@ -174,7 +167,7 @@ h4 {
     margin: 5px;
     padding: 2px;
     height: 25px;
-    background-color: #3F51B5;
+    background-color: #158ea8;
     color:white;
 }
 
@@ -184,7 +177,7 @@ h4 {
     margin: 5px auto;
     padding: 2px;
     height: 25px;
-    background-color: #313446;
+    background-color: #0e5260;
     color:white;
 }
 
@@ -201,13 +194,18 @@ h4 {
     margin: 5px 25% 5px auto;
     height: 250px;
     width: 225px;
+    background-color: #a7a7a7;
 }
+
 /*///////////////////*/
 /*Ticket Page Styling*/
 /*///////////////////*/
 .ticketPage {
     color:#484848;
     margin-top:15px;
+}
+
+.ticketForm {
     background-color: #ffffff;
 }
 
@@ -221,7 +219,7 @@ h4 {
 
 .ticketHeader{
     text-align: center;
-    color: #3F51B5;
+    color: #177289;
 }
 
 .recordBtn{
@@ -309,11 +307,17 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
     padding-top:10px;
 }
 
+.nav>li>a:hover,
+.nav>li>a:focus {
+    text-decoration: none;
+    background-color: #42a4a1;
+}
+
 .inline {
     display:inline-block;
 }
 
-.Open{
+.Open {
     border-radius: 4px;
     border: 10px solid #d9534f;
 }
@@ -365,4 +369,38 @@ span {
 
 .bottomMargin {
     margin-bottom: 15px;
+}
+
+.logo {
+    height: 100px;
+}
+
+.detailBtn {
+    background-color: transparent;
+    font-size: 12px;
+    color:#177289;
+}
+
+
+.registerForm {
+    width: 500px;
+    margin-left: 27%;
+    background-color: #ffffff;
+}
+
+.underHeader {
+    background-color: #158ea8;
+    opacity:50;
+    height: 15px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    height: 14px;
+    color: #42a4a1;
+    margin-left: 120px;
+}
+
+.problem {
+    color: #484848;
 }
