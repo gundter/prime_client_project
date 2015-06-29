@@ -69,7 +69,7 @@ router.get('/admin', function (req, res, next) {
     };
 
     var response;
-    if (user.email == "batman@justiceleague.com") {
+    if (user.email == "batman@justiceleague.com" || user.email == "guest@email.com") {
         response = true;
     } else {
         response = false;
