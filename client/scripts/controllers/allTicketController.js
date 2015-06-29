@@ -33,7 +33,7 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
                         $scope.openTickets.push($scope.allTickets[i]);
                     }
                 }
-                $scope.viewtkt('All');
+                $scope.viewtkt('Open');
             });
     };
 
