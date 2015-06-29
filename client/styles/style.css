@@ -174,7 +174,7 @@ h4 {
     margin: 5px;
     padding: 2px;
     height: 25px;
-    background-color: #3F51B5;
+    background-color: #158ea8;
     color:white;
 }
 
@@ -379,5 +379,6 @@ span {
     background-color: #158ea8;
     opacity:50;
     height: 15px;
+    margin-bottom: 10px;
 }
 
