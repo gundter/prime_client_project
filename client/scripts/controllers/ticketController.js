@@ -1,5 +1,6 @@
 App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$location', 'browser',function($scope, $http, $sce, $interval, $location, browser){
 
+
         $scope.ticket = {};
         $scope.user = {};
         $scope.returnedData = {};
@@ -26,6 +27,7 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
             $location.path('/allTickets');
         };
 
+
         ////////////////////////
         // Get User information
         ///////////////////////
@@ -48,10 +50,21 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
                     $scope.token = $scope.returnedData.token;
                     console.log("iframe button: ",$scope.iframeButton);
 
-        }).error(
+
+        //////////////////////////
+        // Get ILOS Record Button
+        //////////////////////////
+        $http.get('/api/getData').success(
+            function(data) {
+                console.log(data);
+                $scope.returnedData = data;
+                $scope.iframeButton = $sce.trustAsHtml($scope.returnedData.recordButtonIframe);
+                $scope.token = $scope.returnedData.token;
+                console.log("iframe button: ",$scope.iframeButton);
+            }).error(
             function(err) {
-                    console.log(err);
-        });
+                console.log(err);
+            });
 
         ////////////////////////////////////////
         // Get the Last Video that was Recorded

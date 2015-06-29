@@ -65,10 +65,19 @@ function GetData(){
 }
 
 var post_data = {
-    api_key: 'b6ANvns15XjOUeMbvyzVumTbgJ9stQ',
-    api_key_type: 'org_guest_recorder',
+    api_key: 'eTnp4mQvjFb5Xb92dYPADytLnSxQLl',
+    api_key_type: 'user',
     service_name: 'Prime Digital Academy Team',
-    video_endpoint: 'https://primedesk.herokuapp.com/api',
+<<<<<<< HEAD
+<<<<<<< HEAD
+    video_endpoint: 'https://polar-reef-6279.herokuapp.com/api',
+=======
+    video_endpoint: 'https://guarded-wave-5600.herokuapp.com/api',
+>>>>>>> 4ad6f2630f8eb934d93975c61477aba1ff94b188
+=======
+    video_endpoint: 'https://dry-everglades-2662.herokuapp.com/api',
+    //video_endpoint: 'https://primedesk.herokuapp.com/api'
+>>>>>>> d4233a72e752ef4ad735d1ad93ccf152f0ba37b3
     video_endpoint_extras: [],
     video_set_public: false
 };

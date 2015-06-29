@@ -39,14 +39,11 @@ App.controller('allTicketController', ['$scope', '$http', function($scope, $http
 
     $scope.viewtkt = function(chgTktStatus) {
         $scope.tickets = [];
-
         if (chgTktStatus == 'All') {
             $scope.tickets = $scope.allTickets;
-
         } else if (chgTktStatus == 'Resolved') {
             console.log("closedTickets: ", $scope.closedTickets);
             $scope.tickets = $scope.closedTickets;
-
         } else if (chgTktStatus == 'Open') {
             $scope.tickets = $scope.openTickets;
             console.log("openTickets: ", $scope.openTickets);
