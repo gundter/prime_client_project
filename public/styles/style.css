@@ -309,6 +309,12 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
     padding-top:10px;
 }
 
+.nav>li>a:hover,
+.nav>li>a:focus {
+    text-decoration: none;
+    background-color: #42a4a1;
+}
+
 .inline {
     display:inline-block;
 }
@@ -365,4 +371,14 @@ span {
 
 .bottomMargin {
     margin-bottom: 15px;
+}
+
+.underHeader {
+    background-color: #158ea8;
+    opacity:50;
+    height: 15px;
+}
+
+.calcbody {
+    background-color: #a7a7a7;
 }
