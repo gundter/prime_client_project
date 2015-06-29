@@ -201,7 +201,9 @@ h4 {
     margin: 5px 25% 5px auto;
     height: 250px;
     width: 225px;
+    background-color: #a7a7a7;
 }
+
 /*///////////////////*/
 /*Ticket Page Styling*/
 /*///////////////////*/
@@ -379,6 +381,3 @@ span {
     height: 15px;
 }
 
-.calcbody {
-    background-color: #a7a7a7;
-}
