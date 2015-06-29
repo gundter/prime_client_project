@@ -17,13 +17,6 @@ li {
     list-style: none;
 }
 
-.primedesk {
-    text-shadow: -5px -5px 0 #58d6c3, -5px -3px 0 #58d6c3, -5px 0px 0 #58d6c3, -5px 3px 0 #58d6c3, -5px 5px 0 #58d6c3, -3px -5px 0 #58d6c3, -3px -3px 0 #58d6c3, -3px 0px 0 #58d6c3, -3px 3px 0 #58d6c3, -3px 5px 0 #58d6c3, 0px -5px 0 #58d6c3, 0px -3px 0 #58d6c3, 0px 0px 0 #58d6c3, 0px 3px 0 #58d6c3, 0px 5px 0 #58d6c3, 3px -5px 0 #58d6c3, 3px -3px 0 #58d6c3, 3px 0px 0 #58d6c3, 3px 3px 0 #58d6c3, 3px 5px 0 #58d6c3, 5px -5px 0 #58d6c3, 5px -3px 0 #58d6c3, 5px 0px 0 #58d6c3, 5px 3px 0 #58d6c3, 5px 5px 0 #58d6c3;
-    color: #c2e49c;
-    font-size: 50px;
-}
-
-
 .loginInputs li , .signedIn li{
     list-style-type: none;
     display: inline;
