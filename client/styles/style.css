@@ -35,7 +35,7 @@ li {
     margin-right: 8em;
 }
 
-#email, #password {
+#email, #password, .newUserpassword, #confirmPassword, #nameFirst, #nameLast, #phone, #department {
     padding: 5px;
     padding-right: 15px;
 }
@@ -201,6 +201,9 @@ h4 {
 .ticketPage {
     color:#484848;
     margin-top:15px;
+}
+
+.ticketForm {
     background-color: #ffffff;
 }
 
@@ -302,6 +305,12 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .waitMessage {
     padding-top:10px;
 }
 
+.nav>li>a:hover,
+.nav>li>a:focus {
+    text-decoration: none;
+    background-color: #42a4a1;
+}
+
 .inline {
     display:inline-block;
 }
@@ -368,4 +377,10 @@ span {
     background-color: transparent;
     font-size: 12px;
     color:#177289;
+}
+
+.registerForm {
+    width: 500px;
+    margin-left: 27%;
+    background-color: #ffffff;
 }
