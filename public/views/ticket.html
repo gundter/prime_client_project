@@ -1,0 +1,52 @@
+<div class="container">
+<<<<<<< HEAD
+=======
+
+>>>>>>> d4233a72e752ef4ad735d1ad93ccf152f0ba37b3
+    <form class="col-md-offset-2 col-md-8 ticketForm" name='ticketForm' novalidate ng-submit="createTicket(ticket)">
+        <h2 class="ticketHeader">Issue Report</h2>
+        <div class="form-group">
+            <label class="col-md-3" for="problem">Problem:*</label>
+            <div class="col-md-9">
+                <input type="text" id="problem" class="col-md-12 field" name="problem" ng-model="ticket.problem" ng-required="true"/>
+                <p class="incomplete" ng-show="ticketForm.problem.$invalid && ticketForm.email.$touched">Please input a problem</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-3" for="email">Contact Email:*</label>
+            <div class="col-md-9">
+                <input type="email" id="email" class="col-md-12 field" name="email" ng-model="ticket.email" ng-required="true" />
+                <p class="incomplete" ng-show="ticketForm.email.$invalid && ticketForm.email.$touched"> Please input email</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3" for="browser">Browser Used:*</label>
+            <div class="col-md-9">
+                <input type="text" id="browser" class="col-md-12 field" name="browser" ng-model="ticket.browser" ng-required="true"/>
+                <p class="incomplete" ng-show="ticketForm.browser.$invalid && ticketForm.browser.$touched"> Please input browser</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3" for="description">Description:*</label>
+            <div class="col-md-9">
+                <textarea type="text" id="description" class="col-md-12 field" name="description" ng-model="ticket.description" ng-required="true"></textarea>
+                <p class="incomplete" ng-show="ticketForm.description.$invalid && ticketForm.description.$touched"> Please input description</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="recordBtn" ng-bind-html="iframeButton"></div>
+            <div ng-show="matchToken">
+                <div class="showHideButtons text-right">
+                    <div class="btn btn-xs videoShow" ng-click="clicked=true">Video</div>
+                    <div class="btn btn-xs embedShow" ng-click="clicked=false">Embed Code</div>
+                </div>
+                <div class="videoDisplay" ng-bind-html="iframeVideo" ng-show="clicked"></div>
+                <div class="urlForToggle" ng-hide="clicked">{{iframeVideo}}</div>
+            </div>
+            <button type="submit" class="btn ticketSubmit" ng-disabled="ticketForm.$invalid">Submit Ticket</button>
+            <br/>
+            <p class="incomplete fieldsrequired" ng-show="ticketForm.description.$invalid">*Required fields</p>
+        </div>
+    </form>
+</div>
