@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c28ab9b-afcd-4a4e-bf87-d0e9f6775a1d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="0c28ab9b-afcd-4a4e-bf87-d0e9f6775a1d" name="Default" comment="" />
     <ignored path="dry-everglades-2662.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,8 +71,8 @@
       <file leaf-file-name="allTickets.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/views/allTickets.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.875">
-              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+            <state vertical-scroll-proportion="-8.75">
+              <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -94,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/public/styles/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="366" column="7" selection-start-line="366" selection-start-column="7" selection-end-line="366" selection-end-column="7" />
+              <caret line="366" column="10" selection-start-line="366" selection-start-column="1" selection-end-line="366" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -151,11 +149,11 @@
         <option value="$PROJECT_DIR$/client/scripts/controllers/ticketController.js" />
         <option value="$PROJECT_DIR$/client/scripts/controllers/allTicketController.js" />
         <option value="$PROJECT_DIR$/public/views/about.html" />
-        <option value="$PROJECT_DIR$/public/views/allTickets.html" />
         <option value="$PROJECT_DIR$/client/views/about.html" />
-        <option value="$PROJECT_DIR$/public/styles/style.css" />
         <option value="$PROJECT_DIR$/client/views/allTickets.html" />
         <option value="$PROJECT_DIR$/client/styles/style.css" />
+        <option value="$PROJECT_DIR$/public/styles/style.css" />
+        <option value="$PROJECT_DIR$/public/views/allTickets.html" />
       </list>
     </option>
   </component>
@@ -816,31 +814,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/primedesk.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/allTickets.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.875">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/scripts/controllers/allTicketController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="366" column="7" selection-start-line="366" selection-start-column="7" selection-end-line="366" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -857,6 +834,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.75">
           <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/primedesk.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/styles/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="366" column="10" selection-start-line="366" selection-start-column="1" selection-end-line="366" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/allTickets.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.75">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
           <folding />
         </state>
       </provider>
