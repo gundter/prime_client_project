@@ -395,7 +395,7 @@ span {
     margin-bottom: 10px;
 }
 
-h2 {
+.tryit {
     height: 14px;
     color: #42a4a1;
     margin-left: 120px;
@@ -404,3 +404,4 @@ h2 {
 .problem {
     color: #484848;
 }
+
