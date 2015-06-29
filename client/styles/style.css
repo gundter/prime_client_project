@@ -208,6 +208,9 @@ h4 {
 .ticketPage {
     color:#484848;
     margin-top:15px;
+}
+
+.ticketForm {
     background-color: #ffffff;
 }
 
@@ -371,4 +374,10 @@ span {
 
 .bottomMargin {
     margin-bottom: 15px;
+}
+
+.registerForm {
+    width: 400px;
+    margin 5px auto;
+    background-color: #ffffff;
 }
