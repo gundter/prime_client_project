@@ -91,7 +91,7 @@ li.inactive a {
 }
 
 .createuser {
-    color:#3F51B5;
+    color:#0e5260;
 }
 
 body {
@@ -184,7 +184,7 @@ h4 {
     margin: 5px auto;
     padding: 2px;
     height: 25px;
-    background-color: #313446;
+    background-color: #0e5260;
     color:white;
 }
 
@@ -223,7 +223,7 @@ h4 {
 
 .ticketHeader{
     text-align: center;
-    color: #3F51B5;
+    color: #0e5260;
 }
 
 .recordBtn{
