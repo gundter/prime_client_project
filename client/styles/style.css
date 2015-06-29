@@ -368,6 +368,6 @@ span {
 }
 
 .logo {
-    background-image: url("/images/primedesk.png");
-    height: 50 px;
+    background-image: url("primedesk.png");
+    height: 50px;
 }
