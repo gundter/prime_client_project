@@ -30,7 +30,6 @@ App.controller('calculatorController',['$scope', function($scope){
             current += value;
             $scope.output = current;
             key = value;
-            console.log("Current: " + current + " key: ", key);
         }
     };
 //scope.clear clears out the equation
