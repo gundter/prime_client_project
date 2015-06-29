@@ -13,7 +13,9 @@
             <div class="form-group">
                 <label class="col-md-3 control-label" for="newUser.password">Password*:</label>
                 <div class="col-md-9">
-                    <input ng-model="newUser.password" ng-required="true" type="password" id="newUser.password" name="password"/>
+                    <input ng-model="newUser.password" ng-required="true" type="password" class="newUserpassword"
+                           id="newUser.password"
+                           name="password"/>
                     <p ng-show="createUserForm.password.$invalid && createUserForm.password.$touched">Please input a Password</p>
                 </div>
             </div>
@@ -56,7 +58,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-lg-10 col-lg-offset-2">
+                <div class="col-md-10">
                     <p class="lead" ng-show="waitMsg">Please wait while your user is being created...</p>
                     <button type="submit" class="btn createuserbtn" ng-disabled="createUserForm.newUser.$invalid">Create
                         User</button>
