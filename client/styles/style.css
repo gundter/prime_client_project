@@ -132,6 +132,23 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .navBar, .login ul, .l
     margin-right: 8px;
 }
 
+.underHeader {
+    background-color: #158ea8;
+    opacity:50;
+    height: 15px;
+    margin-bottom: 10px;
+}
+
+.aboutHeader {
+    height: 14px;
+    color: #42a4a1;
+    margin-left: 120px;
+}
+
+.problem {
+    color: #484848;
+}
+
 /*///////////////////*/
 /* About Page Styling*/
 /*///////////////////*/
@@ -367,6 +384,11 @@ span {
     color: #ffffff;
 }
 
+.btn-default:hover {
+    background-color: black;
+    color: #ffffff;
+}
+
 .bottomMargin {
     margin-bottom: 15px;
 }
@@ -375,33 +397,15 @@ span {
     height: 100px;
 }
 
-.detailBtn {
-    background-color: transparent;
-    font-size: 12px;
-    color:#177289;
-}
-
-
 .registerForm {
     width: 500px;
     margin-left: 27%;
     background-color: #ffffff;
 }
 
-.underHeader {
-    background-color: #158ea8;
-    opacity:50;
-    height: 15px;
-    margin-bottom: 10px;
+.detailBtn {
+    font-size: 12px;
+    text-decoration: none;
 }
 
-.aboutHeader {
-    height: 14px;
-    color: #42a4a1;
-    margin-left: 120px;
-}
-
-.problem {
-    color: #484848;
-}
 
