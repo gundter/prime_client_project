@@ -7,10 +7,9 @@
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in tickets" >
             <div class="well col-md-5 heatTicket {{ticket.tktStatus}}">
                 <div class="col-md-9">
-                    <p class="lead">{{ticket.problem}}</p>
-                    <div class="ticketStatus"><button class="btn-info" ng-click="ticketData=!ticketData">See Info</button></div>
+                    <p class="lead">{{ticket.problem}} <a class="btn-info" ng-click="ticketData=!ticketData">(Detail)</a></p>
                 </div>
-                <a class="col-md-3"><b>Ticket Number:</b> {{ticket.ticketNum}}</a>
+                <p class="col-md-3"><b>Ticket Number:</b> {{ticket.ticketNum}}</p>
                 <div ng-show="ticketData">
                     <div class="col-md-8">
                         <div class="well clientField">

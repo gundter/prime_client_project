@@ -363,3 +363,7 @@ span {
 .logo {
     height: 75px;
 }
+
+.btn-info {
+    font-size: 12px;
+}
