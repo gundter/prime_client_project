@@ -23,6 +23,15 @@ li {
     padding: 5px;
     background-color:#177289;
 }
+
+.huh li {
+    background-color:#177289;
+    list-style-type: none;
+    display: inline;
+    padding: 5px;
+    color: white
+}
+
 .signedIn li, .waitMessage {
     color: white;
 }
@@ -158,11 +167,16 @@ h4 {
 }
 
 .aboutContent {
-    padding-top: 30px;
+    padding-top: 70px;
     margin: 0 auto;
-    width: 600px;
+    width: 500px;
     text-align: center;
 }
+
+.leadAbout {
+    border-top: 1px solid black;
+}
+
 /*///////////////////*/
 /*Calculator Styling*/
 /*///////////////////*/
@@ -208,7 +222,7 @@ h4 {
     border: 2px solid #484848;
     border-radius: 10px;
     padding: 5px auto;
-    margin: 5px 25% 5px auto;
+    margin: 50px 30% 5px auto;
     height: 250px;
     width: 225px;
     background-color: #a7a7a7;
@@ -394,7 +408,7 @@ span {
 }
 
 .logo {
-    height: 100px;
+    height: 30px;
 }
 
 .registerForm {
@@ -418,4 +432,16 @@ span {
 
 .poweredBy {
     text-align: center;
+}
+
+.contactus {
+    margin-top:30px;
+    text-align: center;
+}
+
+.best {
+    padding-top:5px;
+    color: white;
+    font-size: 20px;
+    padding-left: 250px;
 }
