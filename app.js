@@ -22,7 +22,6 @@ var videos = require('./routes/videos');
 
 var app = express();
 
-
 // Mongo setup
 
     // Add your MongoLab Information
