@@ -168,7 +168,7 @@ h4 {
 
 .aboutContent {
     padding-top: 70px;
-    margin: 0 auto;
+    margin: 100px auto 5px auto;
     width: 500px;
     text-align: center;
 }
@@ -435,7 +435,7 @@ span {
 }
 
 .contactus {
-    margin-top: 130px;
+    margin-top: 30px;
     text-align: center;
 }
 
