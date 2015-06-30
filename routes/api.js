@@ -66,11 +66,11 @@ function GetData(){
 
 var post_data = {
     //////////// Add You API KEY ////////////
-    api_key: sys.env.API_KEY,
+    api_key: process.env.API_KEY,
     api_key_type: 'user',
     service_name: 'Prime Digital Academy Team',
     ///////////// Point to your Web Address //////////////
-    video_endpoint: sys.env.VIDEO_ENDPOINT,
+    video_endpoint: process.env.VIDEO_ENDPOINT,
     video_endpoint_extras: [],
     video_set_public: false
 };

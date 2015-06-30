@@ -69,7 +69,7 @@ router.get('/admin', function (req, res, next) {
     };
 
     var response;
-    if (user.email == sys.env.SUPER_USER_ONE || user.email == sys.env.SUPER_USER_TWO) {
+    if (user.email == process.env.SUPER_USER_ONE || user.email == process.env.SUPER_USER_TWO) {
         response = true;
     } else {
         response = false;
