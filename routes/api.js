@@ -65,9 +65,11 @@ function GetData(){
 }
 
 var post_data = {
+    //////////// Add You API KEY ////////////
     api_key: 'tEE8mV0mJny5v4f0ZdABzaXplO1hME',
     api_key_type: 'user',
     service_name: 'Prime Digital Academy Team',
+    ///////////// Point to your Web Address //////////////
     video_endpoint: 'https://primedesk.herokuapp.com/api',
     video_endpoint_extras: [],
     video_set_public: false
