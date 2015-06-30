@@ -23,6 +23,15 @@ li {
     padding: 5px;
     background-color:#177289;
 }
+
+.huh li {
+    background-color:#177289;
+    list-style-type: none;
+    display: inline;
+    padding: 5px;
+    color: white
+}
+
 .signedIn li, .waitMessage {
     color: white;
 }
@@ -132,6 +141,23 @@ header, .nav-pills, .indivnav, .loginInputs, .pull-right, .navBar, .login ul, .l
     margin-right: 8px;
 }
 
+.underHeader {
+    background-color: #158ea8;
+    opacity:50;
+    height: 15px;
+    margin-bottom: 10px;
+}
+
+.aboutHeader {
+    height: 14px;
+    color: #42a4a1;
+    margin-left: 120px;
+}
+
+.problem {
+    color: #484848;
+}
+
 /*///////////////////*/
 /* About Page Styling*/
 /*///////////////////*/
@@ -141,11 +167,16 @@ h4 {
 }
 
 .aboutContent {
-    padding-top: 30px;
-    margin: 0 auto;
-    width: 600px;
+    padding-top: 70px;
+    margin: 100px auto 5px auto;
+    width: 500px;
     text-align: center;
 }
+
+.leadAbout {
+    border-top: 1px solid black;
+}
+
 /*///////////////////*/
 /*Calculator Styling*/
 /*///////////////////*/
@@ -191,7 +222,7 @@ h4 {
     border: 2px solid #484848;
     border-radius: 10px;
     padding: 5px auto;
-    margin: 5px 25% 5px auto;
+    margin: 50px auto 5px auto;
     height: 250px;
     width: 225px;
     background-color: #a7a7a7;
@@ -367,20 +398,18 @@ span {
     color: #ffffff;
 }
 
+.btn-default:hover {
+    background-color: black;
+    color: #ffffff;
+}
+
 .bottomMargin {
     margin-bottom: 15px;
 }
 
 .logo {
-    height: 100px;
+    height: 30px;
 }
-
-.detailBtn {
-    background-color: transparent;
-    font-size: 12px;
-    color:#177289;
-}
-
 
 .registerForm {
     width: 500px;
@@ -388,19 +417,31 @@ span {
     background-color: #ffffff;
 }
 
-.underHeader {
-    background-color: #158ea8;
-    opacity:50;
-    height: 15px;
+.detailBtn {
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.field {
     margin-bottom: 10px;
 }
 
-.aboutHeader {
-    height: 14px;
-    color: #42a4a1;
-    margin-left: 120px;
+.iloslogo {
+    height:30px;
 }
 
-.problem {
-    color: #484848;
+.poweredBy {
+    text-align: center;
+}
+
+.contactus {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.best {
+    padding-top:5px;
+    color: white;
+    font-size: 20px;
+    padding-left: 250px;
 }

@@ -1,10 +1,5 @@
 <div class="container">
 
-    <img class="logo" src="../images/primedesk.png">
-
-    <h2 class="aboutHeader"> Try out the Calulator!</h2>
-    <h4 class="problem"> Problem? Let's Report an Issue.</h4>
-
     <div class="calcbody">
 
         <p class="output" name="output">{{output}}</p>
@@ -41,12 +36,18 @@
             </div>
             <button name="btnClear" class="clrBtn" ng-click='clear()'>CLEAR</button>
         </div>
+        <hr>
+        <div class="contactus">
+            <p> Having a problem? Click here <a href="#ticket" target="_blank"> Report An Issue</a> powered by: <img
+                    class="logo" src="../images/prmedesk3.png"></p>
+        </div>
     </div>
+
     <div class="aboutContent">
-        <p class="lead"> About Us </p>
-        <p> This page displays one example of how the ilos recorder API can be used to add value for customers. Report the issue you see by clicking the Report An Issue tab, and filling out a support ticket.  You can save your tickets to a user by first registering as a user. </p>
-        <p> The ilos recorder shows the IBC support team what's happening by displaying a video of the problem in the support ticket itself. To try it out, use email: guest@email.com, password: guest. To see how a support representative would see the tickets, click</p>
-        <a href="#allTickets"> All Tickets </a>
-        <p> For more on how to implement the ilos API, click on API Instructions link below. </p>
+        <p class="lead leadAbout"> About Us </p>
+        <p> This page displays one example of how the ilos recorder API can be used to add value for customers.</p>
+        <p> You can save your tickets to a user by first registering as a user. <b>guest@email.com, password: guest.</b></p>
+        <p> The ilos recorder shows the OKC support team what's happening by displaying a video of the problem in the support ticket itself.  To see how a support representative would see the tickets, click<a href="#allTickets"> Submitted Tickets </a></p>
+        <p> For more on how to implement the ilos API, click on API Instructions </p>
     </div>
 </div>
