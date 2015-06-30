@@ -18,11 +18,11 @@
     <!-- /////////////////////////// -->
     <div class="navBar pull-left ng-cloak">
         <ul class="nav nav-pills">
-            <li class="indivnav"><a href="#home">About</a></li>
-            <li class="indivnav"><a href="#ticket" target="_blank">Report An Issue</a></li>
-            <li class="indivnav" ng-if="showUser"><a href="#allTickets">All Tickets</a></li>
+            <li class="indivnav"><a href="#home">Home</a></li>
+            <li class="indivnav best"> One of a Kind Calculator </li>
         </ul>
     </div>
+
 
         <!-- /////////////////// -->
         <!-- Login Functionality -->
@@ -58,9 +58,17 @@
 <!-- /////////////////////////// -->
 <!-- Bring in all the pages here -->
 <!-- /////////////////////////// -->
-<div class="page-wrap">
-    <main ng-view></main>
-</div>
+    <div class="page-wrap">
+        <main ng-view></main>
+        <div class="aboutContent">
+            <p class="lead leadAbout"> About Us </p>
+            <p> This page displays one example of how the ilos recorder API can be used to add value for customers.</p>
+            <p> You can save your tickets to a user by first registering as a user. <b>guest@email.com, password: guest.</b></p>
+            <p> The ilos recorder shows the OKC support team what's happening by displaying a video of the problem in the support ticket itself.  To see how a support representative would see the tickets, click<a href="#allTickets"> Submitted Tickets </a></p>
+            <p> For more on how to implement the ilos API, click on API Instructions </p>
+        </div>
+    </div>
+
     <footer class="site-footer">
         <a href="#apiInstructions">API Instructions</a>
     </footer>
