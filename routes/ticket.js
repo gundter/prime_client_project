@@ -14,7 +14,7 @@ router.get('/getTickets', function (req, res, next) {
     // Check if the User is logged in
     if (req.isAuthenticated()) {
         // Check if User is SuperUser
-        if (req.user.email == "batman@justiceleague.com" || req.user.email == "guest@email.com"){
+        if (req.user.email == sys.env.SUPER_USER_ONE|| req.user.email == sys.env.SUPER_USER_TWO){
             Tickets.find({}, null, function(err, data){
                 // Send back all Tickets
                 res.send(data);
@@ -27,7 +27,6 @@ router.get('/getTickets', function (req, res, next) {
             });
         }
     }
-
 });
 
 /////////////////////////

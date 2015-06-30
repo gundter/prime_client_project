@@ -24,13 +24,9 @@ var app = express();
 
 
 // Mongo setup
-//////////////////////////////////
-// Add your MongoLab Information
-/////////////////////////////////
-var mongoURI = "mongodb://vincethebutcher:winteriscoming9@ds047652.mongolab.com:47652/primedesk";
-// var mongoURI = "mongodb://kmshimko:prime123@ds047772.mongolab.com:47772/primedesk";
-// var mongoURI = 'mongodb://tgun6144:Docix016@ds045242.mongolab.com:45242/primedesk';
-//var mongoURI = "mongodb://primedesk:vtkb@ds045252.mongolab.com:45252/primedesk";
+
+    // Add your MongoLab Information
+var mongoURI = sys.env.MONGO_URI;
 
 var MongoDB = mongoose.connect(mongoURI).connection;
 
