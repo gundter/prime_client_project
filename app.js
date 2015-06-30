@@ -26,7 +26,7 @@ var app = express();
 // Mongo setup
 
     // Add your MongoLab Information
-var mongoURI = process.env.MONGO_URI;
+var mongoURI = process.env.MONGOLAB_URI;
 
 var MongoDB = mongoose.connect(mongoURI).connection;
 
