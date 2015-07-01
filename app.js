@@ -22,10 +22,9 @@ var videos = require('./routes/videos');
 
 var app = express();
 
-
 // Mongo setup
-var mongoURI = 'mongodb://tgun6144:Docix016@ds045242.mongolab.com:45242/primedesk';
-
+    // Add your MongoLab Information
+var mongoURI = process.env.MONGOLAB_URI;
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function (err) {
