@@ -21,7 +21,7 @@
     "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-uglify": "^5.2.2",
     "https": "^1.0.0",
-    "mongoose": "^4.0.5",
+    "mongoose": "^8.14.3",
     "morgan": "~1.10.0",
     "passport": "^0.2.2",
     "passport-local": "^1.0.0",
