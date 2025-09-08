@@ -16,7 +16,7 @@
     "debug": "~4.4.1",
     "express": "~5.1.0",
     "express-session": "^1.11.3",
-    "form-urlencoded": "6.1.5",
+    "form-urlencoded": "6.1.6",
     "grunt": "^1.6.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-uglify": "^5.2.2",
