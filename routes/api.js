@@ -9,14 +9,32 @@ var VideoData = require('../models/videoDataSchema');
 // Save Video Data to database
 //////////////////////////////
 router.post('/', function(req, res, next){
-    console.log('Results: ', req.body);
+    if (!req.isAuthenticated()) {
+        return res.status(401).json({error: 'Unauthorized'});
+    }
 
-    VideoData.create(req.body, function(err, data) {
+    // Sanitize iframe field: only allow iframe tags with https src, strip all other HTML
+    var iframeValue = '';
+    if (req.body.iframe && typeof req.body.iframe === 'string') {
+        var iframeMatch = req.body.iframe.match(/<iframe\s[^>]*src="(https:\/\/[^"]+)"[^>]*><\/iframe>/i);
+        if (iframeMatch) {
+            iframeValue = iframeMatch[0].replace(/\son\w+="[^"]*"/gi, '');
+        }
+    }
+
+    var videoData = {
+        token: req.body.token,
+        randtag: req.body.randtag,
+        videoURL: req.body.videoURL,
+        embedURL: req.body.embedURL,
+        iframe: iframeValue
+    };
+
+    VideoData.create(videoData, function(err, data) {
        if (err) {
            console.log("Error with creating videoData: ", err);
         return next(err);
        }
-       console.log("Callback Create Video Data: ", data);
        res.send(data);
     });
 });

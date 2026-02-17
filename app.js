@@ -42,7 +42,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
-    secret: 'secret',
+    secret: process.env.SESSION_SECRET || require('crypto').randomBytes(32).toString('hex'),
     key: 'user',
     resave: true,
     saveUninitialized: false,
@@ -79,11 +79,9 @@ passport.use('local', new localStrategy({
                 return done(null, false, {message: 'Incorrect Email and Password.'});}
 
             // test a matching password
-            console.log("testing for email: "+ emailAddress + " password: "+ password);
             user.comparePassword(password, function(err, isMatch) {
                 if (err) throw err;
                 if(isMatch) {
-                    console.log("Password matches for " + user.email + " isMatch " + isMatch);
                     return done(null, user);
                 }
                 else

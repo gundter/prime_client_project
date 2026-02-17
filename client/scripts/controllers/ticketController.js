@@ -10,6 +10,27 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
     $scope.token = '';
     $scope.clicked = true;
 
+    // Sanitize HTML to only allow safe iframe tags, stripping scripts and event handlers
+    function sanitizeIframeHtml(html) {
+        if (!html || typeof html !== 'string') return '';
+        var div = document.createElement('div');
+        div.innerHTML = html;
+        var iframes = div.querySelectorAll('iframe');
+        var safeHtml = '';
+        for (var i = 0; i < iframes.length; i++) {
+            var src = iframes[i].getAttribute('src') || '';
+            if (src.indexOf('https://') !== 0) continue;
+            var safe = document.createElement('iframe');
+            safe.setAttribute('src', src);
+            if (iframes[i].getAttribute('width')) safe.setAttribute('width', iframes[i].getAttribute('width'));
+            if (iframes[i].getAttribute('height')) safe.setAttribute('height', iframes[i].getAttribute('height'));
+            if (iframes[i].getAttribute('frameborder')) safe.setAttribute('frameborder', iframes[i].getAttribute('frameborder'));
+            safe.setAttribute('sandbox', 'allow-scripts allow-same-origin');
+            safeHtml += safe.outerHTML;
+        }
+        return safeHtml;
+    }
+
     $scope.ticket.browser = browser();
     console.log("Broswer service: ", $scope.ticket.browser);
 
@@ -44,7 +65,7 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
         function(data) {
             console.log(data);
             $scope.returnedData = data;
-            $scope.iframeButton = $sce.trustAsHtml($scope.returnedData.recordButtonIframe);
+            $scope.iframeButton = $sce.trustAsHtml(sanitizeIframeHtml($scope.returnedData.recordButtonIframe));
             $scope.token = $scope.returnedData.token;
             console.log("iframe button: ",$scope.iframeButton);
 
@@ -66,7 +87,7 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
                     console.log("Video Data: ", data);
                     console.log("Video URL: ", data[lastVideo].videoURL);
                     $scope.recordedVideo = data;
-                    $scope.iframeVideo = $sce.trustAsHtml($scope.recordedVideo[lastVideo].iframe);
+                    $scope.iframeVideo = $sce.trustAsHtml(sanitizeIframeHtml($scope.recordedVideo[lastVideo].iframe));
                     $scope.token === data[0].token ? $scope.matchToken = true : $scope.matchToken = false;
                 }).error(
                 function (err) {

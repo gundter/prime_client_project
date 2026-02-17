@@ -80,10 +80,14 @@ router.post('/createTicket', function(req, res, next) {
 });
 
 router.put('/updateStatus', function(req, res, next) {
-    Tickets.findByIdAndUpdate(req.body._id, {tktStatus: req.body.tktStatus}, function (err, data) {
-        if (err) return next(err);
-        res.json(data);
-    });
+    if (req.isAuthenticated()) {
+        Tickets.findByIdAndUpdate(req.body._id, {tktStatus: req.body.tktStatus}, function (err, data) {
+            if (err) return next(err);
+            res.json(data);
+        });
+    } else {
+        res.status(401).json({error: 'Unauthorized'});
+    }
 });
 
 console.log('ticket route loaded');
