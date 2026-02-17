@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var https = require('https');
+var mongoose = require('mongoose');
 var formUrlEncoded = require('form-urlencoded');
 var VideoData = require('../models/videoDataSchema');
 
@@ -50,7 +51,12 @@ router.post('/nullify', function(req, res, next){
         embededURL: req.body.embededURL,
         iframe: req.body.iframe
     });
-    VideoData.findById(req.body.id,
+    // Validate id is a valid MongoDB ObjectId to prevent NoSQL injection
+    var videoId = String(req.body.id || '');
+    if (!mongoose.Types.ObjectId.isValid(videoId)) {
+        return res.status(400).json({error: 'Invalid video ID'});
+    }
+    VideoData.findById(videoId,
         function(err, article){
             if (err){
                 console.log("Find article failed", err);
