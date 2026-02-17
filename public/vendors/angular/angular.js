@@ -1436,7 +1436,7 @@ function bootstrap(element, modules, config) {
       throw ngMinErr(
           'btstrpd',
           "App Already Bootstrapped with this Element '{0}'",
-          tag.replace(/</,'&lt;').replace(/>/,'&gt;'));
+          tag.replace(/</g,'&lt;').replace(/>/g,'&gt;'));
     }
 
     modules = modules || [];
