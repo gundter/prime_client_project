@@ -13,12 +13,15 @@ router.post('/', function(req, res, next){
         return res.status(401).json({error: 'Unauthorized'});
     }
 
-    // Sanitize iframe field: only allow iframe tags with https src, strip all other HTML
+    // Sanitize iframe field: extract src URL and rebuild a clean iframe tag
     var iframeValue = '';
     if (req.body.iframe && typeof req.body.iframe === 'string') {
-        var iframeMatch = req.body.iframe.match(/<iframe\s[^>]*src="(https:\/\/[^"]+)"[^>]*><\/iframe>/i);
-        if (iframeMatch) {
-            iframeValue = iframeMatch[0].replace(/\son\w+="[^"]*"/gi, '');
+        // Extract the src URL using a simple, non-backtracking pattern
+        var srcMatch = req.body.iframe.match(/src="(https:\/\/[^"]+)"/i);
+        if (srcMatch && srcMatch[1]) {
+            // Rebuild a clean iframe with only the src attribute - no regex on untrusted HTML
+            var safeSrc = srcMatch[1].replace(/[<>"]/g, '');
+            iframeValue = '<iframe src="' + safeSrc + '" frameborder="0"></iframe>';
         }
     }
 

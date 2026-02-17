@@ -28,7 +28,6 @@ module.exports = function(grunt) {
                         src: [
                             "dist/css/*",
                             "dist/fonts/*",
-                            "dist/js/*",
                             "fonts/*"
                         ],
                         "dest": "public/vendors/bootstrap"

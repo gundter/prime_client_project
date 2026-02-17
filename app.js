@@ -4,6 +4,8 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var crypto = require('crypto');
+var rateLimit = require('express-rate-limit');
 
 var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
@@ -42,12 +44,70 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
-    secret: process.env.SESSION_SECRET || require('crypto').randomBytes(32).toString('hex'),
+    secret: process.env.SESSION_SECRET || crypto.randomBytes(32).toString('hex'),
     key: 'user',
     resave: true,
     saveUninitialized: false,
-    cookie: { maxAge: 600000, secure: false }
+    cookie: {
+        maxAge: 600000,
+        secure: process.env.NODE_ENV === 'production',
+        httpOnly: true,
+        sameSite: 'lax'
+    }
 }));
+
+// Trust proxy in production (for secure cookies behind reverse proxy)
+if (process.env.NODE_ENV === 'production') {
+    app.set('trust proxy', 1);
+}
+
+// Rate limiting
+var generalLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100,
+    standardHeaders: true,
+    legacyHeaders: false,
+    message: { error: 'Too many requests, please try again later.' }
+});
+
+var authLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 20,
+    standardHeaders: true,
+    legacyHeaders: false,
+    message: { error: 'Too many authentication attempts, please try again later.' }
+});
+
+app.use(generalLimiter);
+
+// CSRF protection via double-submit cookie pattern (compatible with AngularJS)
+// AngularJS $http automatically reads XSRF-TOKEN cookie and sends as X-XSRF-TOKEN header
+app.use(function(req, res, next) {
+    // Generate a CSRF token and set it as a cookie that AngularJS can read
+    if (!req.cookies['XSRF-TOKEN']) {
+        var csrfToken = crypto.randomBytes(32).toString('hex');
+        res.cookie('XSRF-TOKEN', csrfToken, {
+            httpOnly: false, // AngularJS needs to read this cookie
+            secure: process.env.NODE_ENV === 'production',
+            sameSite: 'lax'
+        });
+    }
+    // For state-changing requests, validate the CSRF token
+    // Exempt the login form POST (traditional form, not AJAX) - protected by authLimiter instead
+    if (['POST', 'PUT', 'DELETE', 'PATCH'].indexOf(req.method) !== -1) {
+        var isLoginForm = req.path === '/' && req.headers['content-type'] &&
+            req.headers['content-type'].indexOf('application/x-www-form-urlencoded') !== -1 &&
+            !req.headers['x-requested-with'];
+        if (!isLoginForm) {
+            var cookieToken = req.cookies['XSRF-TOKEN'];
+            var headerToken = req.headers['x-xsrf-token'];
+            if (!cookieToken || !headerToken || cookieToken !== headerToken) {
+                return res.status(403).json({ error: 'CSRF token validation failed' });
+            }
+        }
+    }
+    next();
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -91,7 +151,7 @@ passport.use('local', new localStrategy({
         });
     }));
 
-app.use('/', routes);
+app.use('/', authLimiter, routes);
 app.use('/users', users);
 app.use('/ticket', ticket);
 app.use('/api', API);

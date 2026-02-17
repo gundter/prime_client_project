@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 var path = require('path');
+var mongoose = require('mongoose');
 var Users = require('../models/userSchema');
 var Tickets = require('../models/ticketSchema');
 var Videos = require('../models/videoDataSchema');
@@ -81,7 +82,18 @@ router.post('/createTicket', function(req, res, next) {
 
 router.put('/updateStatus', function(req, res, next) {
     if (req.isAuthenticated()) {
-        Tickets.findByIdAndUpdate(req.body._id, {tktStatus: req.body.tktStatus}, function (err, data) {
+        // Validate _id is a valid MongoDB ObjectId to prevent NoSQL injection
+        var ticketId = String(req.body._id || '');
+        if (!mongoose.Types.ObjectId.isValid(ticketId)) {
+            return res.status(400).json({error: 'Invalid ticket ID'});
+        }
+        // Whitelist allowed status values
+        var allowedStatuses = ['Open', 'Resolved'];
+        var newStatus = String(req.body.tktStatus || '');
+        if (allowedStatuses.indexOf(newStatus) === -1) {
+            return res.status(400).json({error: 'Invalid status value'});
+        }
+        Tickets.findByIdAndUpdate(ticketId, {tktStatus: newStatus}, function (err, data) {
             if (err) return next(err);
             res.json(data);
         });

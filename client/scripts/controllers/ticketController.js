@@ -13,13 +13,15 @@ App.controller('ticketController', ["$scope", "$http", '$sce', '$interval', '$lo
     // Sanitize HTML to only allow safe iframe tags, stripping scripts and event handlers
     function sanitizeIframeHtml(html) {
         if (!html || typeof html !== 'string') return '';
-        var div = document.createElement('div');
-        div.innerHTML = html;
-        var iframes = div.querySelectorAll('iframe');
+        // Use DOMParser instead of innerHTML to avoid executing scripts during parsing
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(html, 'text/html');
+        var iframes = doc.querySelectorAll('iframe');
         var safeHtml = '';
         for (var i = 0; i < iframes.length; i++) {
             var src = iframes[i].getAttribute('src') || '';
             if (src.indexOf('https://') !== 0) continue;
+            // Rebuild a clean iframe element with only safe attributes
             var safe = document.createElement('iframe');
             safe.setAttribute('src', src);
             if (iframes[i].getAttribute('width')) safe.setAttribute('width', iframes[i].getAttribute('width'));

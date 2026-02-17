@@ -5,7 +5,7 @@
     <button class="btn-info" ng-click="viewtkt('All')">View All Tickets</button>
     <div class="row">
         <div class="col-md-offset-1 ticketDisplay" ng-repeat="ticket in tickets" >
-            <div class="well col-md-5 heatTicket {{ticket.tktStatus}}">
+            <div class="well col-md-5 heatTicket" ng-class="{'Open': ticket.tktStatus === 'Open', 'Resolved': ticket.tktStatus === 'Resolved'}">
                 <div class="col-md-9">
                     <p class="lead">{{ticket.problem}}
                         <br>
@@ -28,7 +28,7 @@
                     <div class="col-md-12">
                         <div class="well tktDescription"><p><b>Desciption:</b> {{ticket.description}}</p></div>
                         <div class="well"><p><b>Browser Used:</b> {{ticket.browser}}</p></div>
-                        <div class="text-center"><a ng-href="{{ticket.embedURL}}" target="_blank">View the Video</a></div>
+                        <div class="text-center" ng-if="ticket.embedURL.indexOf('https://') === 0"><a ng-href="{{ticket.embedURL}}" target="_blank" rel="noopener noreferrer">View the Video</a></div>
                         <div class="statusBtns">
                             <p><b>Status:</b><br>{{ticket.tktStatus}}</p>
                             <div ng-show="admin" class="ticketStatus">

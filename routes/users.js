@@ -22,7 +22,18 @@ router.get('/', function(req, res, next) {
 // Create User
 /////////////////////////
 router.post('/create', function(req,res,next) {
-    Users.create(req.body, function (err, post) {
+    // Whitelist allowed fields to prevent mass assignment
+    var userData = {
+        email: String(req.body.email || ''),
+        password: String(req.body.password || ''),
+        name: {
+            first: String((req.body.name && req.body.name.first) || ''),
+            last: String((req.body.name && req.body.name.last) || '')
+        },
+        phone: String(req.body.phone || ''),
+        department: String(req.body.department || '')
+    };
+    Users.create(userData, function (err, post) {
         if (err)
             next(err);
         else

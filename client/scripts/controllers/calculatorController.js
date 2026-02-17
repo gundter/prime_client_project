@@ -10,7 +10,17 @@ App.controller('calculatorController',['$scope', function($scope){
     var key = "";
 //scope.equal resolves the  equation and acts "broken" by adding pi to the result
     $scope.equal = function(){
-        current = eval(current) + Math.PI;
+        // Use Function constructor with strict input validation instead of eval
+        // Only allow digits, operators, and decimal points
+        if (/^[0-9+\-*/. ]+$/.test(current)) {
+            try {
+                current = Function('"use strict"; return (' + current + ')')() + Math.PI;
+            } catch (e) {
+                current = "Error";
+            }
+        } else {
+            current = "Error";
+        }
         $scope.output = current;
         key = "equal";
     };
